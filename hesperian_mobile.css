@@ -1,0 +1,17 @@
+@import url('jquery.mobile-1.0a4/jquery.mobile-1.0beta-pre.css');
+/* @import url('jquery.mobile-1.0a4/jquery.mobile-1.0a4.css'); */
+
+/* Do not aggressively elide list item text. */
+.ui-li-desc {
+white-space: normal;
+}
+
+/*
+Workaround for iPhone / WebKit bug where headers and footers can disappear after page animation.
+ http://forum.jquery.com/topic/question-about-header-footer-in-jquery-mobile-alpha3 
+*/
+.ui-page { z-index: 1}
+.ui-header { z-index: 10 }
+.ui-header * { z-index: 20 }
+
+ 
