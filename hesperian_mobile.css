@@ -1,5 +1,4 @@
-@import url('jquery.mobile-1.0a4/jquery.mobile-1.0beta-pre.css');
-/* @import url('jquery.mobile-1.0a4/jquery.mobile-1.0a4.css'); */
+@import url('jquery.mobile-1.0a4/jquery.mobile-1.0a4.1.min.css');
 
 /* Do not aggressively elide list item text. */
 .ui-li-desc {
