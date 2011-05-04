@@ -1,0 +1,8 @@
+This is the hesperian mobile web application prototype.
+
+src: html / css sources
+jslib: javascript libraries
+
+'make web' to create an html directory containing the app.
+
+http://www.hesperian.org
