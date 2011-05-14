@@ -13,13 +13,14 @@
 JQM=jquery.mobile-1.0a4.1.min
 
 # JavaScript sources, in order of page inclusion
-JSOBJ=jslib/jquery-1.5.1.min.js  jslib/jquery.mobile/$(JQM).js jslib/hesperian_mobile.js
+JSOBJ=jslib/jquery-1.5.1.min.js  jslib/hesperian_mobile_init.js jslib/jquery.mobile/$(JQM).js jslib/hesperian_mobile.js
 
-.PHONY: all html
+.PHONY: all html phonegap
 
 all: html 
 	
 html: 
+	@-rm -R html
 	@-mkdir html
 	# Copy the raw html source from the src directory
 	./bin/copyfiles.pl src html
@@ -29,11 +30,24 @@ html:
 	# Merge the javascript into one .js file
 	cat $(JSOBJ) > html/hesperian_mobile.js
 	# Put the jquery mobile css and images into a jquery.mobile directory
-	@-mkdir html/jquery.mobile
+	-@mkdir html/jquery.mobile
 	cp jslib/jquery.mobile/$(JQM).css html/jquery.mobile/
 	cp -Rf jslib/jquery.mobile/images html/jquery.mobile/
 	# Create a manifest
 	./bin/create_manifest.pl html > html/cache.manifest
 
+phonegap:
+	@-rm -R phonegap/www
+	@-mkdir phonegap/www
+	# Copy the raw html source from the src directory
+	./bin/copyfiles.pl src phonegap/www
+	./bin/concatinate_html.pl src > phonegap/www/index.html 
+	cat $(JSOBJ) > phonegap/www/hesperian_mobile.js
+	cat jslib/phonegap.0.9.5.min.js >> phonegap/www/hesperian_mobile.js
+	@-mkdir phonegap/www/jquery.mobile
+	cp jslib/jquery.mobile/$(JQM).css phonegap/www/jquery.mobile/
+	cp -Rf jslib/jquery.mobile/images phonegap/www/jquery.mobile/
+
 clean:
 	@- rm -R html
+	@- rm -R phonegap/www/*
