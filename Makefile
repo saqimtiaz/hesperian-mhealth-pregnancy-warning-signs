@@ -9,11 +9,15 @@
 # serve the correct content type for the manifest.
 #
 
+# JQuery (minus .js / .css extension)
+JQUERY ?= jquery-1.5.1.min
 # JQuery mobile version (minus .js / .css extension)
-JQM=jquery.mobile-1.0a4.1.min
+JQM ?= jquery.mobile-1.0a4.1.min
+# phonegap version (minus .js / .css extension)
+PHONEGAP ?= phonegap.0.9.5.min
 
 # JavaScript sources, in order of page inclusion
-JSOBJ=jslib/jquery-1.5.1.min.js  jslib/hesperian_mobile_init.js jslib/jquery.mobile/$(JQM).js jslib/hesperian_mobile.js
+JSOBJ=jslib/$(JQUERY).js  jslib/hesperian_mobile_init.js jslib/jquery.mobile/$(JQM).js jslib/hesperian_mobile.js
 
 .PHONY: all html phonegap
 
@@ -43,7 +47,7 @@ phonegap:
 	./bin/copyfiles.pl src phonegap/www
 	./bin/concatinate_html.pl src > phonegap/www/index.html 
 	cat $(JSOBJ) > phonegap/www/hesperian_mobile.js
-	cat jslib/phonegap.0.9.5.min.js >> phonegap/www/hesperian_mobile.js
+	cat jslib/$(PHONEGAP).js >> phonegap/www/hesperian_mobile.js
 	@-mkdir phonegap/www/jquery.mobile
 	cp jslib/jquery.mobile/$(JQM).css phonegap/www/jquery.mobile/
 	cp -Rf jslib/jquery.mobile/images phonegap/www/jquery.mobile/
