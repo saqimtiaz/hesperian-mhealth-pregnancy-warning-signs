@@ -19,9 +19,13 @@ PHONEGAP ?= phonegap.0.9.5.min
 # JavaScript sources, in order of page inclusion
 JSOBJ=jslib/$(JQUERY).js  jslib/hesperian_mobile_init.js jslib/jquery.mobile/$(JQM).js jslib/hesperian_mobile.js
 
+# phonegap needs addional javascript
+phonegap: JSOBJ += jslib/$(PHONEGAP).js
+
+# destination directory where we will assemble the app
 html: DESTDIR = html
 phonegap: DESTDIR = phonegap/www
-phonegap: JSOBJ += jslib/$(PHONEGAP).js
+
 
 .PHONY: all html phonegap
 
