@@ -19,38 +19,35 @@ PHONEGAP ?= phonegap.0.9.5.min
 # JavaScript sources, in order of page inclusion
 JSOBJ=jslib/$(JQUERY).js  jslib/hesperian_mobile_init.js jslib/jquery.mobile/$(JQM).js jslib/hesperian_mobile.js
 
+html: DESTDIR = html
+phonegap: DESTDIR = phonegap/www
+phonegap: JSOBJ += jslib/$(PHONEGAP).js
+
 .PHONY: all html phonegap
 
 all: html 
-	
-html: 
-	@-rm -R html
-	@-mkdir html
-	# Copy the raw html source from the src directory
-	./bin/copyfiles.pl src html
-	./bin/concatinate_html.pl src > html/index.html 
-	# Create an .htaccess file with the right mime-type for a manifest
-	echo "AddType text/cache-manifest .manifest" > html/.htaccess
-	# Merge the javascript into one .js file
-	cat $(JSOBJ) > html/hesperian_mobile.js
-	# Put the jquery mobile css and images into a jquery.mobile directory
-	-@mkdir html/jquery.mobile
-	cp jslib/jquery.mobile/$(JQM).css html/jquery.mobile/
-	cp -Rf jslib/jquery.mobile/images html/jquery.mobile/
-	# Create a manifest
-	./bin/create_manifest.pl html > html/cache.manifest
 
-phonegap:
-	@-rm -R phonegap/www
-	@-mkdir phonegap/www
+htmldest:
+	@-rm -R $(DESTDIR)
+	@-mkdir $(DESTDIR)
 	# Copy the raw html source from the src directory
-	./bin/copyfiles.pl src phonegap/www
-	./bin/concatinate_html.pl src > phonegap/www/index.html 
-	cat $(JSOBJ) > phonegap/www/hesperian_mobile.js
-	cat jslib/$(PHONEGAP).js >> phonegap/www/hesperian_mobile.js
-	@-mkdir phonegap/www/jquery.mobile
-	cp jslib/jquery.mobile/$(JQM).css phonegap/www/jquery.mobile/
-	cp -Rf jslib/jquery.mobile/images phonegap/www/jquery.mobile/
+	./bin/copyfiles.pl src $(DESTDIR)
+	./bin/concatinate_html.pl src > $(DESTDIR)/index.html 
+	# Merge the javascript into one .js file
+	cat $(JSOBJ) > $(DESTDIR)/hesperian_mobile.js
+	# Put the jquery mobile css and images into a jquery.mobile directory
+	@mkdir $(DESTDIR)/jquery.mobile
+	cp jslib/jquery.mobile/$(JQM).css $(DESTDIR)/jquery.mobile/
+	cp -Rf jslib/jquery.mobile/images $(DESTDIR)/jquery.mobile/
+
+manifest:
+	# Create a manifest
+	./bin/create_manifest.pl  $(DESTDIR) >  $(DESTDIR)/cache.manifest
+	echo "AddType text/cache-manifest .manifest" >  $(DESTDIR)/.htaccess
+	
+html: htmldest manifest
+
+phonegap: htmldest
 
 clean:
 	@- rm -R html
