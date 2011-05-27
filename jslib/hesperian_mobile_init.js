@@ -16,6 +16,7 @@ $("div.[data-role=page]").live('pagebeforecreate',function(event){
 		var seq_length = $(this).attr("seq-length");
 		var seq_position = $(this).attr("seq-position");
 		var pos = 0;
+		$("div.sequence-dots",this).empty();
 		while (pos < seq_length) {
 			if (pos + 1 == seq_position) {
 				$("div.sequence-dots",this).append('<div class="circle active"></div>');
