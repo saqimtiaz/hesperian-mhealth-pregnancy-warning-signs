@@ -49,6 +49,21 @@ Workaround for iPhone / WebKit bug where headers and footers can disappear after
 .circle.active {
 	background:#444;
 }
+
+.seq-nav-button-left img{
+	float:left;
+	margin-left:5px;
+}
+
+.seq-nav-button-right img{
+	float:right;
+	margin-right:5px;
+}
+
+.clear {
+	clear:both;
+	display:block;
+}
 /* end of css for sequence-bar*/
 
 /*change background color of pages to white*/
