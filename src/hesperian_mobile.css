@@ -59,4 +59,8 @@ Workaround for iPhone / WebKit bug where headers and footers can disappear after
 /*allow wrapping of links in listview menus*/
 .ui-li .ui-btn-text a.ui-link-inherit {
 	white-space:normal;
+	/* following two lines indent the second line of wrapped links
+	padding-left:45px;
+	text-indent:-30px;
+	*/
 }

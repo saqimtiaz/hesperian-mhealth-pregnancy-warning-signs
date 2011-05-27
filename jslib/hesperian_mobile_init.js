@@ -15,14 +15,14 @@ $("div.[data-role=page]").live('pagebeforecreate',function(event){
 	$("div.sequence-bar").each(function(index) {
 		var seq_length = $(this).attr("seq-length");
 		var seq_position = $(this).attr("seq-position");
-		var index = 0;
-		while (index < seq_length) {
-			if (index + 1 == seq_position) {
+		var pos = 0;
+		while (pos < seq_length) {
+			if (pos + 1 == seq_position) {
 				$("div.sequence-dots",this).append('<div class="circle active"></div>');
 			} else {
 				$("div.sequence-dots",this).append('<div class="circle"></div>');
 			}
-			index++;
+			pos++;
 		}
 	});	
 });
