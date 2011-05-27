@@ -7,5 +7,24 @@ function isiPhone(){
     return ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)));
 };
 
-// jquery mobile configuration
 
+
+
+//populate sequence-bar div and highlight appropriate circle
+$("div.[data-role=page]").live('pagebeforecreate',function(event){
+	$("div.sequence-bar").each(function(index) {
+		var seq_length = $(this).attr("seq-length");
+		var seq_position = $(this).attr("seq-position");
+		var index = 0;
+		while (index < seq_length) {
+			if (index + 1 == seq_position) {
+				$("div.sequence-dots",this).append('<div class="circle active"></div>');
+			} else {
+				$("div.sequence-dots",this).append('<div class="circle"></div>');
+			}
+			index++;
+		}
+	});	
+});
+
+// jquery mobile configuration
