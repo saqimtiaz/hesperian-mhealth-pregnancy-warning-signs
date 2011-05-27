@@ -87,3 +87,8 @@ Workaround for iPhone / WebKit bug where headers and footers can disappear after
 	text-indent:-30px;
 	*/
 }
+
+/* temporary styling on navbar icons for demonstration purposes*/
+.ui-header .ui-navbar.top-navbar .ui-btn-inner {
+	padding-top: 5px;
+}
