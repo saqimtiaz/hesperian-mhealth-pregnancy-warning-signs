@@ -51,12 +51,12 @@ Workaround for iPhone / WebKit bug where headers and footers can disappear after
 }
 /* end of css for sequence-bar*/
 
-//change background color of pages to white
+/*change background color of pages to white*/
 .ui-body-c {
 	background:#fff;
 }
 
-//allow wrapping of links in listview menus
+/*allow wrapping of links in listview menus*/
 .ui-li .ui-btn-text a.ui-link-inherit {
 	white-space:normal;
 }
