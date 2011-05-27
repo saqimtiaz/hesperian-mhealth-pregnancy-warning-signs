@@ -17,6 +17,9 @@ Workaround for iPhone / WebKit bug where headers and footers can disappear after
 .sequence-bar {
 	border-bottom: 2px solid #6B94BC;
 	border-top: 2px solid #efefef;
+	background-color: #DDE6F2;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFFFFF), to(#DDE6F2), color-stop(.5,#EDF1F8));
+	background: -moz-linear-gradient(top, #FFFFFF 0%, #EDF1F8 50%, #DDE6F2 100%);
 }
  
 .sequence-bar h2.sequence-title {
@@ -48,6 +51,11 @@ Workaround for iPhone / WebKit bug where headers and footers can disappear after
 
 .circle.active {
 	background:#444;
+}
+
+.seq-nav-button img {
+	height: 21px;
+	width: 13px;
 }
 
 .seq-nav-button-left img{
