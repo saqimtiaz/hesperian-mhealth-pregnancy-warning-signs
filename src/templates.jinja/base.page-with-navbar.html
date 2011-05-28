@@ -18,7 +18,7 @@
 <!-- {% block id %}{% endblock %} -->
 <div data-role="page" id="{{ self.id() }}">
 	{% block header %}
-	<div data-role="header">
+	<div data-role="header" data-position="fixed">
 		<h1>{% block headertitle %}Pregnancy &amp; Birth{% endblock %}</h1>
 		{% include 'templates.jinja/base.page.navbar.html' %}
 	</div>
