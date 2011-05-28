@@ -53,7 +53,7 @@ def main(args):
 
 def render(template_file, template_dir, **kwargs):
 	loader = jinja2.FileSystemLoader(template_dir) # XXX: use PackageLoader?
-	env = jinja2.Environment(loader=loader)
+	env = jinja2.Environment(loader=loader,line_comment_prefix="##")
 
 	template = env.get_template(template_file)
 

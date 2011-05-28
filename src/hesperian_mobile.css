@@ -97,3 +97,8 @@ Workaround for iPhone / WebKit bug where headers and footers can disappear after
 .ui-header .ui-navbar.top-navbar .ui-btn-inner img {
 	height: 40px;
 }
+/* end temporary styling*/
+
+.hidden {
+	visibility: hidden;
+}

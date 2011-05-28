@@ -11,7 +11,7 @@ function isiPhone(){
 
 
 //populate sequence-bar div and highlight appropriate circle
-$("div.[data-role=page]").live('pagebeforecreate',function(event){
+$("div:jqmData(role='page')").live('pagebeforecreate',function(event){
 	$("div.sequence-bar").each(function(index) {
 		var seq_length = $(this).attr("seq-length");
 		var seq_position = $(this).attr("seq-position");
@@ -25,6 +25,11 @@ $("div.[data-role=page]").live('pagebeforecreate',function(event){
 			}
 			pos++;
 		}
+		$("a.seq-nav-button",this).each(function(index,el) {
+			if (el.href == "javascript:;") {
+				$(el).addClass("hidden");
+			}
+		});
 	});	
 });
 
