@@ -90,5 +90,10 @@ Workaround for iPhone / WebKit bug where headers and footers can disappear after
 
 /* temporary styling on navbar icons for demonstration purposes*/
 .ui-header .ui-navbar.top-navbar .ui-btn-inner {
-	padding-top: 5px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.ui-header .ui-navbar.top-navbar .ui-btn-inner img {
+	height: 40px;
 }
