@@ -19,8 +19,10 @@
 <div data-role="page" id="{{ self.id() }}">
 	{% block header %}
 	<div data-role="header" data-position="fixed">
+		<a href="" class="ui-btn-left" data-icon="arrow-l" data-rel="back">Back</a>
 		<h1>{% block headertitle %}Pregnancy &amp; Birth{% endblock %}</h1>
-		{% include 'templates.jinja/base.page.navbar.html' %}
+		<a href="index.html" class="ui-btn-right" data-icon="home" data-iconpos="notext" data-direction="reverse">Home</a>
+{% include 'templates.jinja/base.page.navbar.html' %}
 	</div>
 	{% endblock %}
 
