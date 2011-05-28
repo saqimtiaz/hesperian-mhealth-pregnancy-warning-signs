@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html manifest="cache.manifest">
+<head>
+	{% block head %}
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+
+    <title>{% block title %}Pregnancy &amp; Birth{% endblock %}</title>
+	
+	<link rel="stylesheet" href="hesperian_mobile.css" />
+	<script src="hesperian_mobile.js"></script>
+	{% endblock %}
+</head>
+
+  
+<body>
+{% block body %}  
+<!-- {% block id %}{% endblock %} -->
+<div data-role="page" id="{{ self.id() }}">
+	{% block header %}
+	<div data-role="header">
+		<h1>{% block headertitle %}Pregnancy &amp; Birth{% endblock %}</h1>
+		{% include 'templates.jinja/base.page.navbar.html' %}
+	</div>
+	{% endblock %}
+
+	<!-- content -->	
+	<div data-role="content">
+		{% block content %}{% endblock %}	
+	</div><!-- /content -->
+	{% block footer %}{% endblock %}
+</div><!-- /{{ self.id() }} -->
+{% endblock %}
+</body>
+</html>

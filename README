@@ -1,8 +1,11 @@
 This is the hesperian mobile web application prototype.
 
+Dependencies: Perl,Python and Jinja python package
+Jinja installation: http://jinja.pocoo.org/docs/intro/#installation
+
 src: html / css sources
 jslib: javascript libraries
 
-'make web' to create an html directory containing the app.
+'make all' to create an html directory containing the app.
 
 http://www.hesperian.org

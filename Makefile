@@ -36,7 +36,11 @@ htmldest:
 	@-mkdir $(DESTDIR)
 	# Copy the raw html source from the src directory
 	./bin/copyfiles.pl src $(DESTDIR)
-	./bin/concatinate_html.pl src > $(DESTDIR)/index.html 
+	@rm -fr src/rendered
+	@mkdir src/rendered
+	# render each html file with jinja
+	cd src/;for filename in *.html;do ../bin/jinjafy.py $$filename > rendered/$$filename;done
+	./bin/concatinate_html.pl src/rendered > $(DESTDIR)/index.html
 	# Merge the javascript into one .js file
 	cat $(JSOBJ) > $(DESTDIR)/hesperian_mobile.js
 	# Put the jquery mobile css and images into a jquery.mobile directory
@@ -56,3 +60,4 @@ phonegap: htmldest
 clean:
 	@- rm -R html
 	@- rm -R phonegap/www/*
+	@- rm -R src/rendered
