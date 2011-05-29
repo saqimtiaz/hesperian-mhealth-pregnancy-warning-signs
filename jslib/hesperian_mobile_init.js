@@ -28,9 +28,6 @@ $("div:jqmData(role='page')").live('pagebeforecreate',function(event){
 			}
 		});
 
-		$(this).live("swiperight", function(e) {
-			console.log("swiped");
-			});
 	});
 
 });

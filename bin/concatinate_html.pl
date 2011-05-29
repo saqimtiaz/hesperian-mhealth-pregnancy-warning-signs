@@ -54,13 +54,13 @@ foreach my $file (@files) {
 foreach my $f (@files) {
  my $id = $fileInfo{$f}{'firstId'};
  # look for link to subpages e.g. foo.html#SubPage
- $body =~ s/<a href=\"$f#([^"]*)"([^>]*)/<a href=\"#$1"$2/mi;
+ $body =~ s/<a href=\"$f#([^"]*)"([^>]*)/<a href=\"#$1"$2/mig;
  # look for link to external pages e.g. foo.html
- $body =~ s/<a href=\"$f[^>]*/<a href=\"#$id"/mi;
+ $body =~ s/<a href=\"$f[^>]*/<a href=\"#$id"/mig;
 }
 
 # For jquery mobile style links "#PageID", the rel="external" needs be exised.
-$body =~ s/<a href=\"#([^>]*)rel=\"external\"([^>]*)/<a href=\"#$1$2/mi;
+$body =~ s/<a href=\"#([^>]*)rel=\"external\"([^>]*)/<a href=\"#$1$2/mig;
 
 print $preamble;
 print $body;
