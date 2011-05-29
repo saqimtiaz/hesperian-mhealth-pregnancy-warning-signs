@@ -32,15 +32,22 @@ $("div:jqmData(role='page')").live('pagebeforecreate',function(event){
 
 });
 
-//swiping would need to be selectively added to pages where we wanted it
-$("div:jqmData(role='page')").live("pagecreate",function(e) {
-	$(this).bind('swiperight swipeleft', function(e) {
-		var b = $("div.ui-content",this);
-		if (b.hasClass("red"))
-			b.removeClass("red");
-		else
-			b.addClass("red");		
-		});
+
+function swipeToClick(el) {
+	$(el).bind("swiperight swipeleft", function(event) {
+		if (event.type == "swiperight") {
+			$("a.seq-nav-button-right",this)[0].click();
+		}
+		else if (event.type == "swipeleft") {
+			$("a.seq-nav-button-left",this)[0].click();
+		}
 	});
+}
+
+//swiping would need to be selectively added to pages where we wanted it
+$("div:jqmData(role='page')").live("pagecreate",function(event) {
+	var page = $(this);
+	//swipeToClick(page.has("div.sequence-bar"));
+});
 
 // jquery mobile configuration
