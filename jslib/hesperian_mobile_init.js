@@ -32,14 +32,15 @@ $("div:jqmData(role='page')").live('pagebeforecreate',function(event){
 
 });
 
-
+//binds swipe events to the specified elements and maps them to clicks on the previous and next links based on them having the appropriate class
 function swipeToClick(el) {
 	$(el).bind("swiperight swipeleft", function(event) {
-		if (event.type == "swiperight") {
-			$("a.seq-nav-button-right",this)[0].click();
+		//console.log($("a.seq-nav-button-left:first",this));
+		if (event.type == "swipeleft") {
+			$("a.seq-nav-button-right:first:not(:disabled)",this).click();
 		}
-		else if (event.type == "swipeleft") {
-			$("a.seq-nav-button-left",this)[0].click();
+		else if (event.type == "swiperight") {
+			$("a.seq-nav-button-left:first:not(:disabled)",this).click();
 		}
 	});
 }
@@ -47,7 +48,8 @@ function swipeToClick(el) {
 //swiping would need to be selectively added to pages where we wanted it
 $("div:jqmData(role='page')").live("pagecreate",function(event) {
 	var page = $(this);
-	//swipeToClick(page.has("div.sequence-bar"));
+	//pass page to bind swipe after filtering it for pages containing a div with class sequence bar, this identifies that swiping is to be enabled.
+	swipeToClick(page.has("div.sequence-bar"));
 });
 
 // jquery mobile configuration
