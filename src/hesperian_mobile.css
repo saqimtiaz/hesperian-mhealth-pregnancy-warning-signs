@@ -102,3 +102,7 @@ Workaround for iPhone / WebKit bug where headers and footers can disappear after
 .hidden {
 	visibility: hidden;
 }
+
+.red {
+	background:red;
+}
