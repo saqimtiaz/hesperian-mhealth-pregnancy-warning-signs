@@ -3,7 +3,9 @@
 <head>
 	{% block head %}
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=0" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
 
     <title>{% block title %}Pregnancy &amp; Birth{% endblock %}</title>
 	
@@ -17,7 +19,7 @@
 <!-- {% block id %}{% endblock %} -->
 <div data-role="page" id="{{ self.id() }}">
 	{% block header %}
-	<div data-role="header" data-position="fixed">
+	<div data-role="header">
 		<a href="" class="ui-btn-left" data-icon="arrow-l" data-rel="back">Back</a>
 		<h1>{% block headertitle %}Pregnancy &amp; Birth{% endblock %}</h1>
 		<a href="index.html" class="ui-btn-right" data-icon="home" data-iconpos="notext" data-direction="reverse">Home</a>
@@ -28,6 +30,7 @@
 	{%- set seq_position = seq_position %}
 	{%- set seq_rlink = seq_rlink %}
 	{%- set seq_llink = seq_llink %}
+	{%- set pagetitle = pagetitle %}
 {% include 'templates.jinja/base.page.sequence.html' with context %}
 	{% endblock %}
 

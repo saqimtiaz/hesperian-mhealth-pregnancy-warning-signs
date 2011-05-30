@@ -106,3 +106,20 @@ Workaround for iPhone / WebKit bug where headers and footers can disappear after
 .red {
 	background:red;
 }
+
+/* start Hesperian mobile content css */
+.hm-content-imgleft {
+	float: left;
+	margin: 5px 5px 10px 0;
+}
+
+.hm-content-imgright {
+	float: right;
+	margin: 5px 0 5px 10px;
+}
+
+.hm-horizontal-center {
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
