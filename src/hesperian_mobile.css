@@ -107,6 +107,11 @@ Workaround for iPhone / WebKit bug where headers and footers can disappear after
 	background:red;
 }
 
+.ui-content {
+	font-size: 80%;
+	padding: 15px 15px;
+}
+
 /* start Hesperian mobile content css */
 .hm-content-imgleft {
 	float: left;
@@ -122,4 +127,17 @@ Workaround for iPhone / WebKit bug where headers and footers can disappear after
 	text-align: center;
 	padding: 0;
 	margin: 0;
+}
+
+div.hm-content-relatedlinks {
+	background: url("images/finger.png") no-repeat scroll 0 0 transparent;
+	background-size: 50px auto;
+	padding-left: 50px;
+	margin-left: -10px;
+	margin-top: 30px;
+	clear: both;
+}
+div.hm-content-relatedlinks .ui-li .ui-btn-inner a.ui-link-inherit {
+	padding-right: 10px;
+	padding-left: 10px;
 }

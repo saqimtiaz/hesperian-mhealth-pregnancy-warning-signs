@@ -50,9 +50,9 @@ $("div:jqmData(role='page')").live("pagecreate",function(event) {
 	var page = $(this);
 	//pass page to bind swipe after filtering it for pages containing a div with class sequence bar, this identifies that swiping is to be enabled.
 	swipeToClick(page.has("div.sequence-bar"));
-	page.bind("touchmove", function(event) {
+	/*page.bind("touchmove", function(event) {
 		event.preventDefault();
-	});
+	});*/
 });
 
 // jquery mobile configuration
