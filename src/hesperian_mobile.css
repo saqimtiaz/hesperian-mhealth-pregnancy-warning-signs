@@ -141,3 +141,29 @@ div.hm-content-relatedlinks .ui-li .ui-btn-inner a.ui-link-inherit {
 	padding-right: 10px;
 	padding-left: 10px;
 }
+
+h2.hm-content-menuheading {
+	color: #366;
+	margin-top: 0;
+	font-size: 220%;
+	text-align: center;
+}
+
+
+ul.hm-menu .ui-li-thumb, ul.hm-menu .ui-li-icon{
+	height: 76px;
+	width: 120px;
+	max-height: 76px;
+    max-width: 90px;
+}
+
+ul.hm-menu .ui-li-has-thumb .ui-btn-inner a.ui-link-inherit, ul.hm-menu .ui-li-static.ui-li-has-thumb {
+    padding-left: 100px;
+    padding-right: 10px;
+}
+
+.wrapper {
+	display:block;
+	padding:0;
+	margin:0;
+}

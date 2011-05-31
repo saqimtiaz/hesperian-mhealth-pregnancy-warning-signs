@@ -45,6 +45,16 @@ function swipeToClick(el) {
 	});
 }
 
+function centerMenuLinks(el) {
+	$("span.wrapper").each(function(index,link) {
+		var link = $(link);
+		var a = link.parent();
+		var x = a.height();
+		var y = link.height();
+		link.css("margin-top",x/2 - y/2 + "px");
+		});
+}
+
 //swiping would need to be selectively added to pages where we wanted it
 $("div:jqmData(role='page')").live("pagecreate",function(event) {
 	var page = $(this);
@@ -53,6 +63,12 @@ $("div:jqmData(role='page')").live("pagecreate",function(event) {
 	/*page.bind("touchmove", function(event) {
 		event.preventDefault();
 	});*/
+	//centerMenuLinks(page.has("hm-menu"));
+});
+
+$("div:jqmData(role='page')").live("pageshow",function(event) {
+	var page = $(this);
+	centerMenuLinks(page.has("hm-menu"));
 });
 
 // jquery mobile configuration
