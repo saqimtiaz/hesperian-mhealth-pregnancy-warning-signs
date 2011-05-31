@@ -162,8 +162,17 @@ ul.hm-menu .ui-li-has-thumb .ui-btn-inner a.ui-link-inherit, ul.hm-menu .ui-li-s
     padding-right: 10px;
 }
 
-.wrapper {
+.hm-menu-linkwrapper {
 	display:block;
 	padding:0;
 	margin:0;
+	/*visibility: hidden;*/
+}
+
+.hm-menu-linkwrapper-singleline {
+	margin-top: 21.5px;
+}
+
+.hm-menu-linkwrapper-doubleline {
+	margin-top: 13px;
 }

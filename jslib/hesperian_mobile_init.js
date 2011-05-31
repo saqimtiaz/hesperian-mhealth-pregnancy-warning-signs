@@ -51,7 +51,9 @@ function centerMenuLinks(el) {
 		var a = link.parent();
 		var x = a.height();
 		var y = link.height();
-		link.css("margin-top",x/2 - y/2 + "px");
+		a.css("display","none");
+		link.css("margin-top",x/2 - y/2 + "px").css("visibility","visible");
+		a.css("display","block");
 		});
 }
 
@@ -63,12 +65,11 @@ $("div:jqmData(role='page')").live("pagecreate",function(event) {
 	/*page.bind("touchmove", function(event) {
 		event.preventDefault();
 	});*/
-	//centerMenuLinks(page.has("hm-menu"));
 });
 
 $("div:jqmData(role='page')").live("pageshow",function(event) {
 	var page = $(this);
-	centerMenuLinks(page.has("hm-menu"));
+	//centerMenuLinks(page.has("hm-menu"));
 });
 
 // jquery mobile configuration
