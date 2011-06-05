@@ -19,8 +19,10 @@ JQMDIR ?= jquery.mobile
 PHONEGAP ?= phonegap.0.9.5.min
 
 # JavaScript sources, in order of page inclusion
-JSOBJ=jslib/$(JQUERY).js  jslib/hesperian_mobile_init.js jslib/$(JQMDIR)/$(JQM).js jslib/hesperian_mobile.js
+JSOBJ ?= jslib/$(JQUERY).js  jslib/hesperian_mobile_init.js jslib/$(JQMDIR)/$(JQM).js jslib/hesperian_mobile.js
 
+# Main css file in src
+CSS ?= hesperian_mobile
 # css files to @import in the main hesperian_mobile.css
 CSSIMPORT ?= jquery.mobile/$(JQM).css
 
@@ -53,14 +55,16 @@ else
 	cp  src/rendered/* $(DESTDIR)
 endif
 	# Merge the javascript into one .js file
-	cat $(JSOBJ) > $(DESTDIR)/hesperian_mobile.js
+	for f in $(JSOBJ); do cat $$f >> $(DESTDIR)/hesperian_mobile.js; done;
 	# create the main ccs file
 	for f in $(CSSIMPORT); do echo @import url\(\'$$f\'\)\; >> $(DESTDIR)/hesperian_mobile.css; done ;
-	cat src/hesperian_mobile.css >> $(DESTDIR)/hesperian_mobile.css
+	cat src/$(CSS).css >> $(DESTDIR)/hesperian_mobile.css
+ifdef $(JQM)
 	# Put the jquery mobile css and images into a jquery.mobile directory
 	@mkdir $(DESTDIR)/jquery.mobile
 	cp jslib/$(JQMDIR)/$(JQM).css $(DESTDIR)/jquery.mobile/
 	cp -Rf jslib/$(JQMDIR)/images $(DESTDIR)/jquery.mobile/
+endif
 
 manifest:
 	# Create a manifest
@@ -85,3 +89,17 @@ clean:
 	@- rm -R phonegap/www/*
 	@- rm -R src/rendered
 	@- rm -R jslib/latest
+
+# Special targets for prototype builds
+
+# Builds with the latests version of JQM
+latest-html:
+	make JQUERY=jquery-1.6.1.min JQM=jquery.mobile.min JQMDIR=latest/jquery.mobile phonegap
+latest-phonegap:
+	make JQUERY=jquery-1.6.1.min JQM=jquery.mobile.min JQMDIR=latest/jquery.mobile html
+
+# Builds without jquery or JQM - only our own explicit jslib/standalone.js
+nojq-html:
+	make JQUERY="" JQM="" JSOBJ=jslib/standalone.js COMBINEHTML="NO" html
+nojq-phonegap:
+	make JQUERY="" JQM="" JSOBJ=jslib/standalone.js COMBINEHTML="NO" phonegap
