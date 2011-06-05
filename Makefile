@@ -59,7 +59,7 @@ endif
 	# create the main ccs file
 	for f in $(CSSIMPORT); do echo @import url\(\'$$f\'\)\; >> $(DESTDIR)/hesperian_mobile.css; done ;
 	cat src/$(CSS).css >> $(DESTDIR)/hesperian_mobile.css
-ifdef $(JQM)
+ifneq ("","$(JQM)")
 	# Put the jquery mobile css and images into a jquery.mobile directory
 	@mkdir $(DESTDIR)/jquery.mobile
 	cp jslib/$(JQMDIR)/$(JQM).css $(DESTDIR)/jquery.mobile/
