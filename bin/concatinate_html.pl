@@ -43,7 +43,7 @@ foreach my $file (@files) {
   $body .= $text; # concatinate
 
   # Remember the id of the first jquery mobile page
-  $text =~ /<div data-role=\"page\" id=\"([^"]*)">/s;
+  $text =~ /<div data-role=\"page\" id=\"([^"]*)".*?>/s;
   my $firstId = $1;
   $fileInfo{$file}{'firstId'} = $firstId;
 }

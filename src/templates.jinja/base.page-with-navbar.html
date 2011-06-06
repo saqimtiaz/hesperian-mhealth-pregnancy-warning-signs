@@ -16,12 +16,11 @@
 <body>
 {% block body %}  
 <!-- {% block id %}{% endblock %} -->
-<div data-role="page" id="{{ self.id() }}">
+<div data-role="page" id="{{ self.id() }}" data-theme="b">
 	{% block header %}
 	<div data-role="header">
 		<a href="" class="ui-btn-left" data-icon="arrow-l" data-rel="back">Back</a>
-		<h1>{% block headertitle %}Pregnancy &amp; Birth{% endblock %}</h1>
-		<a href="index.html" class="ui-btn-right" data-icon="home" data-iconpos="notext" data-direction="reverse">Home</a>
+		<h1><a href="index.html" rel="external" data-role="button" data-direction="reverse" class="hm-home">{% block headertitle %}Pregnancy and Birth{% endblock %}</a></h1>
 {% include 'templates.jinja/base.page.navbar.html' %}
 	</div>
 	{% endblock %}

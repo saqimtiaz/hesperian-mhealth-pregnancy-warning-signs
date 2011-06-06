@@ -75,7 +75,7 @@ Workaround for iPhone / WebKit bug where headers and footers can disappear after
 /* end of css for sequence-bar*/
 
 /*change background color of pages to white*/
-.ui-body-c {
+.ui-body-c, .ui-body-b {
 	background:#fff;
 }
 
@@ -179,7 +179,7 @@ ul.hm-menu .ui-li-has-thumb .ui-btn-inner a.ui-link-inherit, ul.hm-menu .ui-li-s
 
 .ui-header .hm-home .ui-btn-corner-all,.ui-header .hm-home.ui-btn-corner-all {
 	border-radius: 0.5em;
-	font-size: 15px;
+	font-size: 17px;
 	
 }
 .ui-header .ui-btn-corner-all {
@@ -188,7 +188,17 @@ ul.hm-menu .ui-li-has-thumb .ui-btn-inner a.ui-link-inherit, ul.hm-menu .ui-li-s
 
 .ui-header .ui-btn-left {
 	top: 0.8em;
+	left: 5px;
 }
 .ui-header .ui-title {
 	overflow:visible;
+	margin: 0.6em 80px;
+}
+
+.ui-header .hm-home .ui-btn-inner {
+	padding: 0.2em 8px 0.3em;
+}
+
+.ui-header .ui-btn-inner {
+	padding: 0.4em 5px 0.5em;
 }
