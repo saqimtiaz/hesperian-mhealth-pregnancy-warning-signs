@@ -176,3 +176,19 @@ ul.hm-menu .ui-li-has-thumb .ui-btn-inner a.ui-link-inherit, ul.hm-menu .ui-li-s
 .hm-menu-linkwrapper-doubleline {
 	margin-top: 13px;
 }
+
+.ui-header .hm-home .ui-btn-corner-all,.ui-header .hm-home.ui-btn-corner-all {
+	border-radius: 0.5em;
+	font-size: 15px;
+	
+}
+.ui-header .ui-btn-corner-all {
+	border-radius: 0.5em;
+}
+
+.ui-header .ui-btn-left {
+	top: 0.8em;
+}
+.ui-header .ui-title {
+	overflow:visible;
+}
