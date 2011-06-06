@@ -37,24 +37,16 @@ function swipeToClick(el) {
 	$(el).bind("swiperight swipeleft", function(event) {
 		//console.log($("a.seq-nav-button-left:first",this));
 		if (event.type == "swipeleft") {
-			$("a.seq-nav-button-right:first:not(:disabled)",this).click();
+			//$("a.seq-nav-button-right:first:not(:disabled)",this).click();
+			var href = $("a.seq-nav-button-right:first:not(:disabled)",this).attr("href");
+			$.mobile.changePage(href,"none");
 		}
 		else if (event.type == "swiperight") {
-			$("a.seq-nav-button-left:first:not(:disabled)",this).click();
+			//$("a.seq-nav-button-left:first:not(:disabled)",this).click();
+			var href = $("a.seq-nav-button-left:first:not(:disabled)",this).attr("href");
+			$.mobile.changePage(href,"slide",true);
 		}
 	});
-}
-
-function centerMenuLinks(el) {
-	$("span.wrapper").each(function(index,link) {
-		var link = $(link);
-		var a = link.parent();
-		var x = a.height();
-		var y = link.height();
-		a.css("display","none");
-		link.css("margin-top",x/2 - y/2 + "px").css("visibility","visible");
-		a.css("display","block");
-		});
 }
 
 //swiping would need to be selectively added to pages where we wanted it
@@ -62,14 +54,6 @@ $("div:jqmData(role='page')").live("pagecreate",function(event) {
 	var page = $(this);
 	//pass page to bind swipe after filtering it for pages containing a div with class sequence bar, this identifies that swiping is to be enabled.
 	swipeToClick(page.has("div.sequence-bar"));
-	/*page.bind("touchmove", function(event) {
-		event.preventDefault();
-	});*/
-});
-
-$("div:jqmData(role='page')").live("pageshow",function(event) {
-	var page = $(this);
-	//centerMenuLinks(page.has("hm-menu"));
 });
 
 // jquery mobile configuration
