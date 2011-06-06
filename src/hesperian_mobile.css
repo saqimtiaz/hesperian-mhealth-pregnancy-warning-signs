@@ -143,7 +143,7 @@ div.hm-content-relatedlinks .ui-li .ui-btn-inner a.ui-link-inherit {
 }
 
 h2.hm-content-menuheading {
-	color: #366;
+	color: #066;
 	margin-top: 0;
 	font-size: 220%;
 	text-align: center;
@@ -201,4 +201,14 @@ ul.hm-menu .ui-li-has-thumb .ui-btn-inner a.ui-link-inherit, ul.hm-menu .ui-li-s
 
 .ui-header .ui-btn-inner {
 	padding: 0.4em 5px 0.5em;
+}
+
+h2.hm-pagetitle {
+	color: #17375E;
+	text-align: center;
+	margin-top: 0;
+}
+
+#Eating_well_during_pregnancy-big div.ui-content {
+	font-size: 90%;
 }

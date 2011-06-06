@@ -39,12 +39,15 @@ function swipeToClick(el) {
 		if (event.type == "swipeleft") {
 			//$("a.seq-nav-button-right:first:not(:disabled)",this).click();
 			var href = $("a.seq-nav-button-right:first:not(:disabled)",this).attr("href");
-			$.mobile.changePage(href,"none");
+			if (href != "javascript:;")
+				$.mobile.changePage(href,"none");
 		}
 		else if (event.type == "swiperight") {
 			//$("a.seq-nav-button-left:first:not(:disabled)",this).click();
 			var href = $("a.seq-nav-button-left:first:not(:disabled)",this).attr("href");
-			$.mobile.changePage(href,"slide",true);
+			//console.log(href);
+			if (href != "javascript:;")
+				$.mobile.changePage(href,"slide",true);
 		}
 	});
 }
