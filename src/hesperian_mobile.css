@@ -159,11 +159,11 @@ ul.hm-submenu {
 	font-size: 120%;
 }
 
-hm-content-underline {
+.hm-content-underline {
 	text-decoration: underline;
 }
 
-hm-content-strong {
+.hm-content-strong {
 	font-weight: bold;
 }
 
