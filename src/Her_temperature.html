@@ -1,0 +1,45 @@
+{% set pagetitle = "Things to check" %}
+{% set seq_length = 4 %}
+{% set seq_position = 1 %}
+{% set seq_llink = "javascript:;" %}		## set rlink equal to next page href
+{% set seq_rlink = "Her_blood_pressure.html" %}		## set llink equal to previous page href
+{% extends "templates.jinja/base.page-with-sequence.html" %}
+{% block title %} Hesperian - Pregnancy &amp; Birth{% endblock %}
+{% block id %}Her_temperature{% endblock %}
+
+		{% block content %}	
+			<div class="hm-horizontal-center">
+				<img src="images/thermometer.png" width="90%"/>
+			</div>
+			<p class="clear">
+				<span class="hm-content-underline hm-content-strong">Healthy sign:</span> If the woman's temperature is close to 37 &deg;C (98.6 &deg;F). She does not feel hot to touch.
+			</p>
+	
+			<p>
+				<span class="hm-content-underline hm-content-strong">Warning sign:</span> Woman has fever - a temperature of 38 &deg;C (100.4 &deg;F) or above. She feels hot to touch. 
+			</p>
+			
+			<p>
+				If a woman has a fever during pregnancy, it could be caused by malaria, sickness like flu, a bladder or kidney infection, or dehydration. Find the cause of the fever and treat it.
+			</p>
+			<img src="images/MW0240E.png" class="hm-content-imgright" width="45%" />
+			<p>Along with the fever does she also:</p>
+			<ul class="hm-content-noindent hm-content-spacedlist">
+				<li>Have shivering, body aches and severe headache? She might have malaria.</li>
+				<li>Have a cough, stuffy nose, and feel weak in her body? She might have the flu.</li>
+				<li>Feel the need to urinate more often or have pain or burning with urination? She might have a bladder or kidney infection.</li>
+				<li>Feel thirsty, have little or no urine, dry mouth, feel dizzy when standing up or have loss of stretchiness in her skin? She may be dehydrated. Give rehydration drink.</li>
+			</ul>
+			<p>Along with treating the cause, a high fever needs to be lowered right away. </p>
+			
+			<div class="hm-content-relatedlinks">
+				<ul data-role="listview" data-theme="b" data-inset="true">
+					<li data-theme="b"><a href="javascript:;">Signs of malaria</a></li>
+					<li data-theme="b"><a href="javascript:;">Signs of bladder and kidney infections</a></li>
+					<li data-theme="b"><a href="javascript:;">How to make rehydration drink</a></li>
+					<li data-theme="b"><a href="javascript:;">How to lower a fever</a></li>
+					<li data-theme="b"><a href="javascript:;">How to check temperature</a></li>
+				</ul>
+			</div>
+			
+		{% endblock %}

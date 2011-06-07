@@ -159,6 +159,22 @@ ul.hm-submenu {
 	font-size: 120%;
 }
 
+hm-content-underline {
+	text-decoration: underline;
+}
+
+hm-content-strong {
+	font-weight: bold;
+}
+
+ul.hm-content-noindent {
+	padding-left: 10px;
+}
+
+ul.hm-content-spacedlist li{
+	margin-bottom: 1em;
+}
+
 ul.hm-menu .ui-li-thumb, ul.hm-menu .ui-li-icon{
 	height: 76px;
 	width: 120px;
