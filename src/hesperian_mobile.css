@@ -149,6 +149,15 @@ h2.hm-content-menuheading {
 	text-align: center;
 }
 
+h2.hm-content-submenuheading {
+	background: #EDEDD3;
+	margin: -15px -15px 15px -15px;
+	padding: 15px;
+}
+
+ul.hm-submenu {
+	font-size: 120%;
+}
 
 ul.hm-menu .ui-li-thumb, ul.hm-menu .ui-li-icon{
 	height: 76px;
