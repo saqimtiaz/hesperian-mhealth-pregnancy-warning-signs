@@ -1,0 +1,37 @@
+{% set pagetitle = "Things to check" %}
+{% set seq_length = 4 %}
+{% set seq_position = 2 %}
+{% set seq_llink = "Her_temperature.html" %}		## set rlink equal to next page href
+{% set seq_rlink = "The_position_of_the_baby.html" %}		## set llink equal to previous page href
+{% extends "templates.jinja/base.page-with-sequence.html" %}
+{% block title %} Hesperian - Pregnancy &amp; Birth{% endblock %}
+{% block id %}Her_blood_pressure{% endblock %}
+
+		{% block content %}
+			<h2 class="hm-pagetitle">Her blood pressure</h2>
+			<img src="images/chunked_36.png" width="45%" class="hm-content-imgright"/>
+
+			<p>
+				Check the mother's blood pressure at each visit during pregnancy. Write it down so you can look for changes over time.
+			</p>
+
+			<p class="clear">
+				<span class="hm-content-underline hm-content-strong">Healthy sign:</span> Blood pressure stays between 90/60 and 140/90 and does not go up much during pregnancy
+			</p>
+
+			<p>
+				<span class="hm-content-underline hm-content-strong">Warning sign:</span> High blood pressure. The woman has high blood pressure if the top number is over 140 or the bottom number is over 90.
+			</p>
+
+			<p>This can be a sign of pre-eclampsia.</p>
+			<p>If her blood pressure is very high (160/110) she has severe pre-eclampsia and needs medical help right away.</p>
+			
+			<div class="hm-content-relatedlinks">
+				<ul data-role="listview" data-theme="b" data-inset="true">
+					<li data-theme="b"><a href="javascript:;">What is pre-eclampsia</a></li>
+					<li data-theme="b"><a href="javascript:;">Severe pre-eclampsia</a></li>
+					<li data-theme="b"><a href="javascript:;">How to check blood-pressure</a></li>
+				</ul>
+			</div>
+			
+		{% endblock %}

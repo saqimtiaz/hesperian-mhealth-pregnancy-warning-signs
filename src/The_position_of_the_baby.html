@@ -1,0 +1,31 @@
+{% set pagetitle = "Things to check" %}
+{% set seq_length = 4 %}
+{% set seq_position = 3 %}
+{% set seq_llink = "Her_blood_pressure.html" %}		## set rlink equal to next page href
+{% set seq_rlink = "Signs_of_kidney_or_bladder_infection.html" %}		## set llink equal to previous page href
+{% extends "templates.jinja/base.page-with-sequence.html" %}
+{% block title %} Hesperian - Pregnancy &amp; Birth{% endblock %}
+{% block id %}The_position_of_the_baby{% endblock %}
+
+		{% block content %}
+			<h2 class="hm-pagetitle">The baby's position</h2>
+			<img src="images/chunked_4.png" width="65%" class="hm-content-imgright"/>
+
+			<p>
+				<span class="hm-content-underline hm-content-strong">Healthy sign:</span> The baby is head down at the time of birth.
+			</p>
+
+			<p>
+				<span class="hm-content-underline hm-content-strong">Warning sign:</span> The baby is breech (feet or bottom down) at the time of birth, or the baby is sideways at the time of birth.
+			</p>
+
+			<p>During pregnancy, it is common for a baby to change position several times in the womb. By the end of the pregnancy, the baby should be head down in the womb. This is the safest position for birth. To make sure the baby is head down, check the baby's position.</p>
+			
+			<div class="hm-content-relatedlinks">
+				<ul data-role="listview" data-theme="b" data-inset="true">
+					<li data-theme="b"><a href="javascript:;">How to check the baby's position</a></li>
+					<li data-theme="b"><a href="javascript:;">If the baby is sideways</a></li>
+				</ul>
+			</div>
+			
+		{% endblock %}

@@ -1,0 +1,50 @@
+{% set pagetitle = "Things to check" %}
+{% set seq_length = 4 %}
+{% set seq_position = 4 %}
+{% set seq_llink = "The_position_of_the_baby.html" %}		## set rlink equal to next page href
+{% set seq_rlink = "javascript:;" %}		## set llink equal to previous page href
+{% extends "templates.jinja/base.page-with-sequence.html" %}
+{% block title %} Hesperian - Pregnancy &amp; Birth{% endblock %}
+{% block id %}Signs_of_kidney_or_bladder_infection{% endblock %}
+
+		{% block content %}
+			<h2 class="hm-pagetitle">Signs of kidney or bladder infection</h2>
+			<img src="images/chunked_23.png" width="20%" class="hm-content-imgright"/>
+
+			<p>Kidney and bladder infections can be dangerous for the mother. They can also cause her to start labor too early if they are not treated right away.</p>
+
+			<p>
+				<span class="hm-content-strong">Signs of kidney infection:</span>
+			</p>
+			
+			<ul class="hm-content-noindent">
+				<li>Any signs of bladder infection</li>
+				<li>Cloudy or bloody urine</li>
+				<li>Pain in the lower back, sometimes on the sides</li>
+				<li>Fever</li>
+				<li>Feeling very sick or weak</li>
+			</ul>
+
+			<p>
+				<span class="hm-content-strong clear">Signs of bladder infection:</span>
+			</p>			
+			<ul class="hm-content-noindent">
+				<li>Constant feeling of needing to urinate, even after having to urinated</li>
+				<li>Pain or burning while, or just after, urinating</li>
+				<li>Pain in the lower belly, behind the front of the pelvis</li>
+				<li>Protein in the urine</li>
+			</ul>
+
+			<ul data-role="listview" data-theme="b" data-inset="true" class="hm-content-essentiallinks">
+				<li><a href="javascript:;">If she has signs of bladder infection</a></li>
+			</ul>
+
+			<div class="hm-content-relatedlinks">
+				<ul data-role="listview" data-theme="b" data-inset="true">
+					<li data-theme="b"><a href="javascript:;">How to take temperature</a></li>
+					<li data-theme="b"><a href="javascript:;">Other causes of fever during pregnancy</a></li>
+					<li data-theme="b"><a href="javascript:;">How to check for protein in urine</a></li>
+				</ul>
+			</div>
+			
+		{% endblock %}
