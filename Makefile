@@ -48,7 +48,7 @@ htmldest:
 	@rm -fr src/rendered
 	@mkdir src/rendered
 	# render each html file with jinja
-	cd src/;for filename in *.html;do ../bin/jinjafy.py $$filename > rendered/$$filename;done
+	cd src/;for filename in *.html;do echo "{}" | ../bin/jinjafy.py $$filename > rendered/$$filename;done
 ifeq ("YES","$(COMBINEHTML)")
 	./bin/concatinate_html.pl src/rendered > $(DESTDIR)/index.html
 else
