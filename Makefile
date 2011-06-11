@@ -27,7 +27,7 @@ CSS ?= hesperian_mobile
 CSSIMPORT ?= jquery.mobile/$(JQM).css
 
 # phonegap needs addional javascript
-phonegap: JSOBJ += jslib/$(PHONEGAP).js
+phonegap: JSOBJ += jslib/$(PHONEGAP).js phonegap/plugins/HesperianMobile.js
 
 # destination directory where we will assemble the app
 html: DESTDIR = html
@@ -91,6 +91,8 @@ clean:
 	@- rm -R jslib/latest
 
 # Special targets for prototype builds
+profile-html:
+	make JQUERY=jquery-1.6.1 JQM=jquery.mobile html
 
 # Builds with the latests version of JQM
 latest-html:
