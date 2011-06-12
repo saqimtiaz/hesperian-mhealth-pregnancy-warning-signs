@@ -130,16 +130,24 @@ Workaround for iPhone / WebKit bug where headers and footers can disappear after
 }
 
 div.hm-content-relatedlinks {
-	background: url("images/finger.png") no-repeat scroll 0 0 transparent;
+	/*background: url("images/finger.png") no-repeat scroll 0 0 transparent;
 	background-size: 50px auto;
 	padding-left: 50px;
-	margin-left: -10px;
-	margin-top: 30px;
+	margin-left: -10px;*/
+	margin: 30px -15px 30px;
 	clear: both;
+	border-top: 1px solid #87A9D3;
+	padding: 30px 15px 30px;
 }
+
+.ui-content div.hm-content-relatedlinks ul.ui-listview-inset{
+	margin-top: 0;
+}
+
 div.hm-content-relatedlinks .ui-li .ui-btn-inner a.ui-link-inherit {
 	padding-right: 10px;
 	padding-left: 10px;
+	color: #369;
 }
 
 .hm-content-essentiallinks .ui-li .ui-btn-inner a.ui-link-inherit {
