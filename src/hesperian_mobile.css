@@ -266,3 +266,40 @@ h2.hm-pagetitle {
 #Eating_well_during_pregnancy-big div.ui-content {
 	font-size: 90%;
 }
+
+
+#Signs_of_kidney_or_bladder_infection.ui-body-c, #Signs_of_kidney_or_bladder_infection.ui-body-b {
+	background: #aaa;
+}
+
+#Signs_of_kidney_or_bladder_infection .ui-content {
+	padding: 11px 11px 0 11px;
+}
+
+#Signs_of_kidney_or_bladder_infection .slidewrapper {
+	background: #fff;
+	padding:15px;
+	border-radius: 1em;
+	-moz-box-shadow: 7px 7px 4px #333;
+	-webkit-box-shadow: 7px 7px 4px #333;
+	box-shadow: 7px 7px 4px #333;
+}
+
+#Signs_of_kidney_or_bladder_infection .sequence-bar-bottom {
+	background: transparent;
+	border: none;
+	margin-top: 25px;
+	margin-bottom: 0px;
+}
+
+#Signs_of_kidney_or_bladder_infection .sequence-bar-bottom .circle {
+	background: #fff;
+}
+
+#Signs_of_kidney_or_bladder_infection .sequence-bar-bottom .circle.active {
+	background: #333;
+}
+
+#Signs_of_kidney_or_bladder_infection .hm-content-relatedlinks.relatedlinkssaq {
+	margin-top: 20px;
+}
