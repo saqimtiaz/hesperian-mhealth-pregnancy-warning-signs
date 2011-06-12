@@ -36,6 +36,7 @@ $("div:jqmData(role='page')").live('pagebeforecreate',function(event){
 function swipeToClick(el) {
 	$(el).bind("swiperight swipeleft", function(event) {
 		//console.log($("a.seq-nav-button-left:first",this));
+		event.preventDefault();
 		if (event.type == "swipeleft") {
 			//$("a.seq-nav-button-right:first:not(:disabled)",this).click();
 			var href = $("a.seq-nav-button-right:first:not(:disabled)",this).attr("href");
@@ -49,6 +50,7 @@ function swipeToClick(el) {
 			if (href != "javascript:;")
 				$.mobile.changePage(href,"slide",true);
 		}
+		
 	});
 }
 

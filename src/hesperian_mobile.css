@@ -80,7 +80,7 @@ Workaround for iPhone / WebKit bug where headers and footers can disappear after
 }
 
 /*allow wrapping of links in listview menus*/
-.ui-li .ui-btn-text a.ui-link-inherit {
+.ui-li .ui-btn-text a.ui-link-inherit, .ui-btn-text {
 	white-space:normal;
 	/* following two lines indent the second line of wrapped links
 	padding-left:45px;
@@ -134,20 +134,35 @@ div.hm-content-relatedlinks {
 	background-size: 50px auto;
 	padding-left: 50px;
 	margin-left: -10px;*/
-	margin: 30px -15px 30px;
+	margin: 30px -15px 0;
 	clear: both;
 	border-top: 1px solid #87A9D3;
-	padding: 30px 15px 30px;
+	padding: 25px 15px 10px;
+}
+
+div.hm-content-relatedlinks.relatedlinkssaq {
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#DDE6F2), to(#FFFFFF), color-stop(.5,#EDF1F8));
+	background: -moz-linear-gradient(top, #DDE6F2 0%, #EDF1F8 50%, #FFFFFF 100%);
+	padding-top: 10px;
 }
 
 .ui-content div.hm-content-relatedlinks ul.ui-listview-inset{
 	margin-top: 0;
 }
 
-div.hm-content-relatedlinks .ui-li .ui-btn-inner a.ui-link-inherit {
-	padding-right: 10px;
-	padding-left: 10px;
+div.hm-content-relatedlinks .ui-li .ui-btn-inner a.ui-link-inherit, div.hm-content-relatedlinks a {
+	/*padding-right: 10px;
+	padding-left: 10px;*/
 	color: #369;
+	text-align:left;
+}
+
+div.hm-content-relatedlinks .ui-btn-inner {
+	padding: 0.6em 8px;
+}
+
+div.hm-content-relatedlinks .ui-btn-corner-all {
+	border-radius: 0.5em;
 }
 
 .hm-content-essentiallinks .ui-li .ui-btn-inner a.ui-link-inherit {
