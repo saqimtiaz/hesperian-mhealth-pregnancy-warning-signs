@@ -7,6 +7,10 @@ function isiPhone(){
     return ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)));
 };
 
+$(document).bind("mobileinit", function(){
+  $.mobile.defaultTransition = "none";
+});
+
 $("div:jqmData(role='page')").live('pagebeforecreate',function(event){
 
 	$("div.sequence-bar",this).each(function(index) {
@@ -48,7 +52,7 @@ function swipeToClick(el) {
 			var href = $("a.seq-nav-button-left:first:not(:disabled)",this).attr("href");
 			//console.log(href);
 			if (href != "javascript:;")
-				$.mobile.changePage(href,"slide",true);
+				$.mobile.changePage(href,"none");
 		}
 		
 	});
