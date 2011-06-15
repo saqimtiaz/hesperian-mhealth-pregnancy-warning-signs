@@ -10,5 +10,7 @@
 	<false/>
 	<key>EnableAcceleration</key>
 	<false/>
+	<key>ExternalHosts</key>
+	<array/>
 </dict>
 </plist>

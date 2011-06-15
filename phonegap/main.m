@@ -2,7 +2,7 @@
 //  main.m
 //  HesperianMobile
 //
-//  Created by Matthew Litwin on 5/5/11.
+//  Created by Matthew Litwin on 6/14/11.
 //  Copyright KCP Technologies 2011. All rights reserved.
 //
 
@@ -11,7 +11,7 @@
 int main(int argc, char *argv[]) {
     
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
-    int retVal = UIApplicationMain(argc, argv, nil, @"HesperianMobileAppDelegate");
+    int retVal = UIApplicationMain(argc, argv, nil, @"AppDelegate");
     [pool release];
     return retVal;
 }

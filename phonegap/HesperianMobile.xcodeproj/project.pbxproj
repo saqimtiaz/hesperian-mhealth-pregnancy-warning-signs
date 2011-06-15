@@ -7,16 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D3623260D0F684500981E51 /* HesperianMobileAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* HesperianMobileAppDelegate.m */; };
+		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
-		3009C2AC127B894C007F4BC6 /* icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 3009C2AA127B894C007F4BC6 /* icon-72.png */; };
-		3009C2AD127B894C007F4BC6 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3009C2AB127B894C007F4BC6 /* icon@2x.png */; };
-		3009C2B2127B897D007F4BC6 /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 3009C2B0127B897D007F4BC6 /* Default-Landscape.png */; };
-		3009C2B3127B897D007F4BC6 /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 3009C2B1127B897D007F4BC6 /* Default-Portrait.png */; };
-		301BF552109A68D80062928A /* libPhoneGapLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BF535109A57CC0062928A /* libPhoneGapLib.a */; };
+		301BF552109A68D80062928A /* libPhoneGap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BF535109A57CC0062928A /* libPhoneGap.a */; };
 		301BF570109A69640062928A /* www in Resources */ = {isa = PBXBuildFile; fileRef = 301BF56E109A69640062928A /* www */; };
 		301BF5B5109A6A2B0062928A /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BF5B4109A6A2B0062928A /* AddressBook.framework */; };
 		301BF5B7109A6A2B0062928A /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BF5B6109A6A2B0062928A /* AddressBookUI.framework */; };
@@ -27,13 +23,19 @@
 		301BF5C1109A6A2B0062928A /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BF5C0109A6A2B0062928A /* MediaPlayer.framework */; };
 		301BF5C3109A6A2B0062928A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BF5C2109A6A2B0062928A /* QuartzCore.framework */; };
 		301BF5C5109A6A2B0062928A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BF5C4109A6A2B0062928A /* SystemConfiguration.framework */; };
-		302CC88810CD8CCE00C49659 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 302CC88610CD8CCE00C49659 /* Default.png */; };
-		302CC88910CD8CCE00C49659 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 302CC88710CD8CCE00C49659 /* icon.png */; };
 		3053AC6F109B7857006FCFE7 /* VERSION in Resources */ = {isa = PBXBuildFile; fileRef = 3053AC6E109B7857006FCFE7 /* VERSION */; };
 		305D5FD1115AB8F900A74A75 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 305D5FD0115AB8F900A74A75 /* MobileCoreServices.framework */; };
 		307D28A2123043360040C0FA /* PhoneGapBuildSettings.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 307D28A1123043350040C0FA /* PhoneGapBuildSettings.xcconfig */; };
+		308D05371370CCF300D202BF /* icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 308D052E1370CCF300D202BF /* icon-72.png */; };
+		308D05381370CCF300D202BF /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 308D052F1370CCF300D202BF /* icon.png */; };
+		308D05391370CCF300D202BF /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 308D05301370CCF300D202BF /* icon@2x.png */; };
+		308D053A1370CCF300D202BF /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 308D05321370CCF300D202BF /* Default-Landscape.png */; };
+		308D053B1370CCF300D202BF /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 308D05331370CCF300D202BF /* Default-Portrait.png */; };
+		308D053C1370CCF300D202BF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 308D05341370CCF300D202BF /* Default.png */; };
+		308D053D1370CCF300D202BF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 308D05351370CCF300D202BF /* Default@2x.png */; };
+		308D053E1370CCF300D202BF /* Default~iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 308D05361370CCF300D202BF /* Default~iPad.png */; };
 		30E1352710E2C1420031B30D /* PhoneGap.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30E1352610E2C1420031B30D /* PhoneGap.plist */; };
-		F6A0441C13A3FF79002B1CF8 /* HesperianMobile.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A0441B13A3FF79002B1CF8 /* HesperianMobile.m */; };
+		F61BD66413A8782900F0CE77 /* HesperianMobile.m in Sources */ = {isa = PBXBuildFile; fileRef = F61BD66313A8782900F0CE77 /* HesperianMobile.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,20 +53,23 @@
 			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = PhoneGapLib;
 		};
+		30E47BC2136F595F00DBB853 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 301BF52D109A57CC0062928A /* PhoneGapLib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 303258D8136B2C9400982B63;
+			remoteInfo = PhoneGap;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		1D3623240D0F684500981E51 /* HesperianMobileAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HesperianMobileAppDelegate.h; sourceTree = "<group>"; };
-		1D3623250D0F684500981E51 /* HesperianMobileAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HesperianMobileAppDelegate.m; sourceTree = "<group>"; };
+		1D3623240D0F684500981E51 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* HesperianMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HesperianMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		3009C2AA127B894C007F4BC6 /* icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-72.png"; sourceTree = "<group>"; };
-		3009C2AB127B894C007F4BC6 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
-		3009C2B0127B897D007F4BC6 /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape.png"; sourceTree = "<group>"; };
-		3009C2B1127B897D007F4BC6 /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait.png"; sourceTree = "<group>"; };
 		301BF52D109A57CC0062928A /* PhoneGapLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = PhoneGapLib.xcodeproj; sourceTree = PHONEGAPLIB; };
 		301BF56E109A69640062928A /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = SOURCE_ROOT; };
 		301BF5B4109A6A2B0062928A /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
@@ -76,16 +81,22 @@
 		301BF5C0109A6A2B0062928A /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		301BF5C2109A6A2B0062928A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		301BF5C4109A6A2B0062928A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		302CC88610CD8CCE00C49659 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		302CC88710CD8CCE00C49659 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		3053AC6E109B7857006FCFE7 /* VERSION */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VERSION; sourceTree = PHONEGAPLIB; };
 		305D5FD0115AB8F900A74A75 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		307D28A1123043350040C0FA /* PhoneGapBuildSettings.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = PhoneGapBuildSettings.xcconfig; sourceTree = "<group>"; };
+		308D052E1370CCF300D202BF /* icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-72.png"; sourceTree = "<group>"; };
+		308D052F1370CCF300D202BF /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		308D05301370CCF300D202BF /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		308D05321370CCF300D202BF /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape.png"; sourceTree = "<group>"; };
+		308D05331370CCF300D202BF /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait.png"; sourceTree = "<group>"; };
+		308D05341370CCF300D202BF /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		308D05351370CCF300D202BF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		308D05361370CCF300D202BF /* Default~iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default~iPad.png"; sourceTree = "<group>"; };
 		30E1352610E2C1420031B30D /* PhoneGap.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PhoneGap.plist; sourceTree = "<group>"; };
-		32CA4F630368D1EE00C91783 /* HesperianMobile_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HesperianMobile_Prefix.pch; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* HesperianMobile-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HesperianMobile-Prefix.pch"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* HesperianMobile-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "HesperianMobile-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
-		F6A0441A13A3FF79002B1CF8 /* HesperianMobile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HesperianMobile.h; sourceTree = "<group>"; };
-		F6A0441B13A3FF79002B1CF8 /* HesperianMobile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HesperianMobile.m; sourceTree = "<group>"; };
+		F61BD66213A8782900F0CE77 /* HesperianMobile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HesperianMobile.h; sourceTree = "<group>"; };
+		F61BD66313A8782900F0CE77 /* HesperianMobile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HesperianMobile.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				301BF552109A68D80062928A /* libPhoneGapLib.a in Frameworks */,
+				301BF552109A68D80062928A /* libPhoneGap.a in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
@@ -116,8 +127,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				1D3623240D0F684500981E51 /* HesperianMobileAppDelegate.h */,
-				1D3623250D0F684500981E51 /* HesperianMobileAppDelegate.m */,
+				1D3623240D0F684500981E51 /* AppDelegate.h */,
+				1D3623250D0F684500981E51 /* AppDelegate.m */,
 			);
 			path = Classes;
 			sourceTree = SOURCE_ROOT;
@@ -148,7 +159,7 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				32CA4F630368D1EE00C91783 /* HesperianMobile_Prefix.pch */,
+				32CA4F630368D1EE00C91783 /* HesperianMobile-Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
 			name = "Other Sources";
@@ -157,8 +168,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3009C2AF127B8962007F4BC6 /* splash */,
-				3009C2AE127B8952007F4BC6 /* icons */,
+				308D052D1370CCF300D202BF /* icons */,
+				308D05311370CCF300D202BF /* splash */,
 				30E1352610E2C1420031B30D /* PhoneGap.plist */,
 				3053AC6E109B7857006FCFE7 /* VERSION */,
 				8D1107310486CEB800E47090 /* HesperianMobile-Info.plist */,
@@ -187,30 +198,11 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3009C2AE127B8952007F4BC6 /* icons */ = {
-			isa = PBXGroup;
-			children = (
-				3009C2AA127B894C007F4BC6 /* icon-72.png */,
-				3009C2AB127B894C007F4BC6 /* icon@2x.png */,
-				302CC88710CD8CCE00C49659 /* icon.png */,
-			);
-			name = icons;
-			sourceTree = "<group>";
-		};
-		3009C2AF127B8962007F4BC6 /* splash */ = {
-			isa = PBXGroup;
-			children = (
-				3009C2B0127B897D007F4BC6 /* Default-Landscape.png */,
-				3009C2B1127B897D007F4BC6 /* Default-Portrait.png */,
-				302CC88610CD8CCE00C49659 /* Default.png */,
-			);
-			name = splash;
-			sourceTree = "<group>";
-		};
 		301BF52E109A57CC0062928A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				301BF535109A57CC0062928A /* libPhoneGapLib.a */,
+				301BF535109A57CC0062928A /* libPhoneGap.a */,
+				30E47BC3136F595F00DBB853 /* PhoneGap.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -218,11 +210,35 @@
 		307C750510C5A3420062BCA9 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
-				F6A0441A13A3FF79002B1CF8 /* HesperianMobile.h */,
-				F6A0441B13A3FF79002B1CF8 /* HesperianMobile.m */,
+				F61BD66213A8782900F0CE77 /* HesperianMobile.h */,
+				F61BD66313A8782900F0CE77 /* HesperianMobile.m */,
 			);
 			path = Plugins;
 			sourceTree = SOURCE_ROOT;
+		};
+		308D052D1370CCF300D202BF /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				308D052E1370CCF300D202BF /* icon-72.png */,
+				308D052F1370CCF300D202BF /* icon.png */,
+				308D05301370CCF300D202BF /* icon@2x.png */,
+			);
+			name = icons;
+			path = Resources/icons;
+			sourceTree = "<group>";
+		};
+		308D05311370CCF300D202BF /* splash */ = {
+			isa = PBXGroup;
+			children = (
+				308D05321370CCF300D202BF /* Default-Landscape.png */,
+				308D05331370CCF300D202BF /* Default-Portrait.png */,
+				308D05341370CCF300D202BF /* Default.png */,
+				308D05351370CCF300D202BF /* Default@2x.png */,
+				308D05361370CCF300D202BF /* Default~iPad.png */,
+			);
+			name = splash;
+			path = Resources/splash;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -231,12 +247,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "HesperianMobile" */;
 			buildPhases = (
-				30E9A9A110B758320022D3BA /* Copy PhoneGap Javascript */,
+				F61BD69213A87E5700F0CE77 /* make phonegap */,
+				30E9A9A110B758320022D3BA /* Check PhoneGap Reference */,
 				304B58A110DAC018002A0835 /* Touch www folder */,
 				1D60588D0D05DD3D006BFB54 /* Resources */,
 				1D60588E0D05DD3D006BFB54 /* Sources */,
 				1D60588F0D05DD3D006BFB54 /* Frameworks */,
-				F6B63CAB137F2FF60055E67B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -279,11 +295,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		301BF535109A57CC0062928A /* libPhoneGapLib.a */ = {
+		301BF535109A57CC0062928A /* libPhoneGap.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libPhoneGapLib.a;
+			path = libPhoneGap.a;
 			remoteRef = 301BF534109A57CC0062928A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		30E47BC3136F595F00DBB853 /* PhoneGap.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = PhoneGap.framework;
+			remoteRef = 30E47BC2136F595F00DBB853 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -295,14 +318,16 @@
 			files = (
 				301BF570109A69640062928A /* www in Resources */,
 				3053AC6F109B7857006FCFE7 /* VERSION in Resources */,
-				302CC88810CD8CCE00C49659 /* Default.png in Resources */,
-				302CC88910CD8CCE00C49659 /* icon.png in Resources */,
 				30E1352710E2C1420031B30D /* PhoneGap.plist in Resources */,
 				307D28A2123043360040C0FA /* PhoneGapBuildSettings.xcconfig in Resources */,
-				3009C2AC127B894C007F4BC6 /* icon-72.png in Resources */,
-				3009C2AD127B894C007F4BC6 /* icon@2x.png in Resources */,
-				3009C2B2127B897D007F4BC6 /* Default-Landscape.png in Resources */,
-				3009C2B3127B897D007F4BC6 /* Default-Portrait.png in Resources */,
+				308D05371370CCF300D202BF /* icon-72.png in Resources */,
+				308D05381370CCF300D202BF /* icon.png in Resources */,
+				308D05391370CCF300D202BF /* icon@2x.png in Resources */,
+				308D053A1370CCF300D202BF /* Default-Landscape.png in Resources */,
+				308D053B1370CCF300D202BF /* Default-Portrait.png in Resources */,
+				308D053C1370CCF300D202BF /* Default.png in Resources */,
+				308D053D1370CCF300D202BF /* Default@2x.png in Resources */,
+				308D053E1370CCF300D202BF /* Default~iPad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,27 +348,28 @@
 			shellPath = /bin/sh;
 			shellScript = "touch -cm ${PROJECT_DIR}/www";
 		};
-		30E9A9A110B758320022D3BA /* Copy PhoneGap Javascript */ = {
+		30E9A9A110B758320022D3BA /* Check PhoneGap Reference */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy PhoneGap Javascript";
+			name = "Check PhoneGap Reference";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# get the PhoneGapLib version\nPGVER=`head -1 \"${PHONEGAPLIB}/VERSION\"`\n\nSRC1=\"${PHONEGAPLIB}/javascripts/phonegap.${PGVER}.js\"\nSRC2=\"${PHONEGAPLIB}/javascripts/phonegap.${PGVER}.min.js\"\nTARGET=\"${PROJECT_DIR}/www\"\n\n# compile and copy PhoneGapLib\nmake -C \"${PHONEGAPLIB}\"\ncp \"${SRC1}\" \"${TARGET}\"\ncp \"${SRC2}\" \"${TARGET}\"\n\n# replace [src=\"phonegap.js\"] in all files in www\nfind \"${TARGET}\" | xargs grep 'src[ \t]*=[ \t]*[\\\\'\\\"]phonegap.*.*.js[\\\\'\\\"]' -sl | xargs -L1 sed -i \"\" \"s/src[ \t]*=[ \t]*[\\\\'\\\"]phonegap.*.*.js[\\\\'\\\"]/src=\\\"phonegap.${PGVER}.min.js\\\"/g\"";
+			shellScript = "# get the PhoneGapLib version\nPGVER=`head -1 \"${PHONEGAPLIB}/VERSION\"`\nTARGET=\"${PROJECT_DIR}/www\"\n\n# look for a reference in all files for \"phonegap.{PGVER}.*.js\" in www, warn if missing\n# [Hesperian Mobile] We combine our .js files (including phonegap) into one file, so there won't be a reference to phonegap.js directly.\n#find \"${TARGET}\" | xargs grep \"phonegap.${PGVER}.*.js\" -sl\n#rc=$?\n#if [ $rc != 0 ] ; then\n#\techo -e \"${PROJECT_DIR}/www:0: warning: Missing - A reference to 'phonegap.${PGVER}.js' or 'phonegap.${PGVER}.min.js' was not found in your HTML #file(s).\" 1>&2\n#fi";
 		};
-		F6B63CAB137F2FF60055E67B /* ShellScript */ = {
+		F61BD69213A87E5700F0CE77 /* make phonegap */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "make phonegap";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,8 +384,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
-				1D3623260D0F684500981E51 /* HesperianMobileAppDelegate.m in Sources */,
-				F6A0441C13A3FF79002B1CF8 /* HesperianMobile.m in Sources */,
+				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
+				F61BD66413A8782900F0CE77 /* HesperianMobile.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,7 +408,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = HesperianMobile_Prefix.pch;
+				GCC_PREFIX_HEADER = "HesperianMobile-Prefix.pch";
 				INFOPLIST_FILE = "HesperianMobile-Info.plist";
 				PRODUCT_NAME = HesperianMobile;
 			};
@@ -394,7 +420,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = HesperianMobile_Prefix.pch;
+				GCC_PREFIX_HEADER = "HesperianMobile-Prefix.pch";
 				INFOPLIST_FILE = "HesperianMobile-Info.plist";
 				PRODUCT_NAME = HesperianMobile;
 			};
@@ -406,7 +432,6 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 0.1;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -420,7 +445,6 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				USER_HEADER_SEARCH_PATHS = "\"$(PHONEGAPLIB)/Classes/JSON\" \"$(PHONEGAPLIB)/Classes\"";
-				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -430,7 +454,6 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 0.1;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -444,7 +467,6 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				USER_HEADER_SEARCH_PATHS = "\"$(PHONEGAPLIB)/Classes/JSON\" \"$(PHONEGAPLIB)/Classes\"";
-				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
