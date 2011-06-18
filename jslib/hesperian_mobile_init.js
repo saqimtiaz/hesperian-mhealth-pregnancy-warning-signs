@@ -34,11 +34,11 @@ $("div:jqmData(role='page')").live('pagebeforecreate',function(event){
 		}
 		$("div.sequence-dots",this).append(html);
 		
-		$("a.seq-nav-button",this).each(function(index,el) {
-			if (el.href == "javascript:;") {
-				$(el).addClass("hidden").attr("disabled",true);
-			}
-		});
+	//	$("a.seq-nav-button",this).each(function(index,el) {
+	//		if (el.href == "javascript:;") {
+	//			$(el).addClass("hidden").attr("disabled",true);
+	//		}
+	//	});
 
 	});
 
