@@ -13,20 +13,27 @@ $(document).bind("mobileinit", function(){
 });
 
 $("div:jqmData(role='page')").live('pagebeforecreate',function(event){
-
+	var html = "";
 	$("div.sequence-bar",this).each(function(index) {
-		var seq_length = $(this).attr("seq-length");
-		var seq_position = $(this).attr("seq-position");
-		var pos = 0;
-		//$("div.sequence-dots",this).empty();
-		while (pos < seq_length) {
-			if (pos + 1 == seq_position) {
-				$("div.sequence-dots",this).append('<div class="circle active"></div>');
-			} else {
-				$("div.sequence-dots",this).append('<div class="circle"></div>');
+		if (html == "") {
+			var seq_length = $(this).attr("seq-length");
+			var seq_position = $(this).attr("seq-position");
+			var pos = 0;
+			//$("div.sequence-dots",this).empty();
+			
+			while (pos < seq_length) {
+				if (pos + 1 == seq_position) {
+					html += '<div class="circle active"></div>';
+					//$("div.sequence-dots",this).append('<div class="circle active"></div>');
+				} else {
+					html += '<div class="circle"></div>';
+					//$("div.sequence-dots",this).append('<div class="circle"></div>');
+				}
+				pos++;
 			}
-			pos++;
 		}
+		$("div.sequence-dots",this).append(html);
+		
 		$("a.seq-nav-button",this).each(function(index,el) {
 			if (el.href == "javascript:;") {
 				$(el).addClass("hidden").attr("disabled",true);
