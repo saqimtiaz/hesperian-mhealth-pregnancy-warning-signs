@@ -82,7 +82,6 @@ fetch-jqm-latest:
 	mkdir jslib/latest
 	unzip jqm-latest.zip -d jslib/latest
 	rm jqm-latest.zip
-	# To build with latest: make JQUERY=jquery-1.6.1.min JQM=jquery.mobile.min JQMDIR=latest/jquery.mobile
 
 clean:
 	@- rm -R html
