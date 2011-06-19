@@ -8,48 +8,58 @@ function isiPhone(){
 };
 
 $(document).bind("mobileinit", function(){
-  $.mobile.defaultTransition = "none";
+	$.mobile.defaultTransition = "none";
+	//$.mobile.hashListeningEnabled = false;
 });
 
 $("div:jqmData(role='page')").live('pagebeforecreate',function(event){
+	if ($(this).attr("swipe") == "true") {
+		var html = "";
+		$("div.sequence-bar",this).each(function(index) {
+			if (html == "") {
+				var seq_length = $(this).attr("seq-length");
+				var seq_position = $(this).attr("seq-position");
+				var pos = 0;
+				//$("div.sequence-dots",this).empty();
+				
+				while (pos < seq_length) {
+					if (pos + 1 == seq_position) {
+						html += '<div class="circle active"></div>';
+						//$("div.sequence-dots",this).append('<div class="circle active"></div>');
+					} else {
+						html += '<div class="circle"></div>';
+						//$("div.sequence-dots",this).append('<div class="circle"></div>');
+					}
+					pos++;
+				}
+			}
+			$("div.sequence-dots",this).append(html);
+			
+		//	$("a.seq-nav-button",this).each(function(index,el) {
+		//		if (el.href == "javascript:;") {
+		//			$(el).addClass("hidden").attr("disabled",true);
+		//		}
+		//	});
 
-	$("div.sequence-bar",this).each(function(index) {
-		var seq_length = $(this).attr("seq-length");
-		var seq_position = $(this).attr("seq-position");
-		var pos = 0;
-		//$("div.sequence-dots",this).empty();
-		while (pos < seq_length) {
-			if (pos + 1 == seq_position) {
-				$("div.sequence-dots",this).append('<div class="circle active"></div>');
-			} else {
-				$("div.sequence-dots",this).append('<div class="circle"></div>');
-			}
-			pos++;
-		}
-		$("a.seq-nav-button",this).each(function(index,el) {
-			if (el.href == "javascript:;") {
-				$(el).addClass("hidden").attr("disabled",true);
-			}
 		});
-
-	});
-
+	}
 });
 
 //binds swipe events to the specified elements and maps them to clicks on the previous and next links based on them having the appropriate class
 function swipeToClick(el) {
+	//console.log("swiper");
 	$(el).bind("swiperight swipeleft", function(event) {
 		//console.log($("a.seq-nav-button-left:first",this));
 		event.preventDefault();
 		if (event.type == "swipeleft") {
 			//$("a.seq-nav-button-right:first:not(:disabled)",this).click();
-			var href = $("a.seq-nav-button-right:first:not(:disabled)",this).attr("href");
+			var href = $("a.seq-nav-button-right:first",this).attr("href");
 			if (href != "javascript:;")
 				$.mobile.changePage(href,"none");
 		}
 		else if (event.type == "swiperight") {
 			//$("a.seq-nav-button-left:first:not(:disabled)",this).click();
-			var href = $("a.seq-nav-button-left:first:not(:disabled)",this).attr("href");
+			var href = $("a.seq-nav-button-left:first",this).attr("href");
 			//console.log(href);
 			if (href != "javascript:;")
 				$.mobile.changePage(href,"none");
@@ -60,9 +70,12 @@ function swipeToClick(el) {
 
 //swiping would need to be selectively added to pages where we wanted it
 $("div:jqmData(role='page')").live("pagecreate",function(event) {
+	//console.log(this);
 	var page = $(this);
 	//pass page to bind swipe after filtering it for pages containing a div with class sequence bar, this identifies that swiping is to be enabled.
-	swipeToClick(page.has("div.sequence-bar"));
+	//console.log(page.attr("swipe"));
+	if (page.attr("swipe") == "true")
+		swipeToClick(page);
 });
 
 // jquery mobile configuration
