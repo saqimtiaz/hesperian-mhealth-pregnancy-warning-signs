@@ -12,7 +12,7 @@
 # JQuery (minus .js / .css extension)
 JQUERY ?= jquery-1.5.1.min
 # JQuery mobile version (minus .js / .css extension)
-JQM ?= jquery.mobile-1.0a4.1.min
+JQM ?= jquery.mobile-1.0b1.min
 # Directory in jslib containing JQM files
 JQMDIR ?= jquery.mobile
 # phonegap version (minus .js / .css extension)
