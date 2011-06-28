@@ -137,14 +137,19 @@ div.hm-content-relatedlinks {
 	margin: 30px -15px 0;
 	clear: both;
 	border-top: 1px solid #87A9D3;
-	padding: 25px 15px 10px;
+	padding: 25px 15px 0px;
 	font-size: 90%;
 }
 
-div.hm-content-relatedlinks.relatedlinkssaq {
+div.hm-content-relatedlinks {
 	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#DDE6F2), to(#FFFFFF), color-stop(.5,#EDF1F8));
 	background: -moz-linear-gradient(top, #DDE6F2 0%, #EDF1F8 50%, #FFFFFF 100%);
 	padding-top: 10px;
+}
+
+div.hm-content-relatedlinks .hm-content-strong {
+	padding-bottom:5px;
+	display: inline-block;
 }
 
 .ui-content div.hm-content-relatedlinks ul.ui-listview-inset{
@@ -266,38 +271,7 @@ h2.hm-pagetitle {
 	font-size: 135%;
 }
 
-#Signs_of_kidney_or_bladder_infection.ui-body-c, #Signs_of_kidney_or_bladder_infection.ui-body-b {
-	background: #aaa;
-}
 
-#Signs_of_kidney_or_bladder_infection .ui-content {
-	padding: 11px 11px 0 11px;
-}
-
-#Signs_of_kidney_or_bladder_infection .slidewrapper {
-	background: #fff;
-	padding:15px;
-	border-radius: 1em;
-	-moz-box-shadow: 7px 7px 4px #333;
-	-webkit-box-shadow: 7px 7px 4px #333;
-	box-shadow: 7px 7px 4px #333;
-}
-
-#Signs_of_kidney_or_bladder_infection .sequence-bar-bottom {
-	background: transparent;
-	border: none;
-	margin-top: 25px;
-	margin-bottom: 0px;
-}
-
-#Signs_of_kidney_or_bladder_infection .sequence-bar-bottom .circle {
-	background: #fff;
-}
-
-#Signs_of_kidney_or_bladder_infection .sequence-bar-bottom .circle.active {
-	background: #333;
-}
-
-#Signs_of_kidney_or_bladder_infection .hm-content-relatedlinks.relatedlinkssaq {
+.hm-content-relatedlinks {
 	margin-top: 20px;
 }
