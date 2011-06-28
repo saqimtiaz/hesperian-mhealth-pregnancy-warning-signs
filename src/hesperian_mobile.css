@@ -108,7 +108,7 @@ Workaround for iPhone / WebKit bug where headers and footers can disappear after
 }
 
 .ui-content {
-	font-size: 80%;
+	font-size: 90%;
 	padding: 15px 15px;
 }
 
@@ -138,6 +138,7 @@ div.hm-content-relatedlinks {
 	clear: both;
 	border-top: 1px solid #87A9D3;
 	padding: 25px 15px 10px;
+	font-size: 90%;
 }
 
 div.hm-content-relatedlinks.relatedlinkssaq {
@@ -168,14 +169,15 @@ div.hm-content-relatedlinks .ui-btn-corner-all {
 .hm-content-essentiallinks .ui-li .ui-btn-inner a.ui-link-inherit {
 	padding-right: 20px;
 	padding-left: 10px;
-	font-size: 110%;
+	font-size: 100%;
 }
 
 h2.hm-content-menuheading {
 	color: #066;
 	margin-top: 0;
-	font-size: 220%;
+	font-size: 190%;
 	text-align: center;
+	margin-bottom: 35px;
 }
 
 h2.hm-content-submenuheading {
@@ -185,7 +187,7 @@ h2.hm-content-submenuheading {
 }
 
 ul.hm-submenu {
-	font-size: 120%;
+	font-size: 100%;
 }
 
 .hm-content-underline {
@@ -204,10 +206,10 @@ ul.hm-content-spacedlist li{
 	margin-bottom: 1em;
 }
 
-ul.hm-menu .ui-li-thumb, ul.hm-menu .ui-li-icon{
-	height: 76px;
+ul.hm-menu .ui-li-thumb, ul.hm-menu .ui-li-icon {
+	height: 80px;
 	width: 120px;
-	max-height: 76px;
+	max-height: 80px;
     max-width: 90px;
 }
 
@@ -261,12 +263,8 @@ h2.hm-pagetitle {
 	color: #17375E;
 	text-align: center;
 	margin-top: 0;
+	font-size: 135%;
 }
-
-#Eating_well_during_pregnancy-big div.ui-content {
-	font-size: 90%;
-}
-
 
 #Signs_of_kidney_or_bladder_infection.ui-body-c, #Signs_of_kidney_or_bladder_infection.ui-body-b {
 	background: #aaa;
