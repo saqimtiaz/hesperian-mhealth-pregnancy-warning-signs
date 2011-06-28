@@ -187,7 +187,7 @@ h2.hm-content-menuheading {
 }
 
 h2.hm-content-submenuheading {
-	background: #EDEDD3;
+	/*background: #EDEDD3;*/
 	margin: -15px -15px 15px -15px;
 	padding: 15px;
 }
