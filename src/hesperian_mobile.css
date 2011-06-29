@@ -15,11 +15,11 @@ Workaround for iPhone / WebKit bug where headers and footers can disappear after
 
 /* start of css for sequence-bar*/
 .sequence-bar {
-	border-bottom: 2px solid #6B94BC;
+	/*border-bottom: 2px solid #6B94BC;
 	border-top: 2px solid #efefef;
 	background-color: #DDE6F2;
 	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFFFFF), to(#DDE6F2), color-stop(.5,#EDF1F8));
-	background: -moz-linear-gradient(top, #FFFFFF 0%, #EDF1F8 50%, #DDE6F2 100%);
+	background: -moz-linear-gradient(top, #FFFFFF 0%, #EDF1F8 50%, #DDE6F2 100%);*/
 }
  
 .sequence-bar h2.sequence-title {
@@ -28,9 +28,12 @@ Workaround for iPhone / WebKit bug where headers and footers can disappear after
 	text-align: center;
 	white-space: nowrap;
 	margin-bottom:0;
+	color: #066;
+	font-weight:bold;
 }
 
 .sequence-dots {
+	margin-top: 5px;
 	text-align: center;
 }
 
