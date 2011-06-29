@@ -1,4 +1,4 @@
-{% set pagetitle = "How to take blood pressure" %}
+{% set pagetitle = "How to take <br>blood pressure" %}
 {% set seq_length = 5 %}
 {% set seq_position = 1 %}
 {% set seq_llink = "javascript:;" %}		## set rlink equal to next page href
@@ -12,10 +12,11 @@
 				<img src="images/chunked_30.gif" width="60%"/>
 			</div>
 			<p class="clear">1. Fasten the cuff around the bare upper arm.</p>
-
+			
+		{% endblock %}
+		{% block footer %}
 			<div class="hm-content-relatedlinks">
 				<span class="hm-content-strong">Related information:</span>	
 				<a href="javascript:;" data-role="button" data-theme="c">If she has high blood pressure</a>
 			</div>
-			
 		{% endblock %}

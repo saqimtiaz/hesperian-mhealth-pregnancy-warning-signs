@@ -37,6 +37,12 @@
 	<div data-role="content">
 		{% block content %}{% endblock %}	
 	</div><!-- /content -->
+	{%- set seq_length = seq_length %}  ##re-assign variables or they arent passed to included templates, possible bug
+	{%- set seq_position = seq_position %}
+	{%- set seq_rlink = seq_rlink %}
+	{%- set seq_llink = seq_llink %}
+	{%- set pagetitle = pagetitle %}
+{% include 'templates.jinja/base.page.sequence-bottom.html' with context %}
 	{% block footer %}{% endblock %}
 </div><!-- /{{ self.id() }} -->
 {% endblock %}

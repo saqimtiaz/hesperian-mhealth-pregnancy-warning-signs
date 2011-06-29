@@ -1,4 +1,4 @@
-{% set pagetitle = "How to take blood pressure" %}
+{% set pagetitle = "How to take <br>blood pressure" %}
 {% set seq_length = 5 %}
 {% set seq_position = 4 %}
 {% set seq_llink = "How_to_take_blood_pressure3.html" %}		## set rlink equal to next page href
@@ -18,6 +18,9 @@
 				5. As you pump, the needle will move. When it reaches 200 stop pumping.
 			</p>
 			<span class="clear"></span>
+
+		{% endblock %}
+		{% block footer %}
 			<div class="hm-content-relatedlinks">
 				<span class="hm-content-strong">Related information:</span>
 				<a href="javascript:;" data-role="button" data-theme="c">If she has high blood pressure</a>
