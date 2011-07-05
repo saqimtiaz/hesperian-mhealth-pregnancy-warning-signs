@@ -279,3 +279,7 @@ h2.hm-pagetitle {
 .hm-content-relatedlinks {
 	margin-top: 20px;
 }
+
+.hm-disabled {
+	background: #ccc;
+}
