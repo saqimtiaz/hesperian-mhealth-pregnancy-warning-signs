@@ -138,7 +138,7 @@ div.hm-content-relatedlinks {
 	background-size: 50px auto;
 	padding-left: 50px;
 	margin-left: -10px;*/
-	margin: 15px 0 0;
+	margin: 5px 0 0;
 	clear: both;
 	border-top: 1px solid #87A9D3;
 	padding: 25px 15px 10px;
@@ -211,6 +211,10 @@ ul.hm-content-noindent {
 	padding-left: 10px;
 }
 
+ol.hm-content-noindent {
+	padding-left: 20px;
+}
+
 ul.hm-content-spacedlist li{
 	margin-bottom: 1em;
 }
@@ -276,10 +280,18 @@ h2.hm-pagetitle {
 }
 
 
-.hm-content-relatedlinks {
+.hm-swipe .hm-content-relatedlinks {
 	margin-top: 20px;
 }
 
 .hm-disabled {
 	background: #ccc;
+	color: #777;
+}
+
+.hm-content-important {
+	background: #FFCC99;
+	border: 2px solid #FF9966;
+	font-weight: bold;
+	padding: 5px 10px;
 }
