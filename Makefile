@@ -12,7 +12,7 @@
 # JQuery (minus .js / .css extension)
 JQUERY ?= jquery-1.5.1.min
 # JQuery mobile version (minus .js / .css extension)
-JQM ?= jquery.mobile-1.0b1.min
+JQM ?= jquery.mobile-1.0b1
 # Directory in jslib containing JQM files
 JQMDIR ?= jquery.mobile
 # phonegap version (minus .js / .css extension)
@@ -56,6 +56,10 @@ else
 endif
 	# Merge the javascript into one .js file
 	for f in $(JSOBJ); do cat $$f >> $(DESTDIR)/hesperian_mobile.js; done;
+	# apply patches - but that only works for non-minified sources
+ifneq ($(suffix $(JQM)),min)
+	patch $(DESTDIR)/hesperian_mobile.js jslib/jquery.mobile/hm.patch
+endif
 	# create the main ccs file
 	for f in $(CSSIMPORT); do echo @import url\(\'$$f\'\)\; >> $(DESTDIR)/hesperian_mobile.css; done ;
 	cat src/$(CSS).css >> $(DESTDIR)/hesperian_mobile.css
@@ -73,7 +77,10 @@ manifest:
 	
 html: htmldest manifest
 
-phonegap: htmldest
+clean-phonegap:
+	@- rm -R phonegap/www/*
+
+phonegap: clean-phonegap htmldest
 
 fetch-jqm-latest:
 	# fetch and extract the latest daily build of JQM
@@ -98,6 +105,8 @@ latest-html:
 	make JQUERY=jquery-1.6.1.min JQM=jquery.mobile.min JQMDIR=latest/jquery.mobile phonegap
 latest-phonegap:
 	make JQUERY=jquery-1.6.1.min JQM=jquery.mobile.min JQMDIR=latest/jquery.mobile html
+dev-phonegap:
+	make JQUERY=jquery-1.6.1.min JQM=jquery.mobile JQMDIR=jquery.mobile.latest/jquery.mobile/ phonegap
 
 # Builds without jquery or JQM - only our own explicit jslib/standalone.js
 nojq-html:

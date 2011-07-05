@@ -11,7 +11,7 @@ PWD=$(shell pwd)
 all: testbuild
 
 testbuild:
-	xcodebuild -activetarget -configuration "$(CONFIGURATION)" build
+	xcodebuild -configuration "$(CONFIGURATION)" build
 	 /usr/bin/xcrun -sdk iphoneos PackageApplication -v "$(RELEASE_BUILDDIR)/$(APPLICATION_NAME).app" -o "$(PWD)/$(APPLICATION_NAME).ipa" --sign "$(DEVELOPER_NAME)" --embed "$(PROVISONING_PROFILE)"
 	@echo "Created $(APPLICATION_NAME).ipa"
 
