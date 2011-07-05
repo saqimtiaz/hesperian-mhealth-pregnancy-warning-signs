@@ -8,7 +8,7 @@ function isiPhone(){
 };
 
 $(document).bind("mobileinit", function(){
-	$.mobile.defaultTransition = "none";
+	$.mobile.defaultPageTransition = "none";
 	//$.mobile.hashListeningEnabled = false;
 });
 

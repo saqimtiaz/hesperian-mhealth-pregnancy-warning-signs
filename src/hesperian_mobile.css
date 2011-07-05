@@ -35,6 +35,11 @@ Workaround for iPhone / WebKit bug where headers and footers can disappear after
 .sequence-dots {
 	margin-top: 5px;
 	text-align: center;
+	
+}
+
+.sequence-bar-bottom  .sequence-dots{
+	padding-top: 10px;
 }
 
 .circle{
@@ -55,18 +60,18 @@ Workaround for iPhone / WebKit bug where headers and footers can disappear after
 .circle.active {
 	background:#444;
 }
-
+/*
 .seq-nav-button img {
 	height: 21px;
 	width: 13px;
 }
-
-.seq-nav-button-left img{
+*/
+.seq-nav-button-left{
 	float:left;
 	margin-left:5px;
 }
 
-.seq-nav-button-right img{
+.seq-nav-button-right{
 	float:right;
 	margin-right:5px;
 }

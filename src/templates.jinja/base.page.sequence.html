@@ -4,8 +4,8 @@
 		seq-position attribute is equivalent to position of current page in sequence 
 	-->	
 		<h2 class="sequence-title">
-			<a href="{{ seq_llink }}" class="seq-nav-button seq-nav-button-left{{ ' %s' % 'hidden' if seq_llink == 'javascript:;' }}" {{ '%s' % 'disabled="true"' if seq_llink == 'javascript:;' }} data-direction="reverse"><img src="images/l-arrow.png"/></a>
-			<a href="{{ seq_rlink }}" class="seq-nav-button seq-nav-button-right{{ ' %s' % 'hidden' if seq_rlink == 'javascript:;' }}" {{ '%s' % 'disabled="true"' if seq_rlink == 'javascript:;' }}><img src="images/r-arrow.png"/></a>
+			<a href="{{ seq_llink }}" class="seq-nav-button seq-nav-button-left{{ ' %s' % 'hidden' if seq_llink == 'javascript:;' }}" {{ '%s' % 'disabled="true"' if seq_llink == 'javascript:;' }} data-direction="reverse" data-role="button" data-icon="arrow-l" data-iconpos="notext"> - </a>
+			<a href="{{ seq_rlink }}" class="seq-nav-button seq-nav-button-right{{ ' %s' % 'hidden' if seq_rlink == 'javascript:;' }}" {{ '%s' % 'disabled="true"' if seq_rlink == 'javascript:;' }} data-role="button" data-icon="arrow-r" data-iconpos="notext"> - </a>
 			<span>{{ pagetitle }}</span>		
 		</h2>
 		<div class="sequence-dots"></div>
