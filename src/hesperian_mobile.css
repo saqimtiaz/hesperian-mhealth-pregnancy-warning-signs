@@ -191,7 +191,7 @@ h2.hm-content-menuheading {
 	margin-top: 0;
 	font-size: 190%;
 	text-align: center;
-	margin-bottom: 35px;
+	margin-bottom: 25px;
 }
 
 h2.hm-content-submenuheading {
@@ -249,6 +249,10 @@ ul.hm-menu .ui-li-has-thumb .ui-btn-inner a.ui-link-inherit, ul.hm-menu .ui-li-s
 
 .hm-menu-linkwrapper-doubleline {
 	margin-top: 13px;
+}
+
+ul.hm-menu.hm-top-menu {
+	margin-top:15px;
 }
 
 .ui-header .hm-home .ui-btn-corner-all,.ui-header .hm-home.ui-btn-corner-all {
@@ -338,4 +342,16 @@ div.sequence-bar a.hm-seq-btn.ui-btn, div.sequence-bar a.hm-seq-btn .ui-btn-inne
 
 div.sequence-bar a.hm-seq-btn.ui-btn-corner-all, div.sequence-bar a.hm-seq-btn .ui-btn-corner-all {
 	border-radius: 0;
+}
+
+.hm-logo {
+	margin-top:30px;
+}
+
+.ui-corner-bottom img {
+	border-bottom-left-radius:0.6em;
+}
+
+.ui-corner-top img {
+	border-top-left-radius:0.6em;
 }
