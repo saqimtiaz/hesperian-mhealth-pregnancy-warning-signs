@@ -33,7 +33,7 @@ Workaround for iPhone / WebKit bug where headers and footers can disappear after
 }
 
 .sequence-dots {
-	margin-top: 5px;
+	margin-top: 8px;
 	text-align: center;
 	
 }
@@ -303,4 +303,39 @@ h2.hm-pagetitle {
 
 body {
 	-webkit-user-select: none;
+}
+
+div.sequence-bar a.hm-seq-btn.ui-btn, div.sequence-bar a.hm-seq-btn.ui-btn.ui-btn-up-g{
+	font-size: 90%;
+	padding: 0.2em 0;
+	text-decoration:none;
+	color: #006666;
+	border: 2px solid #CCC;
+
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, rgb(228,237,211)),
+		color-stop(1, rgb(255,255,255))
+	);
+	background-image: -moz-linear-gradient(
+		center bottom,
+		rgb(228,237,211) 0%,
+		rgb(255,255,255) 100%
+	);
+
+}
+
+div.sequence-bar a.hm-seq-btn.ui-btn.ui-btn-hover-g, div.sequence-bar a.hm-seq-btn.ui-btn.ui-btn-down-g {
+	background: rgb(228,237,211);
+}
+
+
+div.sequence-bar a.hm-seq-btn.ui-btn, div.sequence-bar a.hm-seq-btn .ui-btn-inner {
+	display:inline;
+}
+
+div.sequence-bar a.hm-seq-btn.ui-btn-corner-all, div.sequence-bar a.hm-seq-btn .ui-btn-corner-all {
+	border-radius: 0;
 }
