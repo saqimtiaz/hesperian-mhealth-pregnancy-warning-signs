@@ -225,15 +225,17 @@ ul.hm-content-spacedlist li{
 }
 
 ul.hm-menu .ui-li-thumb, ul.hm-menu .ui-li-icon {
-	height: 80px;
-	width: 120px;
-	max-height: 80px;
-    max-width: 90px;
+	height: 76px;
+	width: 76px;
+	max-height: 76px;
+    max-width: 76px;
 }
 
 ul.hm-menu .ui-li-has-thumb .ui-btn-inner a.ui-link-inherit, ul.hm-menu .ui-li-static.ui-li-has-thumb {
-    padding-left: 100px;
+    padding-left: 88px;
     padding-right: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
 }
 
 .hm-menu-linkwrapper {
