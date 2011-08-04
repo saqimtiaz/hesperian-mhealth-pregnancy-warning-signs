@@ -411,6 +411,7 @@
 				GCC_PREFIX_HEADER = "HesperianMobile-Prefix.pch";
 				INFOPLIST_FILE = "HesperianMobile-Info.plist";
 				PRODUCT_NAME = "Saving Mothers' Lives";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Debug;
 		};
@@ -423,6 +424,7 @@
 				GCC_PREFIX_HEADER = "HesperianMobile-Prefix.pch";
 				INFOPLIST_FILE = "HesperianMobile-Info.plist";
 				PRODUCT_NAME = "Saving Mothers' Lives";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
