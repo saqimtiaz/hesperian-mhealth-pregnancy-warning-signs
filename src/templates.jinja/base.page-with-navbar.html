@@ -1,16 +1,6 @@
 <!DOCTYPE html>
 <html manifest="cache.manifest">
-<head>
-	{% block head %}
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
-
-    <title>{% block title %}Saving Mothers' Lives{% endblock %}</title>
-	
-	<link rel="stylesheet" href="hesperian_mobile.css" />
-	<script src="hesperian_mobile.js"></script>
-	{% endblock %}
-</head>
+{% include 'templates.jinja/base.head.html' %}
 
   
 <body>
