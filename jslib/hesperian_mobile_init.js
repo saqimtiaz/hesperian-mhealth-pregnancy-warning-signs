@@ -33,6 +33,23 @@ $("div:jqmData(role='page')").live('pagebeforecreate',function(event){
 	}
 });
 
+$("div:jqmData(role='page')").live("pageshow",function(event) {
+	if ($(this).attr("swipe") == "true") {
+		var el = $("div.sequence-bar-bottom",this);
+	/*	if ( $(window).scrollTop() + $(window).height() > el.offset().top ) {
+			console.log("in view");
+		} else {
+			console.log("hidden");
+		}
+	*/
+	//console.log($(document).height() - $(window).height() - $("div.ui-header",this).height() - $("div.sequence-bar:first",this).height());
+		if ( $(document).height() - $(window).height() - $("div.ui-header",this).height() - $("div.sequence-bar:first",this).height() + 20 < 0) {
+		//	console.log(el);
+			el.hide();
+		}
+	}
+});
+
 /* *** Commenting out swiping code
 //binds swipe events to the specified elements and maps them to clicks on the previous and next links based on them having the appropriate class
 function swipeToClick(el) {
