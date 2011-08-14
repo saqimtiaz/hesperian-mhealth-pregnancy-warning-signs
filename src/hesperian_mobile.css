@@ -267,12 +267,11 @@ ul.hm-menu.hm-top-menu {
 }
 
 .ui-header .ui-btn-left {
-	top: 0.8em;
 	left: 5px;
 }
 .ui-header .ui-title {
 	overflow:visible;
-	margin: 0.6em 80px;
+	margin: 0.7em 80px;
 }
 
 .ui-header .hm-home .ui-btn-inner {
@@ -356,4 +355,27 @@ div.sequence-bar a.hm-seq-btn.ui-btn-corner-all, div.sequence-bar a.hm-seq-btn .
 
 .ui-corner-top img {
 	border-top-left-radius:0.6em;
+}
+
+#hm-keepreading {
+	font-family: Helvetica,Arial,sans-serif;
+	font-size: 95%;
+	position:absolute;
+	z-index:2;
+	display: none;
+	right:0px;
+	background: rgb(0,0,0); opacity: 0.75;
+	color:white;
+	padding: 0.3em 0 0.5em 0.3em;
+	border-top-left-radius:0.4em;
+	border-bottom-left-radius:0.4em;
+}
+
+
+.ui-header a.hm-circle .ui-btn-inner {
+	padding:0;
+}
+
+.ui-header a.hm-circle .ui-btn-corner-all, .ui-header a.hm-circle.ui-btn-corner-all {
+	border-radius:1em;
 }
