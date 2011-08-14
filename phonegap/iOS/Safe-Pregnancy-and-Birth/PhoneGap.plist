@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>DetectPhoneNumber</key>
-	<true/>
+	<false/>
 	<key>TopActivityIndicator</key>
 	<string>gray</string>
 	<key>EnableLocation</key>
 	<false/>
 	<key>EnableAcceleration</key>
-	<true/>
+	<false/>
 	<key>EnableViewportScale</key>
 	<false/>
 	<key>AutoHideSplashScreen</key>
