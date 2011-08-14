@@ -8,9 +8,10 @@
 <!-- {% block id %}{% endblock %} -->
 <div data-role="page" id="{{ self.id() }}" data-theme="b">
 	{% block header %}
-	<div data-role="header">
+	<div data-role="header" data-theme="b">
 		<a href="" class="ui-btn-left" data-icon="arrow-l" data-rel="back">Back</a>
-		<h1><a href="index.html" rel="external" data-role="button" data-direction="reverse" class="hm-home">{% block headertitle %}Saving Mothers' Lives{% endblock %}</a></h1>
+		<h1>{% block headertitle %}Safe Pregnancy &amp; Birth{% endblock %}</h1>
+		<a href="index.html" class="ui-btn-right hm-circle" data-icon="home" data-iconpos="notext" data-direction="reverse">Home</a> 
 {% include 'templates.jinja/base.page.navbar.html' %}
 	</div>
 	{% endblock %}
