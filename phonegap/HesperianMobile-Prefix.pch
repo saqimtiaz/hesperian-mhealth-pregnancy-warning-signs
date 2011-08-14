@@ -1,8 +1,0 @@
-//
-// Prefix header for all source files of the 'HesperianMobile' target in the 'HesperianMobile' project
-//
-
-#ifdef __OBJC__
-    #import <Foundation/Foundation.h>
-    #import <UIKit/UIKit.h>
-#endif
