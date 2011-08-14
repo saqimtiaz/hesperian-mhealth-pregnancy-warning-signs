@@ -33,6 +33,7 @@ $("div:jqmData(role='page')").live('pagebeforecreate',function(event){
 	}
 });
 
+/* *** Commenting out swiping code
 //binds swipe events to the specified elements and maps them to clicks on the previous and next links based on them having the appropriate class
 function swipeToClick(el) {
 	$(el).bind("swiperight swipeleft", function(event) {
@@ -57,5 +58,6 @@ $("div:jqmData(role='page')").live("pagecreate",function(event) {
 	if (page.attr("swipe") == "true")
 		swipeToClick(page);
 });
+** end swiping code */
 
 // jquery mobile configuration
