@@ -10,11 +10,11 @@
 #
 
 # JQuery (minus .js / .css extension)
-JQUERY ?= jquery-1.5.1.min
+JQUERY ?= jquery-1.6.2.min
 # JQuery mobile version (minus .js / .css extension)
-JQM ?= jquery.mobile-1.0b1
+JQM ?= jquery.mobile-1.0b2.min
 # Directory in jslib containing JQM files
-JQMDIR ?= jquery.mobile
+JQMDIR ?= jquery.mobile-1.0b2
 # phonegap version (minus .js / .css extension)
 PHONEGAP ?= phonegap.0.9.5.1.min
 
@@ -56,10 +56,6 @@ else
 endif
 	# Merge the javascript into one .js file
 	for f in $(JSOBJ); do cat $$f >> $(DESTDIR)/hesperian_mobile.js; done;
-	# apply patches - but that only works for non-minified sources
-ifneq ($(suffix $(JQM)),min)
-	patch $(DESTDIR)/hesperian_mobile.js jslib/jquery.mobile/hm.patch
-endif
 	# create the main ccs file
 	for f in $(CSSIMPORT); do echo @import url\(\'$$f\'\)\; >> $(DESTDIR)/hesperian_mobile.css; done ;
 	cat src/$(CSS).css >> $(DESTDIR)/hesperian_mobile.css

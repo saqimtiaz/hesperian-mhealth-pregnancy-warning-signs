@@ -1,5 +1,5 @@
 CONFIGURATION=Release
-APPLICATION_NAME=HesperianMobile
+APPLICATION_NAME=Saving Mothers' Lives
 RELEASE_BUILDDIR= ./build/Release-iphoneos
 DEVELOPER_NAME=Matthew Litwin (763465CPK9)
 PROVISONING_PROFILE=HesperianMobileTest.mobileprovision
