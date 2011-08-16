@@ -1,6 +1,8 @@
 	<div class="sequence-bar sequence-bar-bottom" seq-length="{{seq_length}}" seq-position="{{seq_position}}">
-		<a href="{{ seq_llink }}" class="seq-nav-button seq-nav-button-left{{ ' %s' % 'hidden' if seq_llink == 'javascript:;' }}" {{ '%s' % 'disabled="true"' if seq_llink == 'javascript:;' }} data-direction="reverse" data-role="button" data-icon="arrow-l" data-iconpos="notext"> - </a>
-		<a href="{{ seq_rlink }}" class="seq-nav-button seq-nav-button-right{{ ' %s' % 'hidden' if seq_rlink == 'javascript:;' }}" {{ '%s' % 'disabled="true"' if seq_rlink == 'javascript:;' }} data-role="button" data-icon="arrow-r" data-iconpos="notext"> - </a>
+		{% if seq_rlink != seq_llink %}
+			<a href="{{ seq_llink }}" class="seq-nav-button seq-nav-button-left{{ ' %s' % 'hidden' if seq_llink == 'javascript:;' }}" {{ '%s' % 'disabled="true"' if seq_llink == 'javascript:;' }} data-direction="reverse" data-role="button" data-icon="arrow-l" data-iconpos="notext"> - </a>
+			<a href="{{ seq_rlink }}" class="seq-nav-button seq-nav-button-right{{ ' %s' % 'hidden' if seq_rlink == 'javascript:;' }}" {{ '%s' % 'disabled="true"' if seq_rlink == 'javascript:;' }} data-role="button" data-icon="arrow-r" data-iconpos="notext"> - </a>
+		{% endif %}
 		<div class="sequence-dots"></div>
 		<span class="clear"></span>
 	</div><!-- /sequence-bar-->
