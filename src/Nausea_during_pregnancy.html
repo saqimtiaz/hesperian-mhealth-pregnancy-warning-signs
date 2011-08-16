@@ -1,0 +1,32 @@
+{% set pagetitle = '<a href="Common_complaints_during_pregnancy.html" rel="external" class="hm-seq-btn" data-role="button" data-theme="g">Common complaints</a>' %}
+{% set seq_length = 4 %}
+{% set seq_position = 3 %}
+{% set seq_llink = "javascript:;" %}		## set rlink equal to next page href
+{% set seq_rlink = "javascript:;" %}		## set llink equal to previous page href
+{% extends "templates.jinja/base.page-with-sequence.html" %}
+{% block title %} Hesperian - Pregnancy &amp; Birth{% endblock %}
+{% block id %}Nausea_during_pregnancy{% endblock %}
+
+		{% block content %}
+			<h2 class="hm-pagetitle">Nausea</h2>
+			<div class="hm-horizontal-center">
+				<img src="images/MW0204.png" width="70%"/>
+			</div>
+			<p>Many women have nausea in the first months of pregnancy. No one knows for sure what causes this, but for many women, they way they eat affects it. If the nausea is mild, encourage the woman to try any of these remedies:</p>
+			<ul class="hm-content-noindent">
+				<li>Eat a food that has protein before bed or in the night. Some good foods with protein are beans, nuts, and cheese.</li>
+				<li>Eat a few crackers, dry bread, dry tortillas, dry chapattis, or other grain food when she first wakes in the morning.</li>
+				<li>Eat many small meals instead of 2 or 3 larger ones, and take small sips of liquid often.</li>
+				<li>Take 50 milligrams vitamin B-6, 2 times a day (Do not take more).</li>
+				<li>Drink a cup of ginger, mint, or cinnamon tea 2 or 3 times a day, before meals.</li>
+			</ul>
+			<ul data-role="listview" data-theme="b" data-inset="true" class="hm-content-essentiallinks clear">
+				<li><a href="Cravings_during_pregnancy.html" rel="external">Other common complaints</a></li>
+			</ul>			
+		{% endblock %}
+		{% block footer %}
+			<div class="hm-content-relatedlinks">
+				<span class="hm-content-strong">Related information:</span>	
+				<a href="javascript:;" data-role="button" data-theme="c">Signs of anemia</a>
+			</div>
+		{% endblock %}

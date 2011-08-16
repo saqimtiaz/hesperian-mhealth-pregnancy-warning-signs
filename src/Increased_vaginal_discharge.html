@@ -1,0 +1,24 @@
+{% set pagetitle = '<a href="Common_complaints_during_pregnancy.html" rel="external" class="hm-seq-btn" data-role="button" data-theme="g">Common complaints</a>' %}
+{% set seq_length = 4 %}
+{% set seq_position = 2 %}
+{% set seq_llink = "javascript:;" %}		## set rlink equal to next page href
+{% set seq_rlink = "javascript:;" %}		## set llink equal to previous page href
+{% extends "templates.jinja/base.page-with-sequence.html" %}
+{% block title %} Hesperian - Pregnancy &amp; Birth{% endblock %}
+{% block id %}Increased_vaginal_discharge{% endblock %}
+
+		{% block content %}
+			<h2 class="hm-pagetitle">Increased vaginal discharge</h2>
+			<img src="images/STD03.png" width="35%" class="hm-content-imgright"/>
+			<p>Discharge is the wetness all women have from thevagina. Pregnant women often have a a lot of discharge, especially near the end of pregnancy. It may be clear or yellowish. This is normal.</p>
+			<p class="clear">Changes in discharge can be a sign of an infection if the discharge is gray, green, lumpy, or has a bad smell, or if the vagina itches or burns. She should see a health worker if there are any of these signs.</p>
+			<ul data-role="listview" data-theme="b" data-inset="true" class="hm-content-essentiallinks clear">
+				<li><a href="Nausea_during_pregnancy.html" rel="external">Other common complaints</a></li>
+			</ul>			
+		{% endblock %}
+		{% block footer %}
+			<div class="hm-content-relatedlinks">
+				<span class="hm-content-strong">Related information:</span>	
+				<a href="javascript:;" data-role="button" data-theme="c">Signs of anemia</a>
+			</div>
+		{% endblock %}

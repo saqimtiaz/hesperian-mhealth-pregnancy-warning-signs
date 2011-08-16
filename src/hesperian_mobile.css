@@ -316,7 +316,7 @@ div.sequence-bar a.hm-seq-btn.ui-btn, div.sequence-bar a.hm-seq-btn.ui-btn.ui-bt
 	text-decoration:none;
 	color: #006666;
 	border: 2px solid #CCC;
-
+	margin:0;
 	background-image: -webkit-gradient(
 		linear,
 		left bottom,
@@ -339,6 +339,10 @@ div.sequence-bar a.hm-seq-btn.ui-btn.ui-btn-hover-g, div.sequence-bar a.hm-seq-b
 
 div.sequence-bar a.hm-seq-btn.ui-btn, div.sequence-bar a.hm-seq-btn .ui-btn-inner {
 	display:inline;
+}
+
+div.sequence-bar a.hm-seq-btn .ui-btn-inner {
+	padding: 0.6em 15px;
 }
 
 div.sequence-bar a.hm-seq-btn.ui-btn-corner-all, div.sequence-bar a.hm-seq-btn .ui-btn-corner-all {
@@ -400,4 +404,6 @@ div.sequence-bar-bottom div.sequence-dots {
 	border-bottom: none;
 }
 
-
+div.ui-page div.ui-content :last-child {
+	margin-bottom:0;
+}
