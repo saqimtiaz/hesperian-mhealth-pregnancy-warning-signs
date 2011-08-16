@@ -3,7 +3,7 @@
 //  HesperianMobile
 //
 //  Created by Matthew Litwin on 6/11/11.
-//  Copyright 2011 KCP Technologies. All rights reserved.
+//  Copyright 2011 Hesperian. All rights reserved.
 //
 
 #import "HesperianMobile.h"
@@ -35,7 +35,9 @@ static void DisableScrollViewBounce(UIView* view)
  
 @implementation HesperianMobile
 
-- (void) init:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options
+@synthesize callbackID;
+
+- (void) OnDeviceReady:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options
 {
 	DisableScrollViewBounce( self.webView);
 }

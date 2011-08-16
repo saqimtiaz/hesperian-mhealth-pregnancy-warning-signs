@@ -1,8 +1,8 @@
 //
 //  AppDelegate.h
-//  HesperianMobile
+//  Safe-Pregnancy-and-Birth
 //
-//  Created by Matthew Litwin on 6/14/11.
+//  Created by Matthew Litwin on 8/14/11.
 //  Copyright KCP Technologies 2011. All rights reserved.
 //
 
@@ -19,7 +19,7 @@
 }
 
 // invoke string is passed to your app on launch, this is only valid if you 
-// edit HesperianMobile.plist to add a protocol
+// edit Safe-Pregnancy-and-Birth.plist to add a protocol
 // a simple tutorial can be found here : 
 // http://iphonedevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html
 

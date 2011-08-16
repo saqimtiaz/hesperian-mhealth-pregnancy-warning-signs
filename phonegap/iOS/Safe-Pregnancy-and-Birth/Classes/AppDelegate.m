@@ -1,8 +1,8 @@
 //
 //  AppDelegate.m
-//  HesperianMobile
+//  Safe-Pregnancy-and-Birth
 //
-//  Created by Matthew Litwin on 6/14/11.
+//  Created by Matthew Litwin on 8/14/11.
 //  Copyright KCP Technologies 2011. All rights reserved.
 //
 
@@ -36,21 +36,19 @@
 	{
 		NSURL *url = [launchOptions objectForKey:[keyArray objectAtIndex:0]];
 		self.invokeString = [url absoluteString];
-		NSLog(@"HesperianMobile launchOptions = %@",url);
+		NSLog(@"Safe-Pregnancy-and-Birth launchOptions = %@",url);
 	}
 	
 	return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }
 
 // this happens while we are running ( in the background, or from within our own app )
-// only valid if HesperianMobile.plist specifies a protocol to handle
+// only valid if Safe-Pregnancy-and-Birth.plist specifies a protocol to handle
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url 
 {
-	// Do something with the url here
-	NSString* jsString = [NSString stringWithFormat:@"handleOpenURL(\"%@\");", url];
-	[webView stringByEvaluatingJavaScriptFromString:jsString];
-	
-	return YES;
+    // must call super so all plugins will get the notification, and their handlers will be called 
+	// super also calls into javascript global function 'handleOpenURL'
+    return [super application:application handleOpenURL:url];
 }
 
 -(id) getCommandInstance:(NSString*)className
@@ -66,7 +64,7 @@
  */
 - (void)webViewDidFinishLoad:(UIWebView *)theWebView 
 {
-	// only valid if HesperianMobile.plist specifies a protocol to handle
+	// only valid if Safe-Pregnancy-and-Birth.plist specifies a protocol to handle
 	if(self.invokeString)
 	{
 		// this is passed before the deviceready event is fired, so you can access it in js when you receive deviceready

@@ -10,7 +10,22 @@
 	<false/>
 	<key>EnableAcceleration</key>
 	<false/>
+	<key>EnableViewportScale</key>
+	<false/>
+	<key>AutoHideSplashScreen</key>
+	<true/>
+	<key>ShowSplashScreenSpinner</key>
+	<true/>
 	<key>ExternalHosts</key>
 	<array/>
+	<key>Plugins</key>
+	<dict>
+		<key>HesperianMobile</key>
+		<string>HesperianMobile</string>
+		<key>com.phonegap.accelerometer</key>
+		<string>PGAccelerometer</string>
+		<key>com.phonegap.splashscreen</key>
+		<string>PGSplashScreen</string>
+	</dict>
 </dict>
 </plist>

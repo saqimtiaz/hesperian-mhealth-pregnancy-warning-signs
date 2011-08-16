@@ -16,7 +16,7 @@ JQM ?= jquery.mobile-1.0b2.min
 # Directory in jslib containing JQM files
 JQMDIR ?= jquery.mobile-1.0b2
 # phonegap version (minus .js / .css extension)
-PHONEGAP ?= phonegap.0.9.5.1.min
+PHONEGAP ?= phonegap-1.0.0
 
 # JavaScript sources, in order of page inclusion
 JSOBJ ?= jslib/$(JQUERY).js  jslib/hesperian_mobile_init.js jslib/$(JQMDIR)/$(JQM).js jslib/hesperian_mobile.js
@@ -27,11 +27,11 @@ CSS ?= hesperian_mobile
 CSSIMPORT ?= jquery.mobile/$(JQM).css
 
 # phonegap needs addional javascript
-phonegap: JSOBJ += jslib/$(PHONEGAP).js phonegap/plugins/HesperianMobile.js
+phonegap: JSOBJ += jslib/$(PHONEGAP).js phonegap/Plugins/HesperianMobile.js
 
 # destination directory where we will assemble the app
 html: DESTDIR = html
-phonegap: DESTDIR = phonegap/www
+phonegap: DESTDIR = phonegap/iOS/www
 
 # Combine all the html into one file?
 COMBINEHTML ?= YES
@@ -41,7 +41,7 @@ COMBINEHTML ?= YES
 all: html 
 
 htmldest:
-	@-rm -R $(DESTDIR)
+	-rm -R $(DESTDIR)
 	@-mkdir $(DESTDIR)
 	# Copy the raw html source from the src directory
 	cp -R src/images $(DESTDIR)/images
@@ -74,7 +74,7 @@ manifest:
 html: htmldest manifest
 
 clean-phonegap:
-	@- rm -R phonegap/www/*
+	@- rm -R phonegap/iOS/www/*
 
 phonegap: clean-phonegap htmldest
 
@@ -88,7 +88,7 @@ fetch-jqm-latest:
 
 clean:
 	@- rm -R html
-	@- rm -R phonegap/www/*
+	@- rm -R phonegap/iOS/www/*
 	@- rm -R src/rendered
 	@- rm -R jslib/latest
 
