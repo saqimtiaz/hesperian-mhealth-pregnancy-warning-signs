@@ -304,6 +304,7 @@ h2.hm-pagetitle {
 	border: 2px solid #FF9966;
 	font-weight: bold;
 	padding: 5px 10px;
+	overflow:auto;
 }
 
 body {
