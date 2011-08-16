@@ -305,6 +305,7 @@ h2.hm-pagetitle {
 	font-weight: bold;
 	padding: 5px 10px;
 	overflow:auto;
+	text-align:center;
 }
 
 body {
