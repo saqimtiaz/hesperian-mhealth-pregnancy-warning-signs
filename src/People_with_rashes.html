@@ -1,0 +1,19 @@
+{% set pagetitle = '<a href="Things_to_avoid_during_pregnancy.html" rel="external" class="hm-seq-btn" data-role="button" data-theme="g">Things to avoid</a>' %}
+{% set seq_length = 5 %}
+{% set seq_position = 1 %}
+{% set seq_llink = "javascript:;" %}		## set rlink equal to next page href
+{% set seq_rlink = "javascript:;" %}		## set llink equal to previous page href
+{% extends "templates.jinja/base.page-with-sequence.html" %}
+{% block title %} Hesperian - Pregnancy &amp; Birth{% endblock %}
+{% block id %}People_with_rashes{% endblock %}
+
+		{% block content %}
+			<h2 class="hm-pagetitle">People with rashes and other sicknesses</h2>
+			<img src="images/MW0135_.png" width="45%" class="hm-content-imgright"/>
+			<p>Some sicknesses are particularly dangerous to pregnant women or their babies. Rubella (German measles) is one sickness that can cause serious birth defects in the baby, including deafness and heart problems. It can even cause death.</p>
+			<p class="clear">Pregnant women should stay away from people with sicknesses or rashes.</p>
+			<ul data-role="listview" data-theme="b" data-inset="true" class="hm-content-essentiallinks">
+				<li><a href="Smoking_and_alcohol.html" rel="external">Other things to avoid</a></li>
+			</ul>
+		{% endblock %}
+

@@ -1,0 +1,18 @@
+{% set pagetitle = '<a href="Things_to_avoid_during_pregnancy.html" rel="external" class="hm-seq-btn" data-role="button" data-theme="g">Things to avoid</a>' %}
+{% set seq_length = 5 %}
+{% set seq_position = 2 %}
+{% set seq_llink = "javascript:;" %}		## set rlink equal to next page href
+{% set seq_rlink = "javascript:;" %}		## set llink equal to previous page href
+{% extends "templates.jinja/base.page-with-sequence.html" %}
+{% block title %} Hesperian - Pregnancy &amp; Birth{% endblock %}
+{% block id %}Smoking_and_alcohol{% endblock %}
+
+		{% block content %}
+			<h2 class="hm-pagetitle">Smoking, alcohol, and other drugs</h2>
+			<img src="images/MW0143.png" width="35%" class="hm-content-imgright"/>
+			<p>Cigarette smoke, alcohol, and other drugs are all harmful to the mother. When a woman smokes, drinks, or takes drugs, they also pass through her blood to her baby.</p>
+			<ul data-role="listview" data-theme="b" data-inset="true" class="hm-content-essentiallinks clear">
+				<li><a href="Chemicals_and_fumes.html" rel="external">Other things to avoid</a></li>
+			</ul>
+		{% endblock %}
+
