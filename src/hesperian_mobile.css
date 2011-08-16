@@ -289,11 +289,11 @@ h2.hm-pagetitle {
 	font-size: 135%;
 }
 
-
+/**
 .hm-swipe .hm-content-relatedlinks {
 	margin-top: 20px;
 }
-
+**/
 .hm-disabled {
 	background: #bbb;
 	color: #777;
@@ -379,3 +379,25 @@ div.sequence-bar a.hm-seq-btn.ui-btn-corner-all, div.sequence-bar a.hm-seq-btn .
 .ui-header a.hm-circle .ui-btn-corner-all, .ui-header a.hm-circle.ui-btn-corner-all {
 	border-radius:1em;
 }
+
+div.sequence-bar-bottom {
+	padding-bottom : 5px;
+}
+
+.ui-page.hm-swipe .ui-content {
+	padding-bottom:0;
+}
+
+div.sequence-bar-bottom {
+	border-top: none;
+}
+
+div.sequence-bar-bottom div.sequence-dots {
+	margin-top:0;
+}
+
+.ui-content {
+	border-bottom: none;
+}
+
+

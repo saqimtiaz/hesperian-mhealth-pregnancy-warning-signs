@@ -2,7 +2,7 @@
 {% set seq_length = 4 %}
 {% set seq_position = 1 %}
 {% set seq_llink = "javascript:;" %}		## set rlink equal to next page href
-{% set seq_rlink = "Her_blood_pressure.html" %}		## set llink equal to previous page href
+{% set seq_rlink = "javascript:;" %}		## set llink equal to previous page href
 {% extends "templates.jinja/base.page-with-sequence.html" %}
 {% block title %} Hesperian - Pregnancy &amp; Birth{% endblock %}
 {% block id %}Her_temperature{% endblock %}
@@ -31,7 +31,10 @@
 				<li>Feel the need to urinate more often or have pain or burning with urination? She might have a bladder or kidney infection.</li>
 				<li>Feel thirsty, have little or no urine, dry mouth, feel dizzy when standing up or have loss of stretchiness in her skin? She may be dehydrated. Give rehydration drink.</li>
 			</ul>
-			<p>Along with treating the cause, a high fever needs to be lowered right away. </p>
+			<p class="clear">Along with treating the cause, a high fever needs to be lowered right away. </p>
+			<ul data-role="listview" data-theme="b" data-inset="true" class="hm-content-essentiallinks">
+				<li><a href="Her_blood_pressure.html" rel="external">Other things to check</a></li>
+			</ul>
 		{% endblock %}
 		{% block footer %}
 			<div class="hm-content-relatedlinks">
