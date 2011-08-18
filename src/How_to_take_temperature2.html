@@ -1,0 +1,26 @@
+{% set pagetitle = "How to take a temperature<br>using a thermometer" %}
+{% set seq_length = 3 %}
+{% set seq_position = 2 %}
+{% set seq_llink = "How_to_take_temperature1.html" %}		## set rlink equal to next page href
+{% set seq_rlink = "How_to_take_temperature3.html" %}		## set llink equal to previous page href
+{% extends "templates.jinja/base.page-with-sequence.html" %}
+{% block title %} Hesperian - Pregnancy &amp; Birth{% endblock %}
+{% block id %}How_to_take_temperature2{% endblock %}
+
+		{% block content %}	
+		<img src="images/chunked_18.png" class="hm-content-imgright" width="25%"/>
+		<p>Put the thermometer:</p>
+		<p>under the tongue (keep the mouth closed around it)</p>
+		
+		
+		<p class="clear"><img src="images/chunked_19.png" class="hm-content-imgright clear" width="45%"/>OR in the armpit if there is danger that the person might bite the thermometer.</p>
+			
+		{% endblock %}
+		{% block footer %}
+			<div class="hm-content-relatedlinks clear">
+				<span class="hm-content-strong">Related information:</span>	
+				<a href="javascript:;" rel="external" data-role="button" data-theme="c">Fever during pregnancy</a>
+				<a href="javascript:;" rel="external" data-role="button" data-theme="c">Fever during labor</a>
+				<a href="javascript:;" rel="external" data-role="button" data-theme="c">Fever after birth</a>
+			</div>
+		{% endblock %}

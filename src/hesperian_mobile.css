@@ -409,3 +409,21 @@ div.sequence-bar-bottom div.sequence-dots {
 div.ui-page div.ui-content :last-child {
 	margin-bottom:0;
 }
+
+div.ui-page div.ui-content p:first-child {
+	margin-top:0;
+}
+
+.hm-content-alignright {
+	float:right;
+	width: 40%;
+}
+
+.hm-content-alignleft {
+	float:left;
+	width: 55%;
+}
+
+.hm-content-floatcontainer {
+	overflow: auto;
+}

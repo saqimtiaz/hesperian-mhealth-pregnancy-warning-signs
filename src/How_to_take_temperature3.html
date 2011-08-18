@@ -1,0 +1,26 @@
+{% set pagetitle = "How to take a temperature<br>using a thermometer" %}
+{% set seq_length = 3 %}
+{% set seq_position = 3 %}
+{% set seq_llink = "How_to_take_temperature2.html" %}		## set rlink equal to next page href
+{% set seq_rlink = "javascript:;" %}		## set llink equal to previous page href
+{% extends "templates.jinja/base.page-with-sequence.html" %}
+{% block title %} Hesperian - Pregnancy &amp; Birth{% endblock %}
+{% block id %}How_to_take_temperature3{% endblock %}
+
+		{% block content %}	
+			<p>Leave it there for 3 or 4 minutes.</p>
+
+			<p>Read the temperature on the thermometer. You may need to rotate the thermometer to see where the silver line stops.</p>
+
+			<p>Wash the thermometer well with soap and cold water. Then, if you can, soak it for 20 minutes in a bleach solution and rinse with clean water.</p>
+
+		{% endblock %}
+		{% block footer %}
+			<div class="hm-content-relatedlinks clear">
+				<span class="hm-content-strong">Related information:</span>	
+				<a href="javascript:;" rel="external" data-role="button" data-theme="c">Fever during pregnancy</a>
+				<a href="javascript:;" rel="external" data-role="button" data-theme="c">Fever during labor</a>
+				<a href="javascript:;" rel="external" data-role="button" data-theme="c">Fever after birth</a>
+				<a href="How_to_make_bleach_solution.html" rel="external" data-role="button" data-theme="c">How to make a bleach solution</a>
+			</div>
+		{% endblock %}
