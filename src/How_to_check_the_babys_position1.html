@@ -1,0 +1,25 @@
+{% set pagetitle = "How to check <br>the baby's position" %}
+{% set seq_length = 4 %}
+{% set seq_position = 1 %}
+{% set seq_llink = "javascript:;" %}		## set rlink equal to next page href
+{% set seq_rlink = "How_to_check_the_babys_position2.html" %}		## set llink equal to previous page href
+{% extends "templates.jinja/base.page-with-sequence.html" %}
+{% block title %} Hesperian - Pregnancy &amp; Birth{% endblock %}
+{% block id %}How_to_check_baby_position1{% endblock %}
+
+		{% block content %}	
+		<img src="images/chunked_3.png" class="hm-content-imgright" width="35%"/>
+		<div class="hm-content-important">If the baby is sideways at the end of pregnancy or at the time of birth the baby must be born in a hospital.</div>
+		<p class="clear">The baby's bottom is larger and wider and its head is harder and more round.</p>
+		<p>So bottom up feels larger high up...</p>
+		<img src="images/PRE88B.png" class="hm-content-imgright" width="40%"/>
+		<img src="images/PRE88A.png" class="hm-content-imgleft" width="40%"/>
+		<p class="clear">... and bottom down feels larger low down</p>
+		{% endblock %}
+		{% block footer %}
+			<div class="hm-content-relatedlinks">
+				<span class="hm-content-strong">Related information:</span>	
+				<a href="Baby_is_lying_sideways.html" rel="external" data-role="button" data-theme="c">If the baby is sideways</a>
+				<a href="How_to_change_babys_position.html" rel="external" data-role="button" data-theme="c">Exercise to change the baby's position</a>
+			</div>
+		{% endblock %}
