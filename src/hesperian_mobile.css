@@ -220,7 +220,7 @@ ol.hm-content-noindent {
 	padding-left: 20px;
 }
 
-ul.hm-content-spacedlist li{
+ol.hm-content-spacedlist li, ul.hm-content-spacedlist li{
 	margin-bottom: 1em;
 }
 
