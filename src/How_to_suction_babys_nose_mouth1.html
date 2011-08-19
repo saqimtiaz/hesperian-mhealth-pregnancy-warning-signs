@@ -1,0 +1,25 @@
+{% set pagetitle = "How to suction a baby's<br>mouth and nose" %}
+{% set seq_length = 4 %}
+{% set seq_position = 1 %}
+{% set seq_llink = "javascript:;" %}		## set rlink equal to next page href
+{% set seq_rlink = "How_to_suction_babys_nose_mouth2.html" %}		## set llink equal to previous page href
+{% extends "templates.jinja/base.page-with-sequence.html" %}
+{% block title %} Hesperian - Pregnancy &amp; Birth{% endblock %}
+{% block id %}How_to_suction1{% endblock %}
+
+		{% block content %}	
+			<img src="images/bulb.syringe.png" class="hm-content-imgright" width="20%"/>
+			<p>First suction the mouth and throat until they are clear of mucus. Then suction the nose. (Practice using the syringe to suck up water before you use it at birth).</p>
+			<div class="hm-content-floatcontainer clear">
+				<img src="images/syringebulb.squeeze.png" class="hm-content-imgright" width="25%"/>
+				<ol class="hm-content-noindent">
+					<li>Squeeze the syringe.</li>
+				</ol>
+			</div>
+		{% endblock %}
+		{% block footer %}
+			<div class="hm-content-relatedlinks">
+				<span class="hm-content-strong">Related information:</span>	
+				<a href="javascript:;" rel="external" data-role="button" data-theme="c">If the waters are green or brown</a>
+			</div>
+		{% endblock %}

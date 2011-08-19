@@ -410,7 +410,7 @@ div.ui-page div.ui-content :last-child {
 	margin-bottom:0;
 }
 
-div.ui-page div.ui-content p:first-child {
+div.ui-page div.ui-content :first-child {
 	margin-top:0;
 }
 
