@@ -1,8 +1,8 @@
 {% set pagetitle = '<a href="Things_to_check_during_pregnancy.html" rel="external" class="hm-seq-btn" data-role="button" data-theme="g">Things to check</a>' %}
 {% set seq_length = 4 %}
 {% set seq_position = 2 %}
-{% set seq_llink = "Her_temperature.html" %}		## set rlink equal to next page href
-{% set seq_rlink = "The_position_of_the_baby.html" %}		## set llink equal to previous page href
+{% set seq_llink = "javascript:;" %}		## set rlink equal to next page href
+{% set seq_rlink = "javascript:;" %}		## set llink equal to previous page href
 {% extends "templates.jinja/base.page-with-sequence.html" %}
 {% block title %} Hesperian - Pregnancy &amp; Birth{% endblock %}
 {% block id %}Her_blood_pressure{% endblock %}
@@ -25,7 +25,9 @@
 
 			<p>This can be a sign of pre-eclampsia.</p>
 			<p>If her blood pressure is very high (160/110) she has severe pre-eclampsia and needs medical help right away.</p>
-			
+			<ul data-role="listview" data-theme="b" data-inset="true" class="hm-content-essentiallinks">
+				<li><a href="The_position_of_the_baby.html" rel="external">Other things to check</a></li>
+			</ul>
 		{% endblock %}
 		{% block footer %}
 			<div class="hm-content-relatedlinks">
