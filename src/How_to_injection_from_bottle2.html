@@ -1,0 +1,23 @@
+{% set pagetitle = "How to inject medicines<br>into muscle<br><span class='hm-content-subtitle'>If the medicine comes as liquid in a bottle</span>" %}
+{% set seq_length = 7 %}
+{% set seq_position = 2 %}
+{% set seq_llink = "How_to_injection_from_bottle1.html" %}		## set rlink equal to next page href
+{% set seq_rlink = "How_to_injection_from_bottle3.html" %}		## set llink equal to previous page href
+{% extends "templates.jinja/base.page-with-sequence.html" %}
+{% block title %} Hesperian - Pregnancy &amp; Birth{% endblock %}
+{% block id %}Injection_from_bottle2{% endblock %}
+
+		{% block content %}
+		
+		<ul class="hm-content-noindent hm-content-spacedlist hm-content-unstyledlist">
+			<li><img src="images/WTND_72-36.png" class="hm-content-imgright" width="30%"/>3. Turn the bottle upside down. Be sure the tip of the needle points into the medicine inside the bottle and not into the air. Hold the barrel of the syringe still and slowly pull the plunger until the correct amount of medicine enters the syringe. Pull the syringe out of the bottle.</li>
+		</ul>
+		{% endblock %}
+		{% block footer %}
+			<div class="hm-content-relatedlinks clear">
+				<span class="hm-content-strong">Related information:</span>	
+				<a href="javascript:;" rel="external" data-role="button" data-theme="c">Heavy bleeding after birth</a>
+				<a href="javascript:;" rel="external" data-role="button" data-theme="c">If she has severe pre-eclampsia</a>
+				<a href="javascript:;" rel="external" data-role="button" data-theme="c">If she has a seizure</a>
+			</div>
+		{% endblock %}

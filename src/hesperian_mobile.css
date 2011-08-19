@@ -181,7 +181,7 @@ div.hm-content-relatedlinks .ui-btn-corner-all {
 }
 
 .hm-content-essentiallinks .ui-li .ui-btn-inner a.ui-link-inherit {
-	padding-right: 20px;
+	padding-right: 28px;
 	padding-left: 10px;
 	font-size: 100%;
 }
@@ -405,12 +405,12 @@ div.sequence-bar-bottom div.sequence-dots {
 .ui-content {
 	border-bottom: none;
 }
-
-div.ui-page div.ui-content :last-child {
+/*
+div.ui-page div.ui-content *:last-child {
 	margin-bottom:0;
 }
-
-div.ui-page div.ui-content :first-child {
+*/
+div.ui-page div.ui-content *:first-child {
 	margin-top:0;
 }
 
@@ -424,6 +424,19 @@ div.ui-page div.ui-content :first-child {
 	width: 55%;
 }
 
+.hm-content-floatright {
+	float:right;
+}
+
 .hm-content-floatcontainer {
 	overflow: auto;
+}
+
+span.hm-content-subtitle {
+	font-size: 70%;
+}
+
+ol.hm-content-unstyledlist, ul.hm-content-unstyledlist {
+	list-style-type:none;
+	padding-left:0px;
 }
