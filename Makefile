@@ -9,10 +9,11 @@
 # serve the correct content type for the manifest.
 #
 
+JSMIN ?= .min
 # JQuery (minus .js / .css extension)
-JQUERY ?= jquery-1.6.2.min
+JQUERY ?= jquery-1.6.2$(JSMIN)
 # JQuery mobile version (minus .js / .css extension)
-JQM ?= jquery.mobile-1.0b2.min
+JQM ?= jquery.mobile-1.0b2$(JSMIN)
 # Directory in jslib containing JQM files
 JQMDIR ?= jquery.mobile-1.0b2
 # phonegap version (minus .js / .css extension)
@@ -94,7 +95,7 @@ clean:
 
 # Special targets for prototype builds
 profile-html:
-	make JQUERY=jquery-1.6.1 JQM=jquery.mobile html
+	make JSMIN="" html
 
 # Builds with the latests version of JQM
 latest-html:
