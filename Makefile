@@ -69,7 +69,7 @@ endif
 
 manifest:
 	# Create a manifest
-	./bin/create_manifest.pl  $(DESTDIR) >  $(DESTDIR)/cache.manifest
+	./bin/create_manifest.sh  $(DESTDIR) >  $(DESTDIR)/cache.manifest
 	echo "AddType text/cache-manifest .manifest" >  $(DESTDIR)/.htaccess
 	
 html: htmldest manifest
