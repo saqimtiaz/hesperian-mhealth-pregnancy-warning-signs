@@ -4,6 +4,7 @@ RELEASE_BUILDDIR= ./build/Release-iphoneos
 DEVELOPER_NAME=Matthew Litwin (763465CPK9)
 PROVISONING_PROFILE=HesperianMobileTest.mobileprovision
 PWD=$(shell pwd)
+OUTDIR?=output
 
 
 .PHONY: testbuild ipa
@@ -16,4 +17,11 @@ testbuild:
 	@echo "Created $(APPLICATION_NAME).ipa"
 
 clean:
-	rm -r build/ "$(APPLICATION_NAME).ipa"
+	-rm -r build/ "$(APPLICATION_NAME).ipa"
+
+release:
+	make clean;
+	make testbuild
+	mkdir -p $(OUTDIR)
+	cp "$(APPLICATION_NAME).ipa" $(OUTDIR)
+	

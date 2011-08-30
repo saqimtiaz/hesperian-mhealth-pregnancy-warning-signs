@@ -9,6 +9,9 @@
 # serve the correct content type for the manifest.
 #
 
+BUILD=0001
+SITEBUILDDIR=site/www/archive/$(BUILD)
+
 JSMIN ?= .min
 # JQuery (minus .js / .css extension)
 JQUERY ?= jquery-1.6.2$(JSMIN)
@@ -31,8 +34,8 @@ CSSIMPORT ?= jquery.mobile/$(JQM).css
 phonegap: JSOBJ += jslib/$(PHONEGAP).js phonegap/Plugins/HesperianMobile.js
 
 # destination directory where we will assemble the app
-html: DESTDIR = html
-phonegap: DESTDIR = phonegap/iOS/www
+html: DESTDIR ?= html
+phonegap: DESTDIR ?= phonegap/iOS/www
 
 # Combine all the html into one file?
 COMBINEHTML ?= YES
@@ -92,6 +95,11 @@ clean:
 	@- rm -R phonegap/iOS/www/*
 	@- rm -R src/rendered
 	@- rm -R jslib/latest
+
+release:
+	mkdir -p $(SITEBUILDDIR)/app
+	make DESTDIR=$(SITEBUILDDIR)/app html
+	(cd phonegap/iOS/; make OUTDIR=../../$(SITEBUILDDIR) release)
 
 # Special targets for prototype builds
 profile-html:
