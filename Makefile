@@ -100,6 +100,7 @@ release:
 	mkdir -p $(SITEBUILDDIR)/app
 	make DESTDIR=$(SITEBUILDDIR)/app html
 	(cd phonegap/iOS/; make OUTDIR=../../$(SITEBUILDDIR) release)
+	(cd site; make BUILD=$(BUILD) www)
 
 # Special targets for prototype builds
 profile-html:
