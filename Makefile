@@ -101,7 +101,7 @@ release:
 	make DESTDIR=$(SITEBUILDDIR)/app html
 	(cd phonegap/iOS/; make OUTDIR=../../$(SITEBUILDDIR) BUILD=$(BUILD) release)
 	(cd site; make BUILD=$(BUILD) www)
-release-deploy:
+site-deploy:
 	(cd site; make deploy)
 
 # Special targets for prototype builds
