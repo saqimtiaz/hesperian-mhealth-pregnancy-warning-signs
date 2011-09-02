@@ -9,7 +9,7 @@
 # serve the correct content type for the manifest.
 #
 
-BUILD=0001
+BUILD=0002
 SITEBUILDDIR=site/www/archive/$(BUILD)
 
 JSMIN ?= .min
@@ -101,6 +101,8 @@ release:
 	make DESTDIR=$(SITEBUILDDIR)/app html
 	(cd phonegap/iOS/; make OUTDIR=../../$(SITEBUILDDIR) BUILD=$(BUILD) release)
 	(cd site; make BUILD=$(BUILD) www)
+release-deploy:
+	(cd phonegap/iOS/; make deploy)
 
 # Special targets for prototype builds
 profile-html:
