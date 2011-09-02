@@ -5,7 +5,7 @@ DEVELOPER_NAME=Matthew Litwin (763465CPK9)
 PROVISONING_PROFILE=HesperianMobileTest.mobileprovision
 PWD=$(shell pwd)
 OUTDIR?=output
-BUILD?=dev
+BUILD?=0dev
 
 
 .PHONY: testbuild ipa
@@ -13,7 +13,7 @@ BUILD?=dev
 all: testbuild
 
 setbuild:
-	agvtool -noscm new-version -all 1.0.${BUILD}
+	agvtool -noscm new-version -all 1.0.$(shell echo $(BUILD) | sed -e 's/^0*//' )
 
 testbuild: setbuild
 	xcodebuild -configuration "$(CONFIGURATION)" build
