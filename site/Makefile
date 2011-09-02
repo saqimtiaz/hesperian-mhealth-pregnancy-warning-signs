@@ -1,7 +1,8 @@
 # Makefile for creating the hesperian mobile development website
 
 BUILD ?= 0001
-ARCHIVE_DIR=./www/archive/${BUILD}
+ARCHIVE_DIR_BASE=archive/${BUILD}
+ARCHIVE_DIR=./www/$(ARCHIVE_DIR_BASE)
 
 .PHONY: all www deploy-www deploy
 
@@ -13,7 +14,7 @@ all: www
 www:
 	-mkdir -p ${ARCHIVE_DIR}
 	cp ../WhatsNew.txt ${ARCHIVE_DIR}/WhatsNew.txt
-	ln -sf ${ARCHIVE_DIR} ./www/latest
+	(cd www; ln -sf ${ARCHIVE_DIR_BASE} latest)
 
 # Push the website live.
 deploy:
