@@ -1,8 +1,9 @@
 # Makefile for creating the hesperian mobile development website
 
-.PHONY: all www deploy-www deploy
-BUILD?=0001
+BUILD ?= 0001
 ARCHIVE_DIR=./www/archive/${BUILD}
+
+.PHONY: all www deploy-www deploy
 
 all: www 
 
