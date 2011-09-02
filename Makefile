@@ -102,7 +102,7 @@ release:
 	(cd phonegap/iOS/; make OUTDIR=../../$(SITEBUILDDIR) BUILD=$(BUILD) release)
 	(cd site; make BUILD=$(BUILD) www)
 release-deploy:
-	(cd phonegap/iOS/; make deploy)
+	(cd site; make deploy)
 
 # Special targets for prototype builds
 profile-html:

@@ -15,5 +15,5 @@ www:
 	ln -sf ${ARCHIVE_DIR} ./www/latest
 
 # Push the website live.
-deploy-www:
+deploy:
 	hm-site-rsync.sh
