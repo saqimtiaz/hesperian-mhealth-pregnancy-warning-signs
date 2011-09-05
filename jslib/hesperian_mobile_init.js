@@ -14,7 +14,7 @@ var HM = {
     if( pageID in HM.contentsections) {
       sectionList = HM.contentsections[pageID];
       // Keep the current section, if allowed by the new page, otherwise use new page default.
-      section = (previousSectionID && ($.inArray(previousSectionID, sectionList) > 0)) ? previousSectionID : sectionList[0];
+      section = (previousSectionID && ($.inArray(previousSectionID, sectionList) >= 0)) ? previousSectionID : sectionList[0];
     }
    // console.log("getContentSectionForPage("+pageID + ", " + previousSectionID + ") returns: " + section);
     return section;
