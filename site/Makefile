@@ -14,7 +14,7 @@ all: www
 www:
 	-mkdir -p ${ARCHIVE_DIR}
 	cp ../WhatsNew.txt ${ARCHIVE_DIR}/WhatsNew.txt
-	(cd www; ln -sf ${ARCHIVE_DIR_BASE} latest)
+	(cd www; rm -f latest; ln -sf ${ARCHIVE_DIR_BASE} latest)
 
 # Push the website live.
 deploy:

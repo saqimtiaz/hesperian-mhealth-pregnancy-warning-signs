@@ -1,3 +1,1 @@
-build 0002
-
-More testing the build scripts.
+Test build with initial implementation of up button.
