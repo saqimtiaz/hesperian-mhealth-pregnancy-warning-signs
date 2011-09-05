@@ -9,7 +9,7 @@
 # serve the correct content type for the manifest.
 #
 
-BUILD=0002
+BUILD=0003
 SITEBUILDDIR=site/www/archive/$(BUILD)
 
 JSMIN ?= .min
