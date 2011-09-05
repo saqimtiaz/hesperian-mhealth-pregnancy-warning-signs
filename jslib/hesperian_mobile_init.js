@@ -20,8 +20,8 @@ var HM = {
     return section;
   },
   
-  // Cache of our current section (for the "up" button). KLOOGE: this will only work in the single page app.
-  // On the load of a new html page, this will be reset, loosing history.
+  // Cache of our current section (for the "up" button). KLOOGE: this will only work in the single page app -
+  // on the load of a new html page, this will be reset, losing history.
   currentSection: null
 };
 
