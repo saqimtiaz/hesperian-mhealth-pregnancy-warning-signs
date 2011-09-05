@@ -23,7 +23,7 @@ JQMDIR ?= jquery.mobile-1.0b2
 PHONEGAP ?= phonegap-1.0.0
 
 # JavaScript sources, in order of page inclusion
-JSOBJ ?= jslib/$(JQUERY).js  jslib/hesperian_mobile_init.js jslib/$(JQMDIR)/$(JQM).js jslib/hesperian_mobile.js
+JSOBJ ?= jslib/$(JQUERY).js  jslib/hesperian_mobile_init.js jslib/contentsections.js jslib/$(JQMDIR)/$(JQM).js jslib/hesperian_mobile.js
 
 # Main css file in src
 CSS ?= hesperian_mobile

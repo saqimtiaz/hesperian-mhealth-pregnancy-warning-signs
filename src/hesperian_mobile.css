@@ -440,3 +440,7 @@ ol.hm-content-unstyledlist, ul.hm-content-unstyledlist {
 	list-style-type:none;
 	padding-left:0px;
 }
+
+.up-navbar img {
+  float:left;
+}

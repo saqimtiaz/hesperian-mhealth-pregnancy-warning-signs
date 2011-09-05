@@ -2,6 +2,23 @@
 // This is loaded before jquery mobile so you can set up jqm initialization.
 // jquery itself is available.
 
+
+// Hesperian Mobile globals
+var HM = { 
+  getContentSectionForPage: function(page, previousSection)
+  {
+    var pageID = page.attr('id');
+    var section = pageID; // default to self id.
+    if( pageID in HM.contentsections) {
+      sectionList = HM.contentsections[pageID];
+      // Keep the current section, if allowed by the new page, otherwise use new page default.
+      section = $.inArray(previousSection,sectionList) ? previousSection : sectionList[0];
+    }
+    return section;
+  },
+  currentSection: null
+};
+
 // iPhone / Mobile Safari workarounds
 function isiPhone(){
     return ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)));
@@ -31,6 +48,13 @@ $("div:jqmData(role='page')").live('pagebeforecreate',function(event){
 			$("div.sequence-dots",this).append(html);
 		});
 	}
+});
+
+$("div:jqmData(role='page')").live("pagebeforeshow",function(event, ui) {
+	var page = $(this);
+  HM.currentSection =  HM.getContentSectionForPage(page, HM.currentSection);
+  $('.upbutton', page).hide();
+  $('[upid='+HM.currentSection+']', page).show();
 });
 
 $("div:jqmData(role='page')").live("pageshow",function(event) {
