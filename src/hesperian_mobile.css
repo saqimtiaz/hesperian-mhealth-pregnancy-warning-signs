@@ -443,4 +443,10 @@ ol.hm-content-unstyledlist, ul.hm-content-unstyledlist {
 
 .up-navbar img {
   float:left;
+  height: 44px;
+	width: 44px;
+}
+
+.up-navbar h3 {
+  text-align:center;
 }

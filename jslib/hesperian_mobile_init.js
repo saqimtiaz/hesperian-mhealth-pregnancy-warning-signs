@@ -5,17 +5,23 @@
 
 // Hesperian Mobile globals
 var HM = { 
-  getContentSectionForPage: function(page, previousSection)
+  // Return the content section for the given jQuery page object,
+  // for a transition from previousSectionID
+  getContentSectionForPage: function(page, previousSectionID)
   {
     var pageID = page.attr('id');
     var section = pageID; // default to self id.
     if( pageID in HM.contentsections) {
       sectionList = HM.contentsections[pageID];
       // Keep the current section, if allowed by the new page, otherwise use new page default.
-      section = $.inArray(previousSection,sectionList) ? previousSection : sectionList[0];
+      section = (previousSectionID && ($.inArray(previousSectionID, sectionList) > 0)) ? previousSectionID : sectionList[0];
     }
+   // console.log("getContentSectionForPage("+pageID + ", " + previousSectionID + ") returns: " + section);
     return section;
   },
+  
+  // Cache of our current section (for the "up" button). KLOOGE: this will only work in the single page app.
+  // On the load of a new html page, this will be reset, loosing history.
   currentSection: null
 };
 
