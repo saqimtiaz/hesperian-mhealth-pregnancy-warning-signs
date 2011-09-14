@@ -54,8 +54,9 @@ htmldest:
 	# render each html file with jinja
 	cd src/;for filename in *.html;do echo "{}" | ../bin/jinjafy.py $$filename > rendered/$$filename;done
 ifeq ("YES","$(COMBINEHTML)")
+	@-rm tidy.log
 	./bin/concatinate_html.pl src/rendered | ./bin/tidy.sh > $(DESTDIR)/index.html
-	cat tidy.log | ./bin/filtertidy.sh
+	./bin/filtertidy.sh
 else
 	cp  src/rendered/* $(DESTDIR)
 endif
