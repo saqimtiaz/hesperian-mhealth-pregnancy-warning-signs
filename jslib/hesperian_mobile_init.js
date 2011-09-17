@@ -7,6 +7,15 @@
 var HM = { 
   // Return the content section for the given jQuery page object,
   // for a transition from previousSectionID
+  testForPageSectionMatch: function(pageID, sectionList) {
+    var i;
+    for(i = 0; i < sectionList.length; i++) {
+      if( (sectionList[i] === pageID) || (sectionList[i] === '*')) // Glob matches all.
+        return true;
+    }
+    
+    return false;
+  },
   getContentSectionForPage: function(page, previousSectionID)
   {
     var pageID = page.attr('id');
@@ -14,9 +23,13 @@ var HM = {
     if( pageID in HM.contentsections) {
       sectionList = HM.contentsections[pageID];
       // Keep the current section, if allowed by the new page, otherwise use new page default.
-      section = (previousSectionID && ($.inArray(previousSectionID, sectionList) >= 0)) ? previousSectionID : sectionList[0];
+      if( sectionList.length > 0) {
+        section = (previousSectionID && this.testForPageSectionMatch(previousSectionID, sectionList))
+                  ? previousSectionID
+                  : sectionList[0];
+      }
     }
-   // console.log("getContentSectionForPage("+pageID + ", " + previousSectionID + ") returns: " + section);
+    //console.log("getContentSectionForPage("+pageID + ", " + previousSectionID + ") returns: " + section);
     return section;
   },
   
