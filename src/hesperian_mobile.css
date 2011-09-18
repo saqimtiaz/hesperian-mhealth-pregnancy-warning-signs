@@ -441,12 +441,26 @@ ol.hm-content-unstyledlist, ul.hm-content-unstyledlist {
 	padding-left:0px;
 }
 
-.up-navbar img {
+/* Up Button styling */
+
+/* Float the image left. We need it to appear in the left of the <a> button, but also be scaled down 50%
+  Not sure how to do this e.g. with a background url image */
+.up-buttonset img {
   float:left;
-  height: 44px;
-	width: 44px;
+  width:44px;
+  height:44px;
 }
 
-.up-navbar h3 {
-  text-align:center;
+/* Default padding is too fat */
+.up-buttonset .ui-btn-inner {
+    padding: 5px 10px 5px 10px;
+}
+
+/* vertical centering of the up button text - inelegant hard coding. */
+.up-buttonset a {
+  position: relative;
+}
+.up-buttonset .hm-uptext {
+  position: relative;
+  top:13px;
 }
