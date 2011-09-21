@@ -1,9 +1,9 @@
-Build 0003
+Build 0004
 
-This is an interim build, which I'm rolling out mostly for internal testing.
+This build incorporates Zena's feedback on the big-5 "up" button sections, and the move of the Anemia page from "things to avoid" to "things to check".
 
-1) It has newer art for big 5 buttons and submenus (not yet validated as the very latest).
-2) It has a preliminary implementation of the "Up" button. Recall that each page will now have a preferred "Up" big5, as well as some other "allowed" big 5's. 
-	When you go to a page, we keep the current "Up" big5 direction if it's allowed, but if it's not, we revert to the preferred one. I've seeded the preferred / allowed big5's with some initial values which are sufficient for testing the behavior of the app, but we've not yet coordinated deciding on what the correct values are. The visual look of the up button is also preliminary.
+Still pending:
+* About / License pages
+* App styling according to the latest Design Powerpoint.
 
-So, lot's of "preliminary" in this build, but I wanted to see where we were ...
+(You can view the latest build in a browser at http://az.antoninus.org/latest/app/index.html)
