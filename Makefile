@@ -12,6 +12,8 @@
 BUILD=0003
 SITEBUILDDIR=site/www/archive/$(BUILD)
 
+TMP=./tmp
+
 JSMIN ?= .min
 # JQuery (minus .js / .css extension)
 JQUERY ?= jquery-1.6.2$(JSMIN)
@@ -45,20 +47,20 @@ COMBINEHTML ?= YES
 all: html 
 
 htmldest:
+	@rm -fr $(TMP)
 	-rm -R $(DESTDIR)
 	@-mkdir $(DESTDIR)
 	# Copy the raw html source from the src directory
 	cp -R src/images $(DESTDIR)/images
-	@rm -fr src/rendered
-	@mkdir src/rendered
+	@mkdir -p $(TMP)/rendered
 	# render each html file with jinja
-	cd src/;for filename in *.html;do echo "{}" | ../bin/jinjafy.py $$filename > rendered/$$filename;done
+	cd src/;for filename in *.html;do echo "{}" | ../bin/jinjafy.py $$filename > ../$(TMP)/rendered/$$filename;done
 ifeq ("YES","$(COMBINEHTML)")
 	@-rm tidy.log
-	./bin/concatinate_html.pl src/rendered | ./bin/tidy.sh > $(DESTDIR)/index.html
+	./bin/concatinate_html.pl $(TMP)/rendered | tee $(TMP)/index-pretidy.html | ./bin/tidy.sh > $(DESTDIR)/index.html
 	./bin/filtertidy.sh
 else
-	cp  src/rendered/* $(DESTDIR)
+	cp  $(TMP)/rendered/* $(DESTDIR)
 endif
 	# Merge the javascript into one .js file
 	for f in $(JSOBJ); do cat $$f >> $(DESTDIR)/hesperian_mobile.js; done;
@@ -95,7 +97,7 @@ fetch-jqm-latest:
 clean:
 	@- rm -R html
 	@- rm -R phonegap/iOS/www/*
-	@- rm -R src/rendered
+	@- rm -R $(TMP)
 	@- rm -R jslib/latest
 
 release:
