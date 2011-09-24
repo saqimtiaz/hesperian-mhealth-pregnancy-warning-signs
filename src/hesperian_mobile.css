@@ -449,15 +449,17 @@ ol.hm-content-unstyledlist, ul.hm-content-unstyledlist {
   float:left;
   width:44px;
   height:44px;
+  padding-left: 10px;
 }
 
 /* Default padding is too fat */
 .up-buttonset .ui-btn-inner {
-    padding: 5px 10px 5px 10px;
+    padding: 2px 2px 2px 2px;
 }
 
 /* vertical centering of the up button text - inelegant hard coding. */
 .up-buttonset a {
+  margin: 2px 5px 9px 5px;
   position: relative;
 }
 .up-buttonset .hm-uptext {
