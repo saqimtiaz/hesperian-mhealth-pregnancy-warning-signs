@@ -4,13 +4,11 @@
 
 (function () {
 
-var HesperianMobile = function() { 
-
+var HesperianMobile = function() {
 };
 
-
-HesperianMobile.prototype.OnDeviceReady = function(types, success, fail) {
-    return PhoneGap.exec("HesperianMobile.OnDeviceReady", GetFunctionName(success), GetFunctionName(fail), types);
+HesperianMobile.prototype.OnDeviceReady = function() {
+    return PhoneGap.exec('HesperianMobile.OnDeviceReady');
 };
 
 

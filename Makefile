@@ -22,7 +22,7 @@ JQM ?= jquery.mobile-1.0b2$(JSMIN)
 # Directory in jslib containing JQM files
 JQMDIR ?= jquery.mobile-1.0b2
 # phonegap version (minus .js / .css extension)
-PHONEGAP ?= phonegap-1.0.0
+PHONEGAP ?= phonegap-1.1.0
 
 # JavaScript sources, in order of page inclusion
 JSOBJ ?= jslib/$(JQUERY).js  jslib/hesperian_mobile_init.js jslib/contentsections.js jslib/$(JQMDIR)/$(JQM).js jslib/hesperian_mobile.js

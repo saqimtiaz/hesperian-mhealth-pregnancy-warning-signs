@@ -16,14 +16,16 @@
 	<true/>
 	<key>ShowSplashScreenSpinner</key>
 	<true/>
+	<key>MediaPlaybackRequiresUserAction</key>
+	<false/>
+	<key>AllowInlineMediaPlayback</key>
+	<false/>
 	<key>ExternalHosts</key>
 	<array/>
 	<key>Plugins</key>
 	<dict>
 		<key>HesperianMobile</key>
 		<string>HesperianMobile</string>
-		<key>com.phonegap.accelerometer</key>
-		<string>PGAccelerometer</string>
 		<key>com.phonegap.splashscreen</key>
 		<string>PGSplashScreen</string>
 	</dict>
