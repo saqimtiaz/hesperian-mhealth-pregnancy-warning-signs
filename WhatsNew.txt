@@ -1,6 +1,6 @@
-Build 0006
+Build 0009
 
--This is an updated build with new expiration which adds Emily West's iPad to the list of permitted devices.
+- One off quick experiment to see if we can get Sarah's iPodTouch up and running.
 
 State of the build is the same as 0004, as follows:
 
