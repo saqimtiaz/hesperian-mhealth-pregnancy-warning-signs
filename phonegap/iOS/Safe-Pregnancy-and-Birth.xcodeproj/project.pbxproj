@@ -241,6 +241,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F67EF0191455164C000355B5 /* Build configuration list for PBXNativeTarget "Safe-Pregnancy-and-Birth" */;
 			buildPhases = (
+				F65096CC145A70C3006ED1FD /* ShellScript */,
 				F67EEFC81455164B000355B5 /* Sources */,
 				F67EEFC91455164B000355B5 /* Frameworks */,
 				F67EEFCA1455164B000355B5 /* Resources */,
@@ -306,6 +307,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		F65096CC145A70C3006ED1FD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "(cd ../../; make phonegap)";
+		};
 		F67EEFCD1455164B000355B5 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
