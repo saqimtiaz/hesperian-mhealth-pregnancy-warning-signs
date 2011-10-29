@@ -1,6 +1,6 @@
-Build 0009
+Build 00l0
 
-- One off quick experiment to see if we can get Sarah's iPodTouch up and running.
+- New build, which (I hope) addresses some of the issues we've run into installing on newer devices.
 
 State of the build is the same as 0004, as follows:
 
