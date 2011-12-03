@@ -278,9 +278,15 @@ ul.hm-menu.hm-top-menu {
 	padding: 0.2em 8px 0.3em;
 }
 
+/*  Under JQM1.0, the following resulted in a non-centered home icon
 .ui-header .ui-btn-inner {
 	padding: 0.4em 5px 0.5em;
 }
+
+.ui-header a.hm-circle .ui-btn-inner {
+	padding:0;
+}
+*/
 
 h2.hm-pagetitle {
 	color: #17375E;
@@ -378,9 +384,7 @@ div.sequence-bar a.hm-seq-btn.ui-btn-corner-all, div.sequence-bar a.hm-seq-btn .
 }
 
 
-.ui-header a.hm-circle .ui-btn-inner {
-	padding:0;
-}
+
 
 .ui-header a.hm-circle .ui-btn-corner-all, .ui-header a.hm-circle.ui-btn-corner-all {
 	border-radius:1em;
