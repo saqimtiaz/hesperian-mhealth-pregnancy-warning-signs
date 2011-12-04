@@ -41,6 +41,7 @@
 		F62C121C14551DB200749EDA /* HesperianMobile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HesperianMobile.h; path = Plugins/HesperianMobile.h; sourceTree = "<group>"; };
 		F62C121D14551DB200749EDA /* HesperianMobile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HesperianMobile.m; path = Plugins/HesperianMobile.m; sourceTree = "<group>"; };
 		F62C121F14551F0200749EDA /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = SOURCE_ROOT; };
+		F673083A1472E0F800D8AAE8 /* Safe-Pregnancy-and-Birth.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Safe-Pregnancy-and-Birth.entitlements"; sourceTree = "<group>"; };
 		F67EEFCF1455164B000355B5 /* Safe-Pregnancy-and-Birth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Safe-Pregnancy-and-Birth.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F67EEFD31455164B000355B5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F67EEFD51455164B000355B5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -146,6 +147,7 @@
 		F67EEFED1455164B000355B5 /* Safe-Pregnancy-and-Birth */ = {
 			isa = PBXGroup;
 			children = (
+				F673083A1472E0F800D8AAE8 /* Safe-Pregnancy-and-Birth.entitlements */,
 				F62C121F14551F0200749EDA /* www */,
 				F67EEFF61455164B000355B5 /* PhoneGap.framework */,
 				F67EEFF81455164B000355B5 /* Resources */,

@@ -9,7 +9,7 @@
 # serve the correct content type for the manifest.
 #
 
-BUILD=0010
+BUILD=0011
 SITEBUILDDIR=site/www/archive/$(BUILD)
 
 TMP=./tmp
@@ -22,7 +22,7 @@ JQM ?= jquery.mobile-1.0$(JSMIN)
 # Directory in jslib containing JQM files
 JQMDIR ?= jquery.mobile-1.0
 # phonegap version (minus .js / .css extension)
-PHONEGAP ?= phonegap-1.1.0
+PHONEGAP ?= phonegap-1.2.0
 
 # JavaScript sources, in order of page inclusion
 JSOBJ ?= jslib/$(JQUERY).js  jslib/hesperian_mobile_init.js jslib/contentsections.js jslib/$(JQMDIR)/$(JQM).js jslib/hesperian_mobile.js

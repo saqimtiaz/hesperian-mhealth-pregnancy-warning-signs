@@ -1,8 +1,19 @@
-Build 0010
+Build 0011
 
-- New build, which (I hope) addresses some of the issues we've run into installing on newer devices.
+We upgrade our technology stack to JQuery Mobile 1.0 and phonegap 1.2.0
+Unless we find bugs in these libraries, these will be the ones we ship with for our initial release.
 
-State of the build is the same as 0004, as follows:
+Note: There was one change to our css which was required by the upgrade to JQM.
+We were adding some custom padding to .ui-btn-inner in the home icon, which resulted in a non-centered icon. I've commented out the offending css:
+.ui-header .ui-btn-inner {
+	padding: 0.4em 5px 0.5em;
+}
+
+.ui-header a.hm-circle .ui-btn-inner {
+	padding:0;
+}
+
+Otherwise, the state of the build is the same as 0004, as follows:
 
 This build incorporates Zena's feedback on the big-5 "up" button sections, and the move of the Anemia page from "things to avoid" to "things to check".
 
