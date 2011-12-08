@@ -1,7 +1,8 @@
-CONFIGURATION=Release
+CONFIGURATION=Ad Hoc
 APPLICATION_NAME=Safe-Pregnancy-and-Birth
-RELEASE_BUILDDIR= ./build/Release-iphoneos
-DEVELOPER_NAME=Matthew Litwin (763465CPK9)
+RELEASE_BUILDDIR= ./build/$(CONFIGURATION)-iphoneos
+#DEVELOPER_NAME=Matthew Litwin (763465CPK9)
+SIGNING_IDENTITY=iPhone Distribution: Matthew Litwin
 #PROVISONING_PROFILE=HesperianMobileTest.mobileprovision
 PROVISONING_PROFILE=RamonaStreetAdHoc.mobileprovision
 PWD=$(shell pwd)
@@ -18,7 +19,7 @@ setbuild:
 
 testbuild: setbuild
 	xcodebuild -configuration "$(CONFIGURATION)" build
-	 /usr/bin/xcrun -no-cache -sdk iphoneos PackageApplication -v "$(RELEASE_BUILDDIR)/$(APPLICATION_NAME).app" -o "$(PWD)/$(APPLICATION_NAME).ipa" --sign "$(DEVELOPER_NAME)" --embed "$(PROVISONING_PROFILE)"
+	 /usr/bin/xcrun -no-cache -sdk iphoneos PackageApplication -v "$(RELEASE_BUILDDIR)/$(APPLICATION_NAME).app" -o "$(PWD)/$(APPLICATION_NAME).ipa" --sign "$(SIGNING_IDENTITY)" --embed "$(PROVISONING_PROFILE)"
 	@echo "Created $(APPLICATION_NAME).ipa"
 
 clean:
