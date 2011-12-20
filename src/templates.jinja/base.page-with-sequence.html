@@ -8,9 +8,9 @@
 <div data-role="page" id="{{ self.id() }}" data-theme="b" swipe="true" class="hm-swipe">
 	{% block header %}
 	<div data-role="header" data-theme="b">
-		<a href="" class="ui-btn-left" data-icon="arrow-l" data-rel="back">Back</a>
-		<h1>{% block headertitle %}Safe Pregnancy &amp; Birth{% endblock %}</h1>
-		<a href="index.html" class="ui-btn-right hm-circle" data-icon="home" data-iconpos="notext" data-direction="reverse">Home</a>		
+		<a href="" class="ui-btn-left hm-back-button hm-nav-button" data-icon="arrow-l" data-rel="back">Back</a>
+		<h1>{% block headertitle %}<img src="images/hesperian_logo_header.png"  style="width:90px;height:35px;" alt="Safe Pregnancy and Birth"/>{% endblock %}</h1>
+		<a href="index.html" class="ui-btn-right hm-home-button hm-nav-button" data-icon="hm-home" data-iconpos="notext" data-direction="reverse">Home</a> 	
 	</div>
 {% include 'templates.jinja/base.page.navbar.html' %}
 	{%- set seq_length = seq_length %}  ##re-assign variables or they arent passed to included templates, possible bug
