@@ -95,7 +95,22 @@
  */
 - (BOOL)webView:(UIWebView *)theWebView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
-	return [ super webView:theWebView shouldStartLoadWithRequest:request navigationType:navigationType ];
+    // have http[s] requests open up in Safari app rather than internally - code from Jesse MacFadyen
+    // groups.google.com/group/phonegap/browse_frm/thread/7815d5e103fc18ac/a3ba58b1002af281?#a3ba58b1002af281
+    NSURL *url = [request URL]; 
+    // add any other schemes you want to support, or perform additional 
+    // tests on the url before deciding what to do -jm 
+    if( [[url scheme] isEqualToString:@"http"] || 
+       [[url scheme] isEqualToString:@"https"]) 
+    { 
+        [[UIApplication sharedApplication] openURL:url]; 
+        return NO; 
+    } 
+    
+    else 
+    { 
+        return [ super webView:theWebView shouldStartLoadWithRequest:request navigationType:navigationType ];
+    }
 }
 
 

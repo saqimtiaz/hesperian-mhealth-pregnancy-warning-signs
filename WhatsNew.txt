@@ -1,4 +1,9 @@
-Build 0012
+Build 0013
+
+As 0012 below, but fixes external urls (e.g. in credits) to open in safari app, rather not working at all or opening in the Mobile app (where they look bad and there's no way to go back to the previous page).
+Again, this one has limited distribution.
+
+0012
 
 Not the real thing build for the Hesperian Beta Test - just going out to me, Tawnia and Saq.
 I'll smoke test it on my iOS5 device, and assuming it goes well, I'll be ready to do the official build.
