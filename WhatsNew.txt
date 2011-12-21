@@ -1,20 +1,5 @@
-Build 0013
+Hesperian Mobile App Beta Test (Build 0014)
 
-As 0012 below, but fixes external urls (e.g. in credits) to open in safari app, rather not working at all or opening in the Mobile app (where they look bad and there's no way to go back to the previous page).
-Again, this one has limited distribution.
+This build has the proposed final content and styling, but has not been reviewed or extensively tested.
 
-0012
-
-Not the real thing build for the Hesperian Beta Test - just going out to me, Tawnia and Saq.
-I'll smoke test it on my iOS5 device, and assuming it goes well, I'll be ready to do the official build.
-
-One note for Saq:
-Re:
-"Note that we have a new loading screen image to be used for the packaged app, loading-app.png in the images folder. The file loading.png is a lower quality version of the same image that is used by the "fullscreen webapp" version in iOS."
-loading-app.png is 320 x 480
-
-Ideally we need 640x960 (Retina) and it's smaller cousin 320x480 (Default@2x.png and Default.png in iOS file naming).
-For this, I've scaled our 320 x 480 to 640x960 as needed.
-
-
-(You can view the latest build in a browser at http://az.antoninus.org/latest/app/index.html)
+Thanks for you time and effort in looking over the app!
