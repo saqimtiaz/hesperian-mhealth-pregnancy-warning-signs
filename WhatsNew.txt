@@ -1,24 +1,15 @@
-Build 0011
+Build 0012
 
-We upgrade our technology stack to JQuery Mobile 1.0 and phonegap 1.2.0
-Unless we find bugs in these libraries, these will be the ones we ship with for our initial release.
+Not the real thing build for the Hesperian Beta Test - just going out to me, Tawnia and Saq.
+I'll smoke test it on my iOS5 device, and assuming it goes well, I'll be ready to do the official build.
 
-Note: There was one change to our css which was required by the upgrade to JQM.
-We were adding some custom padding to .ui-btn-inner in the home icon, which resulted in a non-centered icon. I've commented out the offending css:
-.ui-header .ui-btn-inner {
-	padding: 0.4em 5px 0.5em;
-}
+One note for Saq:
+Re:
+"Note that we have a new loading screen image to be used for the packaged app, loading-app.png in the images folder. The file loading.png is a lower quality version of the same image that is used by the "fullscreen webapp" version in iOS."
+loading-app.png is 320 x 480
 
-.ui-header a.hm-circle .ui-btn-inner {
-	padding:0;
-}
+Ideally we need 640x960 (Retina) and it's smaller cousin 320x480 (Default@2x.png and Default.png in iOS file naming).
+For this, I've scaled our 320 x 480 to 640x960 as needed.
 
-Otherwise, the state of the build is the same as 0004, as follows:
-
-This build incorporates Zena's feedback on the big-5 "up" button sections, and the move of the Anemia page from "things to avoid" to "things to check".
-
-Still pending:
-* About / License pages
-* App styling according to the latest Design Powerpoint.
 
 (You can view the latest build in a browser at http://az.antoninus.org/latest/app/index.html)
