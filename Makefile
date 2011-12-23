@@ -9,7 +9,7 @@
 # serve the correct content type for the manifest.
 #
 
-BUILD=0014
+BUILD=0015
 SITEBUILDDIR=site/www/archive/$(BUILD)
 
 TMP=./tmp
