@@ -322,7 +322,7 @@ ul.hm-menu.hm-top-menu {
 }
 
 #home .ui-header.ui-bar-b {
-	border: 1px solid 		rgb(110,35,6) /*{b-bar-border}*/;
+	border: 0px solid 		rgb(110,35,6) /*{b-bar-border}*/;
 	background: 			none repeat scroll 0 0 rgb(110,35,6);
 	color: 					#fff /*{b-bar-color}*/;
 	font-weight: bold;
@@ -661,7 +661,7 @@ div.up-buttonset .ui-btn-corner-all {
 -----------------------------------------------------------------------------------------------------------*/
 
 .ui-bar-b {
-	border: 1px solid 		#FAF3E2 /*{b-bar-border}*/;
+	border: 0px solid 		#FAF3E2 /*{b-bar-border}*/;
 	background: 			none repeat scroll 0 0 #FAF3E2;
 	color: 					#fff /*{b-bar-color}*/;
 	font-weight: bold;
