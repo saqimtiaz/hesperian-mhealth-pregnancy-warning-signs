@@ -18,9 +18,9 @@ HM.contentsections = {
 , Her_temperature:['Staying_healthy_during_pregnancy'] // Slide 24-26
 , Her_blood_pressure:['Staying_healthy_during_pregnancy'] // Slide 27-28
 , The_position_of_the_baby:['Staying_healthy_during_pregnancy'] // Slide 29-30
-, Baby_is_lying_sideways:['Staying_healthy_during_pregnancy', 'Danger_Signs_During_Birth'] // Slide 31
+, Baby_is_lying_sideways:['Danger_Signs_During_Birth', 'Staying_healthy_during_pregnancy'] // Slide 31
 , Signs_of_kidney_or_bladder_infection:['Staying_healthy_during_pregnancy'] // Slide 32-33
-, If_she_has_a_bladder_infection:['Staying_healthy_during_pregnancy'] // Slide 34-35
+, If_she_has_a_bladder_infection:['Staying_healthy_during_pregnancy', 'How_Tos'] // Slide 34-35
 , Medicines_for_a_kidney_infection:['Staying_healthy_during_pregnancy'] // Slide 36
 , Danger_Signs_During_Pregnancy:['Danger_Signs_During_Pregnancy'] // Slide 37
 , Bleeding_during_pregnancy:['Danger_Signs_During_Pregnancy'] // Slide 38
@@ -32,7 +32,7 @@ HM.contentsections = {
 , Seizures_during_pregnancy:['Danger_Signs_During_Pregnancy', 'Danger_Signs_During_Birth'] // Slide 45-46
 , Danger_Signs_During_Birth:['Danger_Signs_During_Birth'] // Slide 47
 , Too_long_labor:['Danger_Signs_During_Birth'] // Slide 48-49
-, What_to_do_strong_labor:['Danger_Signs_During_Birth'] // Slide 50
+, What_to_do_strong_labor:['Danger_Signs_During_Birth', 'How_Tos'] // Slide 50
 , What_to_do_not_strong_labor:['Danger_Signs_During_Birth'] // Slide 51
 , Fever_during_labor:['Danger_Signs_During_Birth'] // Slide 52
 , Water_breaks_no_labor:['Danger_Signs_During_Birth'] // Slide 53-54
@@ -97,6 +97,6 @@ HM.contentsections = {
 , How_to_check_for_protein_in_urine1:['How_Tos', '*'] // Slide 126-127
 , How_to_check_for_protein_in_urine2:['How_Tos', '*'] // Slide 128-129
 , Foods_with_iron:['Staying_healthy_during_pregnancy'] // Slide 130
-, Fever_during_pregnancy:['How_Tos', '*'] // Slide 131-132
+, Fever_during_pregnancy:['Staying_healthy_during_pregnancy'] // Slide 131-132
 
 };
