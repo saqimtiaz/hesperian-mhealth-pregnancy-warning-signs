@@ -19,7 +19,7 @@ function setBottomPosition (el) {
 
 function showKeepReadingText(id) {
 	// TODO: should really use an attribute on the page container div instead, ala jqm
-	var menus = ["home","Staying_healthy_during_pregnancy", "Danger_Signs_During_Pregnancy", "Danger_Signs_During_Birth", "Danger_Signs_After_Birth"];
+	var menus = ["home","Staying_healthy_during_pregnancy", "Danger_Signs_During_Pregnancy",  "Danger_Signs_After_Birth"];
 	if ($.inArray($.mobile.activePage[0].id,menus) != -1) {
 		return false;
 	}
