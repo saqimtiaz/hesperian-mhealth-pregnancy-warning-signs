@@ -54,6 +54,10 @@ $("div:jqmData(role='page')").live('pagebeforecreate',function(event){
 			if (html == "") {
 				var seq_length = $(this).attr("seq-length");
 				var seq_position = $(this).attr("seq-position");
+				if (seq_length == 0) {
+					$("div.sequence-dots",this).css("margin-top","-=8px");
+					return;
+				}
 				var pos = 0;
 				while (pos < seq_length) {
 					if (pos + 1 == seq_position) {
