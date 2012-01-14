@@ -1,9 +1,13 @@
-{% extends "templates.jinja/base.page-with-navbar.html" %}
+{% set pagetitle = "How to inject medicines<br>into muscle" %}
+{% set seq_length = 8 %}
+{% set seq_position = 1 %}
+{% set seq_llink = "javascript:;" %}		## set rlink equal to next page href
+{% set seq_rlink = "javascript:;" %}		## set llink equal to previous page href
+{% extends "templates.jinja/base.page-with-sequence.html" %}
 {% block title %} Hesperian - Pregnancy &amp; Birth{% endblock %}
 {% block id %}How_to_inject_medicines_into_muscle{% endblock %}
 		{% block content %}
-			<h2 class="hm-pagetitle">How to inject medicines <br>into muscle</h2>
-			 <img src="images/syringe_z.png" class="hm-content-imgright" width="130"/> 
+			<img src="images/syringe_z.png" class="hm-content-imgright" width="130"/> 
 			<p class="clear">What form of medicine do you have?</p>
 			<div class="hm-content-floatcontainer">
 				 <img src="images/WTND_72-23.png" class="hm-content-imgleft" width="15"/> 

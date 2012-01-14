@@ -28,7 +28,7 @@ Workaround for iPhone / WebKit bug where headers and footers can disappear after
 	text-align: center;
 	white-space: nowrap;
 	margin-bottom:0;
-	color: #000;
+	color: rgb(125,155,162);
 	font-weight:bold;
 }
 
