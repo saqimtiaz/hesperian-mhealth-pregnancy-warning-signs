@@ -271,6 +271,10 @@ ol.hm-content-spacedlist li, ul.hm-content-spacedlist li{
 	margin-bottom: 1em;
 }
 
+.hm-content-nomargintop {
+	margin-top: 0;
+}
+
 ul.hm-menu .ui-li-thumb, ul.hm-menu .ui-li-icon {
 	height: 76px;
 	width: 76px;

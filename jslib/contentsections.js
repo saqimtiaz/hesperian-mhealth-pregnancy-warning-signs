@@ -99,4 +99,6 @@ HM.contentsections = {
 , Foods_with_iron:['Staying_healthy_during_pregnancy'] // Slide 130
 , Fever_during_pregnancy:['Staying_healthy_during_pregnancy'] // Slide 131-132
 , Unnecessary_medicines:['Staying_healthy_during_pregnancy']
+, How_to_treat_yeast_infections:['Staying_healthy_during_pregnancy','How_Tos']
+, How_to_treat_infection_during_labor:['Danger_Signs_During_Birth','Danger_Signs_After_Birth','How_Tos']
 };
