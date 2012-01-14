@@ -98,5 +98,5 @@ HM.contentsections = {
 , How_to_check_for_protein_in_urine2:['How_Tos', '*'] // Slide 128-129
 , Foods_with_iron:['Staying_healthy_during_pregnancy'] // Slide 130
 , Fever_during_pregnancy:['Staying_healthy_during_pregnancy'] // Slide 131-132
-
+, Unnecessary_medicines:['Staying_healthy_during_pregnancy']
 };
