@@ -33,13 +33,13 @@ Workaround for iPhone / WebKit bug where headers and footers can disappear after
 }
 
 .sequence-dots {
-	margin-top: 15px;
+	margin-top: 11px;
 	text-align: center;
 	
 }
 
 .sequence-bar-bottom  .sequence-dots{
-	padding-top: 15px;
+	padding-top: 11px;
 }
 
 .circle{
@@ -61,11 +61,13 @@ Workaround for iPhone / WebKit bug where headers and footers can disappear after
 	background:#444;
 }
 
+/*
 div.sequence-bar a.seq-nav-button.ui-shadow {
-	-moz-box-shadow: 0px 0px 0px/*{global-box-shadow-size}*/ 			rgba(0,0,0,0) /*{global-box-shadow-color}*/;
-	-webkit-box-shadow: 0px 0px 0px/*{global-box-shadow-size}*/ 		rgba(0,0,0,0) /*{global-box-shadow-color}*/;
-	box-shadow: 0px 0px 0px /*{global-box-shadow-size}*/ 				rgba(0,0,0,0) /*{global-box-shadow-color}*/;
+	-moz-box-shadow: 0px 0px 0px 			rgba(0,0,0,0) ;
+	-webkit-box-shadow: 0px 0px 0px 		rgba(0,0,0,0) ;
+	box-shadow: 0px 0px 0px 				rgba(0,0,0,0) ;
 }
+*/
 
 .seq-nav-button-left{
 	float:left;
@@ -77,6 +79,7 @@ div.sequence-bar a.seq-nav-button.ui-shadow {
 	margin-right:5px;
 }
 
+/*
 a.seq-nav-button.ui-btn-up-b, a.seq-nav-button.ui-btn-down-b, a.seq-nav-button.ui-btn-hover-b {
 	background : none;
 	border: none;
@@ -85,6 +88,7 @@ a.seq-nav-button.ui-btn-up-b, a.seq-nav-button.ui-btn-down-b, a.seq-nav-button.u
 a.seq-nav-button.ui-btn-icon-notext .ui-btn-inner {
 	padding: 0;
 }
+*/
 
 .seq-nav-button-left.ui-btn-hover-b .ui-icon-hm-arrow-l, 
 .seq-nav-button-left.ui-btn-down-b .ui-icon-hm-arrow-l {
