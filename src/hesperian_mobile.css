@@ -23,7 +23,7 @@ Workaround for iPhone / WebKit bug where headers and footers can disappear after
 }
  
 .sequence-bar h2.sequence-title {
-	font-size: 135%;
+	font-size: 125%;
 	padding: 0;
 	text-align: center;
 	white-space: nowrap;
