@@ -1,4 +1,8 @@
 Hesperian Mobile App (Build 0017)
 
-Final Code for release - this is an Ad Hoc build for testing.
+Test build including the latest code from Saq.
+Also, I've added a "Design" section to the credits, in order to list some Hesperian folks. Take a look and let me know if there should be tweaks / changes or if there's someone else that should be listed.
+
+Also, test the permissions@hesperian.org link - that required some code changes to get working.
+
 
