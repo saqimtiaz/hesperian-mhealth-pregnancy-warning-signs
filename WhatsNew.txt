@@ -1,4 +1,4 @@
-Hesperian Mobile App Beta Test (Build 0017)
+Hesperian Mobile App (Build 0017)
 
-New loading screen art.
+Final Code for release - this is an Ad Hoc build for testing.
 

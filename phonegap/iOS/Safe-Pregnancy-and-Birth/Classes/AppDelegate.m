@@ -101,7 +101,8 @@
     // add any other schemes you want to support, or perform additional 
     // tests on the url before deciding what to do -jm 
     if( [[url scheme] isEqualToString:@"http"] || 
-       [[url scheme] isEqualToString:@"https"]) 
+       [[url scheme] isEqualToString:@"https"] ||
+       [[url scheme] isEqualToString:@"mailto"]) 
     { 
         [[UIApplication sharedApplication] openURL:url]; 
         return NO; 
