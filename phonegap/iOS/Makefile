@@ -1,37 +1,36 @@
-CONFIGURATION=Ad Hoc
+#CONFIGURATION=Ad Hoc
+CONFIGURATION=AppStore
 APPLICATION_NAME=Safe-Pregnancy-and-Birth
 RELEASE_BUILDDIR= ./build/$(CONFIGURATION)-iphoneos
 SIGNING_IDENTITY=iPhone Distribution: The Hesperian Foundation
-PROVISONING_PROFILE=Hesperian_Ad_Hoc_Distribution_Profile.mobileprovision
+AD_HOC_PROVISONING_PROFILE=Hesperian_Ad_Hoc_Distribution_Profile.mobileprovision
 PWD=$(shell pwd)
 OUTDIR?=output
 BUILD?=0dev
 
+CODESIGN_ALLOCATE=/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/codesign_allocate
 
-.PHONY: testbuild ipa appstore
 
-all: testbuild
+.PHONY: build appstore_zip
+
+all: build
 
 setbuild:
 	agvtool -noscm new-version -all 1.0.$(shell echo $(BUILD) | sed -e 's/^0*//' )
 
-testbuild: setbuild
+build: setbuild
 	xcodebuild -configuration "$(CONFIGURATION)" clean build
-	 /usr/bin/xcrun -no-cache -sdk iphoneos PackageApplication -v "$(RELEASE_BUILDDIR)/$(APPLICATION_NAME).app" -o "$(PWD)/$(APPLICATION_NAME).ipa" --sign "$(SIGNING_IDENTITY)" --embed "$(PROVISONING_PROFILE)"
-	@echo "Created $(APPLICATION_NAME).ipa"
 
 clean:
-	-rm -r build/ "$(APPLICATION_NAME).ipa"
-
-appstore_zip: 
-	xcodebuild -configuration AppStore clean build
-	(cd "$(RELEASE_BUILDDIR)"; zip -y -r "$(APPLICATION_NAME).zip" "$(APPLICATION_NAME).app")
-	mkdir -p $(OUTDIR)
-	cp "$(RELEASE_BUILDDIR)/$(APPLICATION_NAME).zip" $(OUTDIR)
-
+	-rm -r build/ output/ "$(APPLICATION_NAME).ipa"
 
 release:
 	make clean;
-	make testbuild
+	make build
+	(cd "$(RELEASE_BUILDDIR)"; zip -y -r "$(APPLICATION_NAME).zip" "$(APPLICATION_NAME).app")
+	@echo "Created $(APPLICATION_NAME).zip"
+	 /usr/bin/xcrun -no-cache -sdk iphoneos PackageApplication -v "$(RELEASE_BUILDDIR)/$(APPLICATION_NAME).app" -o "$(PWD)/$(APPLICATION_NAME).ipa" --sign "$(SIGNING_IDENTITY)" --embed "$(AD_HOC_PROVISONING_PROFILE)"
+	@echo "Created Ad Hoc $(APPLICATION_NAME).ipa"
 	mkdir -p $(OUTDIR)
 	cp "$(APPLICATION_NAME).ipa" $(OUTDIR)
+	cp "$(RELEASE_BUILDDIR)/$(APPLICATION_NAME).zip" $(OUTDIR)
