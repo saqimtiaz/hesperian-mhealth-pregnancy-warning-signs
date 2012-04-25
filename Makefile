@@ -22,7 +22,7 @@ JQM ?= jquery.mobile-1.0$(JSMIN)
 # Directory in jslib containing JQM files
 JQMDIR ?= jquery.mobile-1.0
 # phonegap version (minus .js / .css extension)
-PHONEGAP ?= phonegap-1.2.0
+#PHONEGAP ?= phonegap-1.2.0
 
 # JavaScript sources, in order of page inclusion
 JSOBJ ?= jslib/$(JQUERY).js  jslib/hesperian_mobile_init.js jslib/contentsections.js jslib/$(JQMDIR)/$(JQM).js jslib/hesperian_mobile.js
@@ -33,14 +33,15 @@ CSS ?= hesperian_mobile
 CSSIMPORT ?= jquery.mobile/$(JQM).css
 
 # phonegap needs addional javascript
-phonegap: JSOBJ += jslib/$(PHONEGAP).js phonegap/Plugins/HesperianMobile.js
+#phonegap: JSOBJ += jslib/$(PHONEGAP).js phonegap/Plugins/HesperianMobile.js
 
 # destination directory where we will assemble the app
-html: DESTDIR ?= html
-phonegap: DESTDIR ?= phonegap/iOS/www
+DESTDIR ?= html
+#phonegap: DESTDIR ?= html
 
 # Combine all the html into one file?
 COMBINEHTML ?= YES
+PHONEGAP ?= NO
 
 .PHONY: all html phonegap
 
@@ -54,7 +55,12 @@ htmldest:
 	cp -R src/images $(DESTDIR)/images
 	@mkdir -p $(TMP)/rendered
 	# render each html file with jinja
+ifeq ("YES","$(PHONEGAP)")
+	cd src/;for filename in *.html;do echo '{"phonegap":"true"}' | ../bin/jinjafy.py $$filename > ../$(TMP)/rendered/$$filename;done
+	cp jslib/hesperian_mobile_phonegap.js $(DESTDIR)/
+else
 	cd src/;for filename in *.html;do echo "{}" | ../bin/jinjafy.py $$filename > ../$(TMP)/rendered/$$filename;done
+endif
 ifeq ("YES","$(COMBINEHTML)")
 	@-rm tidy.log
 	./bin/concatinate_html.pl $(TMP)/rendered | tee $(TMP)/index-pretidy.html | ./bin/tidy.sh > $(DESTDIR)/index.html
@@ -84,7 +90,8 @@ html: htmldest manifest
 clean-phonegap:
 	@- rm -R phonegap/iOS/www/*
 
-phonegap: clean-phonegap htmldest
+phonegap:
+	make PHONEGAP="YES" htmldest
 
 fetch-jqm-latest:
 	# fetch and extract the latest daily build of JQM

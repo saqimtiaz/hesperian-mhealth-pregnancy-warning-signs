@@ -95,6 +95,13 @@ $("div:jqmData(role='page')").live("pageshow",function(event) {
 			el.hide();
 		}
 	}
+	if (window.PhoneGap) {
+		/*if (device != undefined) {
+			if (device.platform == "Android") {
+				$("a.ui-btn-left.hm-back-button.hm-nav-button").hide();	
+			}
+		}*/
+	}
 });
 
 /* *** Commenting out swiping code

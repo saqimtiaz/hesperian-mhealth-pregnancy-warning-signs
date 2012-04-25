@@ -9,6 +9,10 @@
     <title>{% block title %}Safe Pregnancy and Birth{% endblock %}</title>
 	
 	<link rel="stylesheet" href="hesperian_mobile.css" />
-	<script src="hesperian_mobile.js"></script>
+	<script type="text/javascript" src="hesperian_mobile.js"></script>
+	{% if phonegap is defined %}
+	<script type="text/javascript" src="phonegap.js"></script>
+	<script type="text/javascript" src="hesperian_mobile_phonegap.js"></script>
+	{% endif %}
 	{% endblock %}
 </head>
