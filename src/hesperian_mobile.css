@@ -1078,3 +1078,19 @@ div.up-buttonset .ui-btn-corner-all {
 .ui-btn-active a.ui-link-inherit {
 	color: 					#000 /*{global-active-color}*/;
 }
+
+body.hm-android .hm-web, body.hm-ios .hm-web {
+	display: none;
+}
+
+.hm-only-android, .hm-only-ios {
+	display: none;
+}
+
+body.hm-android .hm-only-android, body.hm-android .hm-only-android.hm-web {
+	display: block;
+}
+
+body.hm-ios .hm-only-ios, body.hm-ios .hm-only-ios.hm-web {
+	display: block;
+}

@@ -58,6 +58,8 @@ htmldest:
 ifeq ("YES","$(PHONEGAP)")
 	cd src/;for filename in *.html;do echo '{"phonegap":"true"}' | ../bin/jinjafy.py $$filename > ../$(TMP)/rendered/$$filename;done
 	cp jslib/hesperian_mobile_phonegap.js $(DESTDIR)/
+	cp phonegap/config.xml $(DESTDIR)/config.xml
+	cp -ar phonegap/icons/ $(DESTDIR)/
 else
 	cd src/;for filename in *.html;do echo "{}" | ../bin/jinjafy.py $$filename > ../$(TMP)/rendered/$$filename;done
 endif
