@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns		= "http://www.w3.org/ns/widgets"
+	xmlns:gap	= "http://phonegap.com/ns/1.0"
+	id		= "org.hesperian.safebirth"
+	version 	= "0.9.0">
+
+	<name>Safe Pregnancy and Birth</name>
+
+	<description>
+		Safe Pregnancy and Birth app from Hesperian Health Guides.
+	</description>
+
+	<author href="http://hesperian.org"
+		email="saq.imtiaz@unamesa.org">
+		Hesperian Health Guides
+	</author>
+
+	<gap:platforms>
+		<gap:platform name="android" minVersion="2.1" />
+	</gap:platforms>
+
+	<preference name="orientation" value="portrait" />
+	<preference name="autorotate" value="false" readonly="true"/>
+	<preference name="fullscreen" value="true" />
+	<preference name="android-minSdkVersion" value="7" />
+
+	<!-- Android requires specific dimensions; ldpi, mdpi, and hdpi respectively -->
+	<icon src="icons/icon-android-36.png" width="36" height="36"/>
+	<icon src="icons/icon-android-48.png" width="48" height="48"/>
+	<icon src="icons/icon-android-72.png" width="72" height="72"/>
+	<gap:splash src="images/loading-app.png" />
+</widget>
