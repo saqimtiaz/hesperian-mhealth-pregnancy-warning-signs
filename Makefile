@@ -16,11 +16,11 @@ TMP=./tmp
 
 JSMIN ?= .min
 # JQuery (minus .js / .css extension)
-JQUERY ?= jquery-1.6.4$(JSMIN)
+JQUERY ?= jquery-1.7.2$(JSMIN)
 # JQuery mobile version (minus .js / .css extension)
-JQM ?= jquery.mobile-1.0$(JSMIN)
+JQM ?= jquery.mobile-1.1.0$(JSMIN)
 # Directory in jslib containing JQM files
-JQMDIR ?= jquery.mobile-1.0
+JQMDIR ?= jquery.mobile-1.1.0
 # phonegap version (minus .js / .css extension)
 #PHONEGAP ?= phonegap-1.2.0
 

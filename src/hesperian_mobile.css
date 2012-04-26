@@ -626,9 +626,13 @@ div.up-buttonset .ui-btn-corner-all {
 .ui-icon-hm-home {
 	background:		url("images/hm-home-icon.png") no-repeat scroll center 0 rgba(0, 0, 0, 0);
 	background-size:		28px 28px;
-	width:		36px;
+	width:		30px;
 	height:		30px;
 	border-radius:		0;
+}
+
+.hm-home-button.ui-btn-icon-notext .ui-btn-inner .ui-icon {
+	margin-top:0;
 }
 
 /* custom back button */
