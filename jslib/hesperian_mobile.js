@@ -8,8 +8,19 @@ $.event.special.swipe.horizontalDistanceThreshold= 60;  // Swipe horizontal disp
 
 
 /* start of code for displaying an indicator that you can scroll to see more content */
+function getDocHeight() {
+    //utility function to find dimensions of page
+    var D = document;
+    return Math.max(
+        Math.max(D.body.scrollHeight, D.documentElement.scrollHeight),
+        Math.max(D.body.offsetHeight, D.documentElement.offsetHeight),
+        Math.max(D.body.clientHeight, D.documentElement.clientHeight)
+    );
+}
+
 function getHiddenHeight() {
-		return $(document).height() - $(document).scrollTop() - $(window).height();
+		//var docH = device.platform == "Android"? getDocHeight : $(document).height(); 
+		return getDocHeight() - $(document).scrollTop() - $(window).height();
 }
 
 // TODO: check jqm fixed header code for a better cross platform way of doing this
