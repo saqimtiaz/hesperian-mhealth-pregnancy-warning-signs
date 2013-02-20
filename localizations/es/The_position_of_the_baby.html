@@ -1,0 +1,33 @@
+{% set pagetitle = '<a href="Things_to_check_during_pregnancy.html" rel="external" class="hm-seq-btn" data-role="button" data-theme="g">Lista de cosas que revisar</a>' %}
+{% set seq_length = 0 %}
+{% set seq_position = 0 %}
+{% set seq_llink = "javascript:;" %}		## set rlink equal to next page href
+{% set seq_rlink = "javascript:;" %}		## set llink equal to previous page href
+{% extends "templates.jinja/base.page-with-sequence.html" %}
+{% block title %} Hesperian - Pregnancy &amp; Birth{% endblock %}
+{% block id %}The_position_of_the_baby{% endblock %}
+
+		{% block content %}
+			<h2 class="hm-pagetitle">La posición del bebé</h2>
+			 <img src="images/chunked_4.png" width="109" class="hm-content-imgright"/> 
+
+			<p>
+				<span class="hm-content-strong">Seña de salud: </span>La cabeza del bebé está hacia abajo al momento del parto.
+			</p>
+
+			<p>
+				<span class="hm-content-strong">Seña de alarma:</span> El bebé viene de nalgas (con los pies o con las nalgas para abajo) en el momento del parto. Un parto cuando el bebé viene de nalgas puede ser difícil. De ser posible, un bebé que viene de nalgas debe nacer en un centro médico que esté bien equipado, especialmente si es el primer bebé de la madre. 
+			<p>
+				<div class="hm-content-important clear">Si el bebé viene de lado, no puede nacer a través de la vagina.  Si el bebé viene de lado cuando el trabajo de parto comience, lleve a la madre a un hospital. Necesitará una cesárea. </div>
+			</p>
+
+			<p>Durante el embarazo, es común que un bebé cambie de posición varias veces en el vientre.  Para el final del embarazo, el bebé debe haberse colocado con la cabeza abajo. Ésta es la posición más segura para poder dar a luz.  Para asegurarse que el bebé esté con la cabeza para abajo, revise siempre la posición del bebé.</p>
+
+		{% endblock %}
+		{% block footer %}
+			<div class="hm-content-relatedlinks">
+				<span class="hm-content-strong">Información relacionada:</span>	
+				<a href="How_to_check_the_babys_position1.html" data-role="button" data-theme="c">Cómo revisar la posición del bebé</a>
+				<a href="Baby_is_lying_sideways.html" data-role="button" data-theme="c">Si el bebé está de lado dentro del vientre</a>
+			</div>
+		{% endblock %}

@@ -8,7 +8,7 @@
 # enough to let it survive. Then, we post-remove the html comment.
 #
 
-TIDY_OPTS="-i --indent-spaces 4 --hide-comments 1 --drop-proprietary-attributes 0 -q -f tidy.log"
+TIDY_OPTS="-utf8 -i --indent-spaces 4 --hide-comments 1 --drop-proprietary-attributes 0 -q -f tidy.log"
 
 cat | sed "s:<span class=\"clear\"></span>:<span class=\"clear\"><!--tidy--></span>:g" \
 | tidy ${TIDY_OPTS} \

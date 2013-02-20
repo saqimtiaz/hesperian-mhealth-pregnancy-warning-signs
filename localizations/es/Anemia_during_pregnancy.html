@@ -1,0 +1,34 @@
+{% set pagetitle = '<a href="Things_to_check_during_pregnancy.html" rel="external" class="hm-seq-btn" data-role="button" data-theme="g">Lista de cosas que revisar</a>' %}
+{% set seq_length = 0 %}
+{% set seq_position = 0 %}
+{% set seq_llink = "javascript:;" %}		## set rlink equal to next page href
+{% set seq_rlink = "javascript:;" %}		## set llink equal to previous page href
+{% extends "templates.jinja/base.page-with-sequence.html" %}
+{% block title %} Hesperian - Pregnancy &amp; Birth{% endblock %}
+{% block id %}Anemia_during_pregnancy{% endblock %}
+
+		{% block content %}
+			
+			<h2 class="hm-pagetitle">Señas de anemia</h2>
+			
+			<p>La anemia es la falta de hierro en la sangre. La anemia es especialmente peligrosa para las mujeres embarazadas porque se pierde sangre durante el parto. Esto puede hacer que la anemia sea tan severa que la mujer muera. </p>
+			 <img src="images/anemia_signs.png" width="87" class="hm-content-imgright"/> 
+			<p><span class="hm-content-strong">Señas de anemia:</span></p>
+			<ul class="hm-content-noindent">
+				<li>Palidez en los párpados interiores, labio interior o piel debajo de las uñas.</li>
+				<li>Debilidad y sentimiento de cansancio.</li>
+				<li>Mareos, especialmente cuando se levanta de estar sentada o de estar acostada. </li>
+				<li>Desmayos (pérdida de la conciencia).</li>
+				<li>Dificultad para respirar.</li>
+				<li>El corazón late muy rápido.</li>
+			</ul>
+			
+            <p>Si una mujer tiene señas de anemia, debe comer comidas que contengan mucho hierro. Otra forma de adquirir hierro es tomar<br> 300 miligramos de sulfato ferroso (o lo suficiente para proveer 60 miligramos de hierro), 2 veces al día hasta que el bebé nazca.  Si toma tabletas de hierro con fruta, el cuerpo absorberá mucho mejor el hierro.</p>
+		
+		{% endblock %}
+		{% block footer %}
+			<div class="hm-content-relatedlinks">
+				<span class="hm-content-strong">Información relacionada:</span>	
+				<a href="Foods_with_iron.html" rel="external" data-role="button" data-theme="c">Comidas con hierro</a>
+			</div>
+		{% endblock %}

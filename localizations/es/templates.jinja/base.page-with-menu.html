@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html manifest="cache.manifest">
+{% include 'templates.jinja/base.head.html' %}
+
+  
+<body>
+{% block body %}  
+<!-- {% block id %}{% endblock %} -->
+<div data-role="page" id="{{ self.id() }}" data-theme="b">
+	{% block header %}
+	<div data-role="header" data-theme="b">
+		<a href="" class="ui-btn-left hm-back-button hm-nav-button" data-icon="arrow-l" data-rel="back">Regresar</a>
+		<h1>{% block headertitle %}<img src="images/hesperian_logo_header.png"  style="width:90px;height:35px;" alt="Safe Pregnancy and Birth"/>{% endblock %}</h1>
+		<a href="index.html" class="ui-btn-right hm-home-button hm-nav-button" data-icon="hm-home" data-iconpos="notext" data-direction="reverse">Home</a> 
+	</div>
+	{% endblock %}
+
+	<!-- content -->	
+	<div data-role="content">
+		{% block content %}{% endblock %}	
+	</div><!-- /content -->
+	{% block footer %}{% endblock %}
+</div><!-- /{{ self.id() }} -->
+{% endblock %}
+</body>
+</html>

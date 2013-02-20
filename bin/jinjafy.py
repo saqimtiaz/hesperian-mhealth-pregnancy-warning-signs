@@ -40,6 +40,7 @@ def main(args):
 		data = {} # XXX: hardly elegant!?
 
 	output = render(template_file, template_dir, **data) # TODO: arguments
+	output = output.encode('utf-8')
 	if output_dir:
 		if os.path.abspath(output_dir) == os.path.abspath(template_dir): # XXX: not safe!?
 			raise ValueError("must not overwrite existing template")

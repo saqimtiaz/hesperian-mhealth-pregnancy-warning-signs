@@ -1,0 +1,51 @@
+{% set pagetitle = '<a href="Things_to_check_during_pregnancy.html" rel="external" class="hm-seq-btn" data-role="button" data-theme="g">Lista de cosas que revisar</a>' %}
+{% set seq_length = 0 %}
+{% set seq_position = 0 %}
+{% set seq_llink = "javascript:;" %}		## set rlink equal to next page href
+{% set seq_rlink = "javascript:;" %}		## set llink equal to previous page href
+{% extends "templates.jinja/base.page-with-sequence.html" %}
+{% block title %} Hesperian - Pregnancy &amp; Birth{% endblock %}
+{% block id %}Signs_of_kidney_or_bladder_infection{% endblock %}
+
+		{% block content %}
+		<div class="slidewrapper">
+			<img src="images/KIDNEY.png" width="87" class="hm-content-imgright"/> 			
+			<h2 class="hm-pagetitle">Señas de infección en los riñones o en la vejiga</h2>
+			
+
+			<p>Las infecciones de la vejiga o de los riñones pueden ser peligrosas para la madre.  Si no se tratan inmediatamente, tambien pueden causar que la madre comience el trabajo de parto antes de tiempo.</p>
+
+			<p>
+				<span class="hm-content-strong clear">Señas de una infección de la vejiga:</span>
+			</p>			
+			<ul class="hm-content-noindent">
+				<li>Sentir la necesidad constante de orinar, aún después de haber orinado</li>
+				<li>Dolor o sensación de ardor durante o después de haber orinado</li>
+				<li>Dolor en la parte baja del abdomen, detrás de la parte frontal de la pelvis</li>
+			</ul>
+
+			<p>
+				<span class="hm-content-strong">Señas de una infección de riñón:</span>
+			</p>
+			
+			<ul class="hm-content-noindent">
+				<li>Dolor en la parte baja de la espalda, a veces en los costados</li>
+				<li>Fiebre</li>
+				<li>Orina turbia o con sangre</li>
+				<li>Sentirse muy débil o mareada</li>
+				<li>La mujer puede también tener las señas de una infección de la vejiga</li>
+			</ul>
+
+			<ul data-role="listview" data-theme="b" data-inset="true" class="hm-content-essentiallinks">
+				<li><a href="If_she_has_a_bladder_infection.html" rel="external">Cómo tratar las infecciones de vejiga y riñón</a></li>
+			</ul>
+		</div>
+	
+		{% endblock %}
+		{% block footer %}
+			<div class="hm-content-relatedlinks clear">
+				<span class="hm-content-strong">Información relacionada:</span>			
+				<a href="How_to_take_temperature1.html" data-role="button" data-theme="c">Cómo medir la temperatura</a>
+				<a href="Fever_during_pregnancy.html" data-role="button" data-theme="c">Fiebre durante el embarazo</a>
+			</div>
+		{% endblock %}

@@ -1,0 +1,23 @@
+{% set pagetitle = "Cómo poner una inyección" %}
+{% set seq_length = 8 %}
+{% set seq_position = 3 %}
+{% set seq_llink = "How_to_injection_from_bottle1.html" %}		## set rlink equal to next page href
+{% set seq_rlink = "How_to_injection_from_ampule3.html" %}		## set llink equal to previous page href
+{% extends "templates.jinja/base.page-with-sequence.html" %}
+{% block title %} Hesperian - Pregnancy &amp; Birth{% endblock %}
+{% block id %}Injection_from_bottle2{% endblock %}
+
+		{% block content %}
+		
+		<ul class="hm-content-noindent hm-content-spacedlist hm-content-unstyledlist">
+			<li> <img src="images/WTND_72-36.png" class="hm-content-imgright" width="87"/> 3. Ponga el frasco con la boquilla hacia abajo. Asegúrese de que la punta de la aguja está adentro de la medicina en la botella y no en el aire. Sostenga el cilindro de la jeringa y jale lentamente del émbolo hasta que la cantidad correcta de medicamento entre en la jeringa. Saque la jeringa de la botella.</li>
+		</ul>
+		{% endblock %}
+		{% block footer %}
+			<div class="hm-content-relatedlinks">
+				<span class="hm-content-strong">Información relacionada:</span>	
+				<a href="Bleeding-After_Birth.html" rel="external" data-role="button" data-theme="c">Sangrado después del parto</a>
+				<a href="Severe_pre-eclampsia.html" rel="external" data-role="button" data-theme="c">Qué hacer si tiene pre-eclampsia severa</a>
+				<a href="Seizures_during_pregnancy.html" rel="external" data-role="button" data-theme="c">Qué hacer si tiene un ataque (convulsiones)</a>
+			</div>
+		{% endblock %}

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "org.hesperian.Safe-Pregnancy-and-Birth"
+        version   = "1.0.0">
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>Safe Birth</name>
+
+    <description>
+        An example for phonegap build docs. 
+    </description>
+
+    <author href="https://hesperian.org" email="support@hesperian.org">
+    </author>
+    
+    <!-- Layout tested in portrait mode - but may work in landscape as well -->
+    <preference name="orientation" value="portrait" />
+    
+    <!-- Disable iOS webviewbounce -->
+    <preference name="webviewbounce" value="false" />
+    
+    <!-- iOS icons prerendered: system won't add it's own glossy effect -->
+    <preference name="prerendered-icon" value="true" />
+    
+    <!-- Don't auto-detect phone#'s etc. in our html -->
+    <preference name="detect-data-types" value="false" />
+    
+    <!-- iOS icons -->
+    <icon src="icons/ios/icon.png" gap:platform="ios" width="57" height="57" />
+    <icon src="icons/ios/icon-72.png" gap:platform="ios" width="72" height="72" />
+    <icon src="icons/ios/icon_at_2x.png" gap:platform="ios" width="114" height="114" />
+  
+    <!-- iOS splash screen a.k.a. launch image -->
+    <gap:splash src="splash/ios/Default.png" width="320" height="480" />
+    <gap:splash src="splash/ios/Default_at_2x.png" width="640" height="960" />
+    <!--
+    <gap:splash src="splash/ios/Default_iphone5.png" width="640" height="1136" />
+    <gap:splash src="splash/ios/Default-Landscape.png" width="1024" height="768" />
+    <gap:splash src="splash/ios/Default-Portrait.png" width="768" height="1024" />
+    -->
+    
+    <!-- Allow external links -->
+    <access origin="*" browserOnly="true"/>
+
+</widget>

@@ -9,10 +9,17 @@
 # serve the correct content type for the manifest.
 #
 
+# Build number.
 BUILD=0017
+
+# Main source directory - retarget for localized builds
+#SRC=src
+SRC=localizations/es
+
 SITEBUILDDIR=site/www/archive/$(BUILD)
 
-TMP=./tmp
+JINJAFY=$(abspath ./bin/jinjafy.py)
+TMP=$(abspath ./tmp)
 
 JSMIN ?= .min
 # JQuery (minus .js / .css extension)
@@ -37,6 +44,7 @@ phonegap: JSOBJ += jslib/$(PHONEGAP).js phonegap/Plugins/HesperianMobile.js
 
 # destination directory where we will assemble the app
 html: DESTDIR ?= html
+gapbuild: DESTDIR ?= gapbuild
 phonegap: DESTDIR ?= phonegap/iOS/www
 
 # Combine all the html into one file?
@@ -51,10 +59,10 @@ htmldest:
 	-rm -R $(DESTDIR)
 	@-mkdir $(DESTDIR)
 	# Copy the raw html source from the src directory
-	cp -R src/images $(DESTDIR)/images
+	cp -R $(SRC)/images $(DESTDIR)/images
 	@mkdir -p $(TMP)/rendered
 	# render each html file with jinja
-	cd src/;for filename in *.html;do echo "{}" | ../bin/jinjafy.py $$filename > ../$(TMP)/rendered/$$filename;done
+	cd $(SRC)/;for filename in *.html;do echo "{}" | $(JINJAFY) $$filename > $(TMP)/rendered/$$filename;done
 ifeq ("YES","$(COMBINEHTML)")
 	@-rm tidy.log
 	./bin/concatinate_html.pl $(TMP)/rendered | tee $(TMP)/index-pretidy.html | ./bin/tidy.sh > $(DESTDIR)/index.html
@@ -66,7 +74,7 @@ endif
 	for f in $(JSOBJ); do cat $$f >> $(DESTDIR)/hesperian_mobile.js; done;
 	# create the main ccs file
 	for f in $(CSSIMPORT); do echo @import url\(\'$$f\'\)\; >> $(DESTDIR)/hesperian_mobile.css; done ;
-	cat src/$(CSS).css >> $(DESTDIR)/hesperian_mobile.css
+	cat $(SRC)/$(CSS).css >> $(DESTDIR)/hesperian_mobile.css
 ifneq ("","$(JQM)")
 	# Put the jquery mobile css and images into a jquery.mobile directory
 	@mkdir $(DESTDIR)/jquery.mobile
@@ -80,6 +88,12 @@ manifest:
 	echo "AddType text/cache-manifest .manifest" >  $(DESTDIR)/.htaccess
 	
 html: htmldest manifest
+
+gapbuild: htmldest
+	cp phonegap/config.xml $(DESTDIR)
+	cp -R phonegap/icons $(DESTDIR)
+	cp -R phonegap/splash $(DESTDIR)
+	zip -r $(DESTDIR).zip $(DESTDIR) -x \*.DS_Store 
 
 clean-phonegap:
 	@- rm -R phonegap/iOS/www/*

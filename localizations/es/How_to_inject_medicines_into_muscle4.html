@@ -1,0 +1,25 @@
+{% set pagetitle = "Cómo poner una inyección" %}
+{% set seq_length = 8 %}
+{% set seq_position = 5 %}
+{% set seq_llink = "How_to_injection_from_bottle3.html" %}		## set rlink equal to next page href
+{% set seq_rlink = "How_to_inject_medicines_into_muscle5.html" %}		## set llink equal to previous page href
+{% extends "templates.jinja/base.page-with-sequence.html" %}
+{% block title %} Hesperian - Pregnancy &amp; Birth{% endblock %}
+{% block id %}How_to_inject_medicines_into_muscle4{% endblock %}
+
+		{% block content %}
+			<p class="hm-content-strong">Escoja dónde inyectar</p>
+			<ul class="hm-content-noindent hm-content-unstyledlist">
+				<li>5.	A un adulto lo puede inyectar en la nalga o el muslo.  Imagine que cada nalga está dividida en 4 partes.  Inyecte en el cuadro superior que está hacia afuera. Alternativamente, puede inyectar en el músculo largo en la parte de enfrente del muslo. </li>
+			</ul>
+			 <img src="images/mwch19p360-2.png" class="hm-content-imgright" width="145"/> 
+			 <img src="images/MW1412-38.png" class="hm-content-imgleft" width="130"/> 
+		{% endblock %}
+		{% block footer %}
+			<div class="hm-content-relatedlinks">
+				<span class="hm-content-strong">Información relacionada:</span>	
+				<a href="Bleeding-After_Birth.html" rel="external" data-role="button" data-theme="c">Sangrado después del parto</a>
+				<a href="Severe_pre-eclampsia.html" rel="external" data-role="button" data-theme="c">Qué hacer si tiene pre-eclampsia severa</a>
+				<a href="Seizures_during_pregnancy.html" rel="external" data-role="button" data-theme="c">Qué hacer si tiene un ataque (convulsiones)</a>
+			</div>
+		{% endblock %}

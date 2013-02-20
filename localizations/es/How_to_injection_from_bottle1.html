@@ -1,0 +1,24 @@
+{% set pagetitle = "Cómo poner una inyección" %}
+{% set seq_length = 8 %}
+{% set seq_position = 2 %}
+{% set seq_llink = "How_to_inject_medicines_into_muscle.html" %}		## set rlink equal to next page href
+{% set seq_rlink = "How_to_injection_from_bottle2.html" %}		## set llink equal to previous page href
+{% extends "templates.jinja/base.page-with-sequence.html" %}
+{% block title %} Hesperian - Pregnancy &amp; Birth{% endblock %}
+{% block id %}Injection_from_bottle1{% endblock %}
+
+		{% block content %}
+		 <img src="images/MED37-29.png" class="hm-content-imgright" width="52"/> 	
+		<ul class="hm-content-noindent hm-content-spacedlist hm-content-unstyledlist">
+			<li>1. Limpie el tapón de goma del frasco con una gaza esterilizada, o un paño, ambos remojados en alcohol. Esto mantiene la suciedad lejos de la aguja y fuera de la medicina.<img src="images/MED38-30.png" class="hm-content-imgleft" width="44"/> </li>
+			<li>2. Jale el émbolo para llenar la jeringa con el aire. Luego introduzca la jeringa en  el tapón de goma del frasco e inyecte el aire en el frasco.</li>
+		</ul>
+		{% endblock %}
+		{% block footer %}
+			<div class="hm-content-relatedlinks">
+				<span class="hm-content-strong">Información relacionada:</span>	
+				<a href="Bleeding-After_Birth.html" rel="external" data-role="button" data-theme="c">Sangrado después del parto</a>
+				<a href="Severe_pre-eclampsia.html" rel="external" data-role="button" data-theme="c">Qué hacer si tiene pre-eclampsia severa</a>
+				<a href="Seizures_during_pregnancy.html" rel="external" data-role="button" data-theme="c">Qué hacer si tiene un ataque (convulsiones)</a>
+			</div>
+		{% endblock %}

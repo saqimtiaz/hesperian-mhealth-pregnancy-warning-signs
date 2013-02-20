@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html manifest="cache.manifest">
+{% include 'templates.jinja/base.head.html' %}
+
+<body>
+{% block body %}  
+<!-- {% block id %}{% endblock %} -->
+<div data-role="page" id="{{ self.id() }}">
+	{% block header %}
+	<div data-role="header" data-backbtn="false" data-theme="b">
+		<h1><span><img src="images/white-app-icon-homescreen.png" style="height:33.5px;"/></span><span>{% block headertitle %}El embarazo y el parto seguros{% endblock %}</span></h1>
+	</div>
+	{% endblock %}
+
+	<!-- content -->	
+	<div data-role="content">
+		{% block content %}{% endblock %}	
+	</div><!-- /content -->
+	{% block footer %}{% endblock %}
+</div><!-- /{{ self.id() }} -->
+<div id="hm-keepreading">ver más &darr;</div>
+{% endblock %}
+</body>
+</html>

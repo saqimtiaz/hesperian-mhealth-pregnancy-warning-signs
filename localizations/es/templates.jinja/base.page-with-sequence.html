@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html manifest="cache.manifest">
+{% include 'templates.jinja/base.head.html' %}
+
+<body>
+{% block body %}  
+<!-- {% block id %}{% endblock %} -->
+<div data-role="page" id="{{ self.id() }}" data-theme="b" swipe="true" class="hm-swipe">
+	{% block header %}
+	<div data-role="header" data-theme="b">
+		<a href="" class="ui-btn-left hm-back-button hm-nav-button" data-icon="arrow-l" data-rel="back">Regresar</a>
+		<h1>{% block headertitle %}<img src="images/hesperian_logo_header.png"  style="width:90px;height:35px;" alt="Safe Pregnancy and Birth"/>{% endblock %}</h1>
+		<a href="index.html" class="ui-btn-right hm-home-button hm-nav-button" data-icon="hm-home" data-iconpos="notext" data-direction="reverse">Home</a> 	
+	</div>
+{% include 'templates.jinja/base.page.navbar.html' %}
+	{%- set seq_length = seq_length %}  ##re-assign variables or they arent passed to included templates, possible bug
+	{%- set seq_position = seq_position %}
+	{%- set seq_rlink = seq_rlink %}
+	{%- set seq_llink = seq_llink %}
+	{%- set pagetitle = pagetitle %}
+{% include 'templates.jinja/base.page.sequence.html' with context %}
+	{% endblock %}
+
+	<!-- content -->	
+	<div data-role="content">
+		{% block content %}{% endblock %}	
+	</div><!-- /content -->
+	{%- set seq_length = seq_length %}  ##re-assign variables or they arent passed to included templates, possible bug
+	{%- set seq_position = seq_position %}
+	{%- set seq_rlink = seq_rlink %}
+	{%- set seq_llink = seq_llink %}
+	{%- set pagetitle = pagetitle %}
+{% include 'templates.jinja/base.page.sequence-bottom.html' with context %}
+	{% block footer %}{% endblock %}
+</div><!-- /{{ self.id() }} -->
+{% endblock %}
+</body>
+</html>

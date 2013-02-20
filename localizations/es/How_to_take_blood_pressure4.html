@@ -1,0 +1,29 @@
+{% set pagetitle = "Cómo medir la presión<br> de la sangre" %}
+{% set seq_length = 5 %}
+{% set seq_position = 4 %}
+{% set seq_llink = "How_to_take_blood_pressure3.html" %}		## set rlink equal to next page href
+{% set seq_rlink = "How_to_take_blood_pressure5.html" %}		## set llink equal to previous page href
+{% extends "templates.jinja/base.page-with-sequence.html" %}
+{% block title %} Hesperian - Pregnancy &amp; Birth{% endblock %}
+{% block id %}How_to_take_blood_pressure4{% endblock %}
+
+		{% block content %}
+			 <img src="images/bloodpressure.png" class="hm-content-imgright" width="145"/> 
+			<p>
+				4. Apriete la perilla repetidamente para llenar con aire al manguito. 
+			</p>
+			<span class="clear"></span>
+			 <img src="images/chunked_34.gif" class="hm-content-imgright clear" width="102"/> 
+			<p>
+				5. A medida que apriete la perilla e infle el manguito, la aguja indicadora se moverá.  Cuando alcance el número 200, deje de apretar la perilla. 
+			</p>
+			<span class="clear"></span>
+
+		{% endblock %}
+		{% block footer %}
+			<div class="hm-content-relatedlinks">
+				<span class="hm-content-strong">Información relacionada:</span>
+				<a href="Pre-eclampsia_during_pregnancy.html" data-role="button" data-theme="c">Qué hacer si tiene alta la presión de la sangre </a>
+				<a href="Her_blood_pressure.html" data-role="button" data-theme="c">Medir la presión de la sangre durante el embarazo</a>
+			</div>
+		{% endblock %}

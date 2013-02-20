@@ -1,0 +1,22 @@
+{% set pagetitle = "Cómo revisar la<br> posición del bebé" %}
+{% set seq_length = 4 %}
+{% set seq_position = 3 %}
+{% set seq_llink = "How_to_check_the_babys_position2.html" %}		## set rlink equal to next page href
+{% set seq_rlink = "How_to_check_the_babys_position4.html" %}		## set llink equal to previous page href
+{% extends "templates.jinja/base.page-with-sequence.html" %}
+{% block title %} Hesperian - Pregnancy &amp; Birth{% endblock %}
+{% block id %}How_to_check_baby_position3{% endblock %}
+
+		{% block content %}	
+		<img src="images/MW0254C.png" class="hm-content-imgright" width="116"/> 
+			<p>Pídale a la madre que exhale lentamente. A medida que ella exhala, presione profundamente en cada lado de la parte baja del abdomen, justo encima del hueso púbico.</p>
+
+			<p>La cabeza se siente dura. Hacia el final del embarazo entre dentro de la pelvis. Si el trasero del bebé está para abajo, se sentirá más suave y más ancho.</p>
+		{% endblock %}
+		{% block footer %}
+			<div class="hm-content-relatedlinks clear">
+				<span class="hm-content-strong">Información relacionada:</span>	
+				<a href="Baby_is_lying_sideways.html" rel="external" data-role="button" data-theme="c">Si el bebé está de lado dentro del vientre</a>
+				<a href="How_to_change_babys_position.html" rel="external" data-role="button" data-theme="c">Ejercicios para cambiar la posición del bebé dentro del vientre</a>
+			</div>
+		{% endblock %}
