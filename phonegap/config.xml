@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
     <widget xmlns = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "org.hesperian.Safe-Pregnancy-and-Birth"
+        id        = "org.hesperian.Safe-Pregnancy-and-Birth-es"
         version   = "1.0.0">
 
     <!-- versionCode is optional and Android only -->
 
-    <name>Safe Birth</name>
+    <name>Parto seguro</name>
 
     <description>
-        An example for phonegap build docs. 
+        El embarazo y el parto seguros. 
     </description>
 
     <author href="https://hesperian.org" email="support@hesperian.org">
@@ -35,11 +35,9 @@
     <!-- iOS splash screen a.k.a. launch image -->
     <gap:splash src="splash/ios/Default.png" width="320" height="480" />
     <gap:splash src="splash/ios/Default_at_2x.png" width="640" height="960" />
-    <!--
     <gap:splash src="splash/ios/Default_iphone5.png" width="640" height="1136" />
     <gap:splash src="splash/ios/Default-Landscape.png" width="1024" height="768" />
     <gap:splash src="splash/ios/Default-Portrait.png" width="768" height="1024" />
-    -->
     
     <!-- Allow external links -->
     <access origin="*" browserOnly="true"/>
