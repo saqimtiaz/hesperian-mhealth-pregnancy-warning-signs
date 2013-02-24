@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+    <!-- 
+      Phonegap build configuration file.
+      "id" is the iOS app id.
+      "versionCode" is Android only
+    -->
     <widget xmlns = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "org.hesperian.Safe-Pregnancy-and-Birth-es"
+        versionCode = "1"
         version   = "1.0.0">
 
-    <!-- versionCode is optional and Android only -->
-
+    <!-- Essential Properties -->
     <name>Parto seguro</name>
 
     <description>
@@ -13,16 +18,32 @@
     </description>
 
     <author href="https://hesperian.org" email="support@hesperian.org">
+      Hesperian Health Guides
     </author>
     
+    <!-- Multiplatform Properties -->
     <!-- Layout tested in portrait mode - but may work in landscape as well -->
     <preference name="orientation" value="portrait" />
     
+    <!-- <preference name="phonegap-version" value="2.3.0" /> -->
+    <!-- <preference name="target-device" value="universal" /> -->
+    <!-- <preference name="fullscreen" value="true" /> -->
+ 
+  
+    <!-- iOS Properties -->
+     
     <!-- Disable iOS webviewbounce -->
     <preference name="webviewbounce" value="false" />
     
     <!-- iOS icons prerendered: system won't add it's own glossy effect -->
     <preference name="prerendered-icon" value="true" />
+    
+    <!-- other preferences we're not using -->
+    <!-- <preference name="stay-in-webview" value="true" /> -->    
+    <!-- <preference name="ios-statusbarstyle" value="black-opaque" /> -->
+    <!-- <preference name="exit-on-suspend" value="true" /> -->
+    <!-- <preference name="show-splash-screen-spinner" value="false" /> -->
+    <!-- <preference name="auto-hide-splash-screen" value="false" /> -->
     
     <!-- Don't auto-detect phone#'s etc. in our html -->
     <preference name="detect-data-types" value="false" />
@@ -41,5 +62,7 @@
     
     <!-- Allow external links -->
     <access origin="*" browserOnly="true"/>
+    
+    <!-- Android Properties -->
 
 </widget>
