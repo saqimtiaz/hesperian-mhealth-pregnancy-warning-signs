@@ -25,7 +25,8 @@
     <!-- Layout tested in portrait mode - but may work in landscape as well -->
     <preference name="orientation" value="portrait" />
     
-    <!-- <preference name="phonegap-version" value="2.3.0" /> -->
+    <!-- Latest version. Supports iOS 5+ -->
+    <preference name="phonegap-version" value="2.3.0" />
     <!-- <preference name="target-device" value="universal" /> -->
     <!-- <preference name="fullscreen" value="true" /> -->
  
