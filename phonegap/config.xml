@@ -26,7 +26,7 @@
     <preference name="orientation" value="portrait" />
     
     <!-- Latest version. Supports iOS 5+ -->
-    <preference name="phonegap-version" value="2.3.0" />
+    <preference name="phonegap-version" value="2.2.0" />
     <!-- <preference name="target-device" value="universal" /> -->
     <!-- <preference name="fullscreen" value="true" /> -->
  
@@ -62,7 +62,7 @@
     <gap:splash src="splash/ios/Default-Portrait.png" width="768" height="1024" />
     
     <!-- Allow external links -->
-    <access origin="*" browserOnly="true"/>
+    <access origin="*" />
     
     <!-- Android Properties -->
     

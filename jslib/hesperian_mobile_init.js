@@ -39,8 +39,8 @@ var HM = {
 };
 
 // iPhone / Mobile Safari workarounds
-function isiPhone(){
-    return ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)));
+function isiOS(){
+    return navigator.userAgent.match(/(iPad|iPhone|iPod)/g) ? true : false 
 };
 
 $(document).bind("mobileinit", function(){
@@ -71,6 +71,13 @@ $("div:jqmData(role='page')").live('pagebeforecreate',function(event){
 			$("div.sequence-dots",this).append(html);
 		});
 	}
+
+  // iOS links (as of PhoneGap 2.2.0) need target="_blank" to open in an external browser
+  if(isiOS()) {
+    $("a.external-site", this).each(function() {
+      $(this).attr("target", "_blank");
+    });
+  }
 });
 
 $("div:jqmData(role='page')").live("pagebeforeshow",function(event, ui) {
