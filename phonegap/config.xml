@@ -27,7 +27,7 @@
     
     <!-- Latest version. Supports iOS 5+ -->
     <preference name="phonegap-version" value="2.2.0" />
-    <!-- <preference name="target-device" value="universal" /> -->
+    <preference name="target-device" value="handset" />
     <!-- <preference name="fullscreen" value="true" /> -->
  
   
