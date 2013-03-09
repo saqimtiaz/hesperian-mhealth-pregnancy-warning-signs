@@ -32,7 +32,7 @@ foreach my $file (@files) {
   open( my $fh, $file ) or die "Can't open $file\n";
   my $text = do { local( $/ ) ; <$fh> } ;
 
-  $text =~ s/(^.*<body>)//si;
+  $text =~ s/(^.*<body[^>]*>)//si;
   $preamble = $1 unless $preamble; # grab the preamble from the first file
 
   $text =~ s/(<\/body>.*$)//si;

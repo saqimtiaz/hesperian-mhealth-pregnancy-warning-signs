@@ -637,6 +637,10 @@ div.up-buttonset .ui-btn-corner-all {
 	height:		30px;
 }
 
+body.hm-phonegap-Android a.hm-back-button.ui-btn-corner-all {
+  display: none;
+}
+
 /* styles for both custom nav button and back button */
 .ui-header a.hm-nav-button.ui-btn-corner-all {
 	background: rgb(170,56,10); /* Old browsers */

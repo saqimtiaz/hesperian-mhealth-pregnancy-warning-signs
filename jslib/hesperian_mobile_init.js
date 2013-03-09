@@ -80,6 +80,22 @@ $("div:jqmData(role='page')").live('pagebeforecreate',function(event){
   }
 });
 
+// deviceready will be triggered by phonegap when it is loaded.
+// exactly when to call document.addEventListener is a bit obscure
+// and attempting to follow the documentation directly (e.g. calling
+// out of an onLoad() for the body tag, didn't get us called on Android.
+// Other examples call soon after the load of phonegap.js, which in essence
+// is what's happening here, and seems to work.
+document.addEventListener("deviceready", function() {
+      var platform;
+      $("body").addClass("hm-phonegap");
+      if( device && device.platform) {
+        // plaform on iOS can be "iPhone Simulator"
+        platform = device.platform.replace(/\s+Simulator$/, "");
+        $("body").addClass("hm-phonegap-" + platform);
+      }
+}, false);
+
 $("div:jqmData(role='page')").live("pagebeforeshow",function(event, ui) {
 	var page = $(this);
   HM.currentSection =  HM.getContentSectionForPage(page, HM.currentSection);

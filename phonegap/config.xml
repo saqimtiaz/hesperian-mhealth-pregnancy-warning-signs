@@ -29,7 +29,10 @@
     <preference name="phonegap-version" value="2.2.0" />
     <preference name="target-device" value="handset" />
     <!-- <preference name="fullscreen" value="true" /> -->
- 
+    
+    <!-- on very slow systems, such as an Android emulator, default
+      load-url-timeout of 20000 won't allow the load of index.html --> 
+    <preference name="load-url-timeout" value="40000" />
   
     <!-- iOS Properties -->
      
