@@ -8,6 +8,7 @@ t[h]}if(f.isEmptyObject(t)){var u=s.handle;u&&(u.elem=null),delete s.events,dele
 
 // Hesperian Mobile globals
 var HM = { 
+  platform: "", // Android, iPhone
   // Return the content section for the given jQuery page object,
   // for a transition from previousSectionID
   testForPageSectionMatch: function(pageID, sectionList) {
@@ -41,11 +42,6 @@ var HM = {
   currentSection: null
 };
 
-// iPhone / Mobile Safari workarounds
-function isiPhone(){
-    return ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)));
-};
-
 $(document).bind("mobileinit", function(){
 	$.mobile.defaultPageTransition = "none";
 });
@@ -74,7 +70,40 @@ $("div:jqmData(role='page')").live('pagebeforecreate',function(event){
 			$("div.sequence-dots",this).append(html);
 		});
 	}
+
+  // Android needs some extra work to open external links in the browser,
+  // rather than keeping them in the app (which tends to be buggy).
+  if(HM.platform === 'Android') {
+    $("a.external-site", this).each(function() {
+      var a = $(this),
+        href = a.attr('href');
+        
+      if( a.attr('target') === '_blank') {
+        a.bind('tap', function() {
+          navigator.app.loadUrl(href, {openExternal: true});
+          return false;
+        });
+      }
+    });
+  }
 });
+
+// deviceready will be triggered by phonegap when it is loaded.
+// exactly when to call document.addEventListener is a bit obscure
+// and attempting to follow the documentation directly (e.g. calling
+// out of an onLoad() for the body tag, didn't get us called on Android.
+// Other examples call soon after the load of phonegap.js, which in essence
+// is what's happening here, and seems to work.
+document.addEventListener("deviceready", function() {
+      var platform;
+      $("body").addClass("hm-phonegap");
+      if( device && device.platform) {
+        // plaform on iOS can be "iPhone Simulator"
+        platform = device.platform.replace(/\s+Simulator$/, "");
+        $("body").addClass("hm-phonegap-" + platform);
+        HM.platform = platform;
+      }
+}, false);
 
 $("div:jqmData(role='page')").live("pagebeforeshow",function(event, ui) {
 	var page = $(this);

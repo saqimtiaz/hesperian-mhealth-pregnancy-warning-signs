@@ -288,6 +288,7 @@ ul.hm-menu .ui-li-has-thumb .ui-btn-inner a.ui-link-inherit, ul.hm-menu .ui-li-s
     padding-right: 10px;
     padding-top: 8px;
     padding-bottom: 8px;
+    margin-right: 20px; /* Make room for the arrow icon */
 }
 
 .hm-menu-linkwrapper {
@@ -546,12 +547,12 @@ div.ui-page div.ui-content *:first-child {
 
 .hm-content-alignright {
 	float:right;
-	width: 40%;
+	width: 45%;
 }
 
 .hm-content-alignleft {
 	float:left;
-	width: 55%;
+	width: 45%;
 }
 
 .hm-content-floatright {
@@ -603,8 +604,9 @@ div.up-buttonset .ui-btn-corner-all {
 .up-buttonset .hm-uptext {
   position: relative;
   font-size: 90%;
+  line-height: 85%;
   color: rgb(110,35,6);
-  top:13px;
+  top:4px;
   left: -20px;
 }
 
@@ -635,6 +637,10 @@ div.up-buttonset .ui-btn-corner-all {
 /* custom back button */
 .ui-header a.hm-back-button.ui-btn-corner-all  {
 	height:		30px;
+}
+
+body.hm-phonegap-Android a.hm-back-button.ui-btn-corner-all {
+  display: none;
 }
 
 /* styles for both custom nav button and back button */
