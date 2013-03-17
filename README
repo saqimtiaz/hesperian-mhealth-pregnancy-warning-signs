@@ -1,4 +1,4 @@
-This is the hesperian mhealth mobile web application prototype.
+This is the hesperian mhealth mobile web application.
 
 Dependencies: Perl,Python and Jinja python package
 Jinja installation: http://jinja.pocoo.org/docs/intro/#installation
@@ -9,5 +9,6 @@ src/templates.jinja: jinja templates
 jslib: javascript libraries
 
 'make all' to create an html directory containing the app.
+'make gapbuild' to create a gapbuild.zip file for upload to build.phonegap.com
 
 http://www.hesperian.org
