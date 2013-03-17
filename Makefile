@@ -93,6 +93,7 @@ gapbuild: htmldest
 	cp phonegap/config.xml $(DESTDIR)
 	cp -R phonegap/icons $(DESTDIR)
 	cp -R phonegap/splash $(DESTDIR)
+	@-rm $(DESTDIR).zip
 	zip -r $(DESTDIR).zip $(DESTDIR) -x \*.DS_Store 
 
 clean-phonegap:
