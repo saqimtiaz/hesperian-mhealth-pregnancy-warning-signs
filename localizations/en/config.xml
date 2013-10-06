@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <!-- 
+      Phonegap build configuration file.
+      "id" is the iOS app id.
+      "versionCode" is Android only
+    -->
+    <widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "org.hesperian.Safe-Pregnancy-and-Birth"
+        versionCode = "2"
+        version   = "1.0.4">
+
+    <!-- Essential Properties -->
+    <name>Safe Birth</name>
+
+    <description>
+        Safe Pregnancy and Birth. 
+    </description>
+
+    <author href="https://hesperian.org" email="support@hesperian.org">
+      Hesperian Health Guides
+    </author>
+    
+    <!-- Multiplatform Properties -->
+    <!-- Layout tested in portrait mode - but may work in landscape as well -->
+    <preference name="orientation" value="portrait" />
+    
+    <!-- Latest version. Supports iOS 5+ -->
+    <preference name="phonegap-version" value="2.9.0" />
+    <preference name="target-device" value="universal" />
+    <!-- <preference name="fullscreen" value="true" /> -->
+    
+    <!-- on very slow systems, such as an Android emulator, default
+      load-url-timeout of 20000 won't allow the load of index.html --> 
+    <preference name="load-url-timeout" value="40000" />
+  
+    <!-- iOS Properties -->
+     
+    <!-- Disable iOS webviewbounce -->
+    <preference name="webviewbounce" value="false" />
+    
+    <!-- iOS icons prerendered: system won't add it's own glossy effect -->
+    <preference name="prerendered-icon" value="true" />
+    
+    <!-- other preferences we're not using -->
+    <!-- <preference name="stay-in-webview" value="true" /> -->    
+    <!-- <preference name="ios-statusbarstyle" value="black-opaque" /> -->
+    <!-- <preference name="exit-on-suspend" value="true" /> -->
+    <!-- <preference name="show-splash-screen-spinner" value="false" /> -->
+    <!-- <preference name="auto-hide-splash-screen" value="false" /> -->
+    
+    <!-- Don't auto-detect phone#'s etc. in our html -->
+    <preference name="detect-data-types" value="false" />
+    
+    <!-- If you do not want any permissions to be added to your app, add the
+    following tag to your config.xml; you will still have the INTERNET
+    permission on your app, which PhoneGap requires. -->
+    <preference name="permissions" value="none"/>
+    
+    <!-- iOS App icons -->
+    <icon src="icons/ios/icon.png" gap:platform="ios" width="57" height="57" />
+    <icon src="icons/ios/icon-72.png" gap:platform="ios" width="72" height="72" />
+    <icon src="icons/ios/icon_at_2x.png" gap:platform="ios" width="114" height="114" />
+  
+    <!-- iOS splash screen a.k.a. launch image -->
+    <gap:splash src="splash/ios/Default.png" width="320" height="480" />
+    <gap:splash src="splash/ios/Default_at_2x.png" width="640" height="960" />
+    <gap:splash src="splash/ios/Default_iphone5.png" width="640" height="1136" />
+    <gap:splash src="splash/ios/Default-Landscape.png" width="1024" height="768" />
+    <gap:splash src="splash/ios/Default-Portrait.png" width="768" height="1024" />
+    
+    <!-- Allow external links -->
+    <access origin="*" />
+    
+    <!-- Android Properties -->
+    
+    <!-- Android App icons -->
+    <icon src="icons/android/ldpi.png" gap:platform="android" gap:density="ldpi" />
+    <icon src="icons/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
+    <icon src="icons/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
+    <icon src="icons/android/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
+   
+    <!-- Android Splash Screen -->
+    <gap:splash src="splash/android/ldpi.png" gap:platform="android" gap:density="ldpi" />
+    <gap:splash src="splash/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
+    <gap:splash src="splash/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
+    <gap:splash src="splash/android/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
+  
+  </widget>

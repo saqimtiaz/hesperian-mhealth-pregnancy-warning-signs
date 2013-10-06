@@ -10,11 +10,11 @@
 #
 
 # Build number.
-BUILD=0017
+BUILD=0018
 
 # Main source directory - retarget for localized builds
-#SRC=src
-SRC=localizations/es
+LOCALIZATION ?= en
+SRC=localizations/$(LOCALIZATION)
 
 SITEBUILDDIR=site/www/archive/$(BUILD)
 
@@ -44,7 +44,7 @@ phonegap: JSOBJ += jslib/$(PHONEGAP).js phonegap/Plugins/HesperianMobile.js
 
 # destination directory where we will assemble the app
 html: DESTDIR ?= html
-gapbuild: DESTDIR ?= gapbuild
+gapbuild: DESTDIR ?= safe-birth-$(LOCALIZATION)
 phonegap: DESTDIR ?= phonegap/iOS/www
 
 # Combine all the html into one file?
@@ -90,11 +90,12 @@ manifest:
 html: htmldest manifest
 
 gapbuild: htmldest
-	cp phonegap/config.xml $(DESTDIR)
+	cp $(SRC)/config.xml $(DESTDIR)
 	cp -R phonegap/icons $(DESTDIR)
 	cp -R phonegap/splash $(DESTDIR)
-	@-rm $(DESTDIR).zip
-	zip -r $(DESTDIR).zip $(DESTDIR) -x \*.DS_Store 
+	cp -R phonegap/iOS/locales $(DESTDIR)
+#	@-rm $(DESTDIR).zip
+#	zip -r $(DESTDIR).zip $(DESTDIR) -x \*.DS_Store 
 
 clean-phonegap:
 	@- rm -R phonegap/iOS/www/*
