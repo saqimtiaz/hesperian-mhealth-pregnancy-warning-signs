@@ -20,14 +20,18 @@
     <author href="https://hesperian.org" email="support@hesperian.org">
       Hesperian Health Guides
     </author>
-    
+ 
+    <!-- Platform Build Selection -->
+    <gap:platform name="ios" />
+    <gap:platform name="android" />
+   
     <!-- Multiplatform Properties -->
     <!-- Layout tested in portrait mode - but may work in landscape as well -->
     <preference name="orientation" value="portrait" />
     
     <!-- Latest version. Supports iOS 5+ -->
-    <preference name="phonegap-version" value="2.2.0" />
-    <preference name="target-device" value="handset" />
+    <preference name="phonegap-version" value="2.9.0" />
+    <preference name="target-device" value="universal" />
     <!-- <preference name="fullscreen" value="true" /> -->
     
     <!-- on very slow systems, such as an Android emulator, default

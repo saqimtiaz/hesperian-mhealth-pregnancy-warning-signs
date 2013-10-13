@@ -20,6 +20,10 @@
     <author href="https://hesperian.org" email="support@hesperian.org">
       Hesperian Health Guides
     </author>
+ 
+    <!-- Platform Build Selection -->
+    <gap:platform name="ios" />
+    <gap:platform name="android" />
     
     <!-- Multiplatform Properties -->
     <!-- Layout tested in portrait mode - but may work in landscape as well -->
