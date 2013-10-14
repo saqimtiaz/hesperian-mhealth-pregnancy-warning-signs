@@ -19,6 +19,7 @@ BUILD=0018
 # Available localizations: en es
 LOCALIZATION ?= en
 SRC=localizations/$(LOCALIZATION)
+GAPDEST=safe-birth-$(LOCALIZATION)
 
 SITEBUILDDIR=site/www/archive/$(BUILD)
 
@@ -48,7 +49,7 @@ phonegap: JSOBJ += jslib/$(PHONEGAP).js phonegap/Plugins/HesperianMobile.js
 
 # destination directory where we will assemble the app
 html: DESTDIR ?= html
-gapbuild: DESTDIR ?= safe-birth-$(LOCALIZATION)
+gapbuild: DESTDIR ?= $(GAPDEST)
 phonegap: DESTDIR ?= phonegap/iOS/www
 
 # Combine all the html into one file?
@@ -101,6 +102,12 @@ gapbuild: htmldest
 	mkdir -p $(DESTDIR)/locales/$(LOCALIZATION)
 	echo "\"DummyKey\" = \"Dummyvalue\";"  > $(DESTDIR)/locales/$(LOCALIZATION)/local.strings
 
+# 
+gapcommit:
+	rm -R ../$(GAPDEST)/*
+	cp -R $(GAPDEST)/* ../$(GAPDEST)
+	(cd ../$(GAPDEST); git add -A; git commit -m "updated build")
+  
 clean:
 	@- rm -R html
 	@- rm -R safe-birth-??
@@ -115,6 +122,3 @@ release:
 site-deploy:
 	(cd site; make deploy)
 
-# Special targets for prototype builds
-profile-html:
-	make JSMIN="" html
