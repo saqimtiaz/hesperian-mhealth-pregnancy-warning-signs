@@ -17,7 +17,7 @@ BUILD=0018
 
 # Main source directory - retarget for localized builds
 # Available localizations: en es
-LOCALIZATION ?= es
+LOCALIZATION ?= en
 SRC=localizations/$(LOCALIZATION)
 
 SITEBUILDDIR=site/www/archive/$(BUILD)
@@ -97,6 +97,7 @@ gapbuild: htmldest
 	cp $(SRC)/config.xml $(DESTDIR)
 	cp -R phonegap/icons $(DESTDIR)
 	cp -R phonegap/splash $(DESTDIR)
+	# Create a dummy string localization file - Apple app store UI looks for these to report language support
 	mkdir -p $(DESTDIR)/locales/$(LOCALIZATION)
 	echo "\"DummyKey\" = \"Dummyvalue\";"  > $(DESTDIR)/locales/$(LOCALIZATION)/local.strings
 
