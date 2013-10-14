@@ -8,12 +8,16 @@
 # and create an html5 cache.manifest file (along with a .htaccess which will
 # serve the correct content type for the manifest.
 #
+# For building the mobile app itself (rather than just the html)
+# use the gapbuild target. You'll need to set LOCALIZATION to the proper
+# localized source to use. Output will be found in safe-birth-$(LOCALIZATION)
 
 # Build number.
 BUILD=0018
 
 # Main source directory - retarget for localized builds
-LOCALIZATION ?= en
+# Available localizations: en es
+LOCALIZATION ?= es
 SRC=localizations/$(LOCALIZATION)
 
 SITEBUILDDIR=site/www/archive/$(BUILD)
@@ -93,28 +97,13 @@ gapbuild: htmldest
 	cp $(SRC)/config.xml $(DESTDIR)
 	cp -R phonegap/icons $(DESTDIR)
 	cp -R phonegap/splash $(DESTDIR)
-	cp -R phonegap/iOS/locales $(DESTDIR)
-#	@-rm $(DESTDIR).zip
-#	zip -r $(DESTDIR).zip $(DESTDIR) -x \*.DS_Store 
-
-clean-phonegap:
-	@- rm -R phonegap/iOS/www/*
-
-phonegap: clean-phonegap htmldest
-
-fetch-jqm-latest:
-	# fetch and extract the latest daily build of JQM
-	@- rm -R jslib/latest
-	curl http://code.jquery.com/mobile/latest/jquery.mobile.zip > jqm-latest.zip
-	mkdir jslib/latest
-	unzip jqm-latest.zip -d jslib/latest
-	rm jqm-latest.zip
+	mkdir -p $(DESTDIR)/locales/$(LOCALIZATION)
+	echo "\"DummyKey\" = \"Dummyvalue\";"  > $(DESTDIR)/locales/$(LOCALIZATION)/local.strings
 
 clean:
 	@- rm -R html
-	@- rm -R phonegap/iOS/www/*
+	@- rm -R safe-birth-??
 	@- rm -R $(TMP)
-	@- rm -R jslib/latest
 
 release:
 	mkdir -p $(SITEBUILDDIR)/app
@@ -128,17 +117,3 @@ site-deploy:
 # Special targets for prototype builds
 profile-html:
 	make JSMIN="" html
-
-# Builds with the latests version of JQM
-latest-html:
-	make JQUERY=jquery-1.6.1.min JQM=jquery.mobile.min JQMDIR=latest/jquery.mobile phonegap
-latest-phonegap:
-	make JQUERY=jquery-1.6.1.min JQM=jquery.mobile.min JQMDIR=latest/jquery.mobile html
-dev-phonegap:
-	make JQUERY=jquery-1.6.1.min JQM=jquery.mobile JQMDIR=jquery.mobile.latest/jquery.mobile/ phonegap
-
-# Builds without jquery or JQM - only our own explicit jslib/standalone.js
-nojq-html:
-	make JQUERY="" JQM="" JSOBJ=jslib/standalone.js COMBINEHTML="NO" html
-nojq-phonegap:
-	make JQUERY="" JQM="" JSOBJ=jslib/standalone.js COMBINEHTML="NO" phonegap
