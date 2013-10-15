@@ -17,7 +17,7 @@ BUILD=0018
 
 # Main source directory - retarget for localized builds
 # Available localizations: en es
-LOCALIZATION ?= en
+LOCALIZATION ?= es
 SRC=localizations/$(LOCALIZATION)
 GAPDEST=safe-birth-$(LOCALIZATION)
 

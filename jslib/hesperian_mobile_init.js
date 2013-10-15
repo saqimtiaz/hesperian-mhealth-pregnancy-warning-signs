@@ -68,23 +68,21 @@ $("div:jqmData(role='page')").live('pagebeforecreate',function(event){
 		});
 	}
 
-  // Android needs some extra work to open external links in the browser,
+  // Phonegap build needs some extra work to open external links in the browser,
   // rather than keeping them in the app (which tends to be buggy).
   // The links in question should be class "external-site", with
   // target "_blank", indicating they want to open in the browser.
-  if(HM.platform === 'Android') {
-    $("a.external-site", this).each(function() {
-      var a = $(this),
-        href = a.attr('href');
-        
-      if( a.attr('target') === '_blank') {
-        a.bind('tap', function() {
-          navigator.app.loadUrl(href, {openExternal: true});
-          return false;
-        });
-      }
-    });
-  }
+  $("a.external-site", this).each(function() {
+    var a = $(this),
+      href = a.attr('href');
+      
+    if( a.attr('target') === '_blank') {
+      a.bind('tap', function() {
+        window.open(href, "_system");
+        return false;
+      });
+    }
+  });
 });
 
 // deviceready will be triggered by phonegap when it is loaded.
