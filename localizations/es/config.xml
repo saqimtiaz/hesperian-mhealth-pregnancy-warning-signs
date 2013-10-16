@@ -72,6 +72,9 @@
     <gap:splash src="splash/ios/Default_iphone5.png" gap:platform="ios" width="640" height="1136" />
     <gap:splash src="splash/ios/Default-Landscape.png" gap:platform="ios" width="1024" height="768" />
     <gap:splash src="splash/ios/Default-Portrait.png" gap:platform="ios" width="768" height="1024" />
+    <!-- retina iPad support -->
+    <gap:splash src="splash/ios/Default-Landscape_at_2x.png" gap:platform="ios" width="2048" height="1496" />
+    <gap:splash src="splash/ios/Default-Portrait_at_2x.png" gap:platform="ios" width="1536" height="2008" />
     
     <!-- Allow external links -->
     <access origin="*" />
