@@ -94,6 +94,7 @@ manifest:
 	
 html: htmldest manifest
 
+# Main target for phonegap-build.
 gapbuild: htmldest
 	cp $(SRC)/config.xml $(DESTDIR)
 	cp -R phonegap/icons $(DESTDIR)
@@ -102,7 +103,9 @@ gapbuild: htmldest
 	mkdir -p $(DESTDIR)/locales/$(LOCALIZATION)
 	echo "\"DummyKey\" = \"Dummyvalue\";"  > $(DESTDIR)/locales/$(LOCALIZATION)/local.strings
 
-# 
+# Take new gapbuild source and commit / replace it into a git repository
+# assumed to exist in a sibling directory. You'll push this to github
+# to make the new source available to phonegap build.
 gapcommit:
 	rm -R ../$(GAPDEST)/*
 	cp -R $(GAPDEST)/* ../$(GAPDEST)
