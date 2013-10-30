@@ -96,6 +96,8 @@ html: htmldest manifest
 
 # Main target for phonegap-build.
 gapbuild: htmldest
+	# Update the version number in index.html
+	./bin/setversion.pl $(SRC)/config.xml $(DESTDIR)/index.html > $(TMP)/index.html; mv $(TMP)/index.html $(DESTDIR)/index.html
 	cp $(SRC)/config.xml $(DESTDIR)
 	cp -R phonegap/icons $(DESTDIR)
 	cp -R phonegap/splash $(DESTDIR)
