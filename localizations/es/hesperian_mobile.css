@@ -5,6 +5,10 @@
 white-space: normal;
 }
 
+.oneword {
+  word-break:keep-all;
+}
+
 /*
 Workaround for iPhone / WebKit bug where headers and footers can disappear after page animation.
  http://forum.jquery.com/topic/question-about-header-footer-in-jquery-mobile-alpha3 
