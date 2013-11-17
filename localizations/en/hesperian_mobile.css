@@ -443,6 +443,14 @@ h2.hm-pagetitle {
   padding: 8px;
 }
 
+.hm-image-bar  > img:first-child {
+  padding-left: 0px;
+}
+
+.hm-image-bar  > img:last-child {
+  padding-right: 0px;
+}
+
 .hm-text-and-img {
   padding-top: 1px;
   margin-top: 5px;
