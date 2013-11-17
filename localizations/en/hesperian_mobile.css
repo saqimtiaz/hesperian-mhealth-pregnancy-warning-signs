@@ -440,8 +440,21 @@ h2.hm-pagetitle {
 .hm-image-bar > img {
   display: inline-block;
   vertical-align: middle;
-  margin: 0 5px;
+  padding: 8px;
 }
+
+.hm-text-and-img {
+  padding-top: 1px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  padding-bottom: 1px;
+}
+
+.hm-text-and-img > img {
+  vertical-align: middle;
+  margin: 5px;
+}
+
 
 body {
 	-webkit-user-select: none;
