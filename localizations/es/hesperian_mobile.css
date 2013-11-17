@@ -432,6 +432,17 @@ h2.hm-pagetitle {
 	text-align:center;
 }
 
+.hm-image-bar {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hm-image-bar > img {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 5px;
+}
+
 body {
 	-webkit-user-select: none;
 }
