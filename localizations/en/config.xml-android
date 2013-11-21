@@ -6,15 +6,15 @@
     -->
     <widget xmlns = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "org.hesperian.Safe-Pregnancy-and-Birth-es"
-        versionCode = "3"
-        version   = "1.0.5">
+        id        = "org.hesperian.safepregnancyandbirth"
+        versionCode = "2"
+        version   = "1.0.1">
 
     <!-- Essential Properties -->
-    <name>Parto seguro</name>
+    <name>Safe Birth</name>
 
     <description>
-        El embarazo y el parto seguros. 
+        Safe Pregnancy and Birth. 
     </description>
 
     <author href="https://hesperian.org" email="support@hesperian.org">
@@ -24,7 +24,7 @@
     <!-- Platform Build Selection -->
     <gap:platform name="ios" />
     <gap:platform name="android" />
-   
+    
     <!-- Multiplatform Properties -->
     <!-- Layout tested in portrait mode - but may work in landscape as well -->
     <preference name="orientation" value="portrait" />
@@ -75,7 +75,7 @@
     <!-- retina iPad support -->
     <gap:splash src="splash/ios/Default-Landscape_at_2x.png" gap:platform="ios" width="2048" height="1496" />
     <gap:splash src="splash/ios/Default-Portrait_at_2x.png" gap:platform="ios" width="1536" height="2008" />
-    
+   
     <!-- Allow external links -->
     <access origin="*" />
     
