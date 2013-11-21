@@ -22,7 +22,6 @@
     </author>
  
     <!-- Platform Build Selection -->
-    <gap:platform name="ios" />
     <gap:platform name="android" />
     
     <!-- Multiplatform Properties -->

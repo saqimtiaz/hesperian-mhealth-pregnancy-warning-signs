@@ -6,7 +6,7 @@
     -->
     <widget xmlns = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "org.hesperian.safepregnancyandbirth"
+        id        = "org.hesperian.Safe-Pregnancy-and-Birth"
         versionCode = "2"
         version   = "1.0.1">
 
@@ -23,7 +23,7 @@
  
     <!-- Platform Build Selection -->
     <gap:platform name="ios" />
-    <gap:platform name="android" />
+    <!-- <gap:platform name="android" /> -->
     
     <!-- Multiplatform Properties -->
     <!-- Layout tested in portrait mode - but may work in landscape as well -->
