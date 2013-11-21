@@ -18,8 +18,11 @@ BUILD=0018
 # Main source directory - retarget for localized builds
 # Available localizations: en es
 LOCALIZATION ?= en
+# sometimes we need to build with a configuration tweak
+VARIANT ?=
 SRC=localizations/$(LOCALIZATION)
-GAPDEST=safe-birth-$(LOCALIZATION)
+GAPCONFIG=config.xml$(VARIANT)
+GAPDEST=safe-birth-$(LOCALIZATION)$(VARIANT)
 
 SITEBUILDDIR=site/www/archive/$(BUILD)
 
@@ -97,8 +100,8 @@ html: htmldest manifest
 # Main target for phonegap-build.
 gapbuild: htmldest
 	# Update the version number in index.html
-	./bin/setversion.pl $(SRC)/config.xml $(DESTDIR)/index.html > $(TMP)/index.html; mv $(TMP)/index.html $(DESTDIR)/index.html
-	cp $(SRC)/config.xml $(DESTDIR)
+	./bin/setversion.pl $(SRC)/$(GAPCONFIG) $(DESTDIR)/index.html > $(TMP)/index.html; mv $(TMP)/index.html $(DESTDIR)/index.html
+	cp $(SRC)/$(GAPCONFIG) $(DESTDIR)/config.xml
 	cp -R phonegap/icons $(DESTDIR)
 	cp -R phonegap/splash $(DESTDIR)
 	# Create a dummy string localization file - Apple app store UI looks for these to report language support
