@@ -7,8 +7,8 @@
     <widget xmlns = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "org.hesperian.Safe-Pregnancy-and-Birth"
-        versionCode = "2"
-        version   = "1.0.18">
+        versionCode = "3"
+        version   = "1.0.19">
 
     <!-- Essential Properties -->
     <name>Safe Birth</name>
@@ -28,8 +28,7 @@
     <!-- Layout tested in portrait mode - but may work in landscape as well -->
     <preference name="orientation" value="portrait" />
     
-    <!-- Latest version. Supports iOS 5+ -->
-    <preference name="phonegap-version" value="2.9.0" />
+    <preference name="phonegap-version" value="3.6.3" />
     <preference name="target-device" value="universal" />
     <!-- <preference name="fullscreen" value="true" /> -->
     
